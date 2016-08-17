@@ -1,0 +1,64 @@
+
+	\begin{sol}
+		\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+		\definecolor{qqqqff}{rgb}{0.,0.,1.}
+		\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+		\clip(-4.8866410764292,-5.572904036609516) rectangle (24.92335892357077,7.055095963390474);
+		\draw (3.38,4.66)-- (4.6,-3.1);
+		\draw (4.6,-3.1)-- (13.6,-3.2);
+		\draw (3.38,4.66)-- (13.6,-3.2);
+		\draw(6.6073797978803945,-0.7786041073342618) circle (1.171777726594992cm);
+		\draw (3.8617737962416823,1.595602738659465)-- (7.415842784909827,1.556113083229819);
+		\draw (1.0600044164045799,-3.0606667157378284)-- (5.638808290575755,1.575857910944642);
+		\draw (1.0600044164045799,-3.0606667157378284)-- (6.581341825154507,-3.1220149091683833);
+		\draw (1.0600044164045799,-3.0606667157378284)-- (8.036095081092272,1.0790893016257088);
+		\begin{scriptsize}
+		\draw [color=qqqqff] (3.38,4.66)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+		\draw[color=qqqqff] (3.5393589235707914,5.053095963390476) node {$A$};
+		\draw [color=qqqqff] (4.6,-3.1)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+		\draw[color=qqqqff] (4.199358923570791,-2.712904036609518) node {$B$};
+		\draw [color=qqqqff] (13.6,-3.2)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+		\draw[color=qqqqff] (13.747358923570783,-2.800904036609518) node {$C$};
+		\draw [color=uuuuuu] (8.036095081092272,1.0790893016257088)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+		\draw[color=uuuuuu] (8.445358923570787,1.3350959633904789) node {$E$};
+		\draw [color=uuuuuu] (4.292261123652807,-1.1425789504473618)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+		\draw[color=uuuuuu] (3.913358923570791,-0.9309040366095195) node {$F$};
+		\draw [color=uuuuuu] (6.581341825154507,-3.1220149091683833)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+		\draw[color=uuuuuu] (6.729358923570788,-2.734904036609518) node {$D$};
+		\draw [color=uuuuuu] (1.0600044164045799,-3.0606667157378284)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+		\draw[color=uuuuuu] (0.7233589235707943,-2.690904036609518) node {$T$};
+		\draw [color=uuuuuu] (6.6334177706062825,1.5648066944998584)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+		\draw [color=uuuuuu] (3.8617737962416823,1.595602738659465)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+		\draw[color=uuuuuu] (4.023358923570791,1.9950959633904781) node {$H$};
+		\draw [color=uuuuuu] (7.415842784909827,1.556113083229819)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+		\draw[color=uuuuuu] (7.719358923570788,2.1930959633904776) node {$G$};
+		\draw [color=uuuuuu] (5.638808290575755,1.575857910944642)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+		\draw[color=uuuuuu] (5.783358923570789,1.9730959633904783) node {$M$};
+		\draw [color=uuuuuu] (4.939888935469334,0.8681279248895978)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+		\draw[color=uuuuuu] (4.595358923570791,1.3790959633904787) node {$T_1$};
+		\end{scriptsize}
+		\end{tikzpicture}
+		
+		(Résolu par Baptiste Serraille)
+		
+		La solution utilise deux résultats de géométrie projective avancés : 
+		
+		i) Pour un point et un cercle donnés, les deux points de contact avec les tangentes par ce point et deux points sur une sécantes sont en division harmonique
+		
+		ii) Le birapport de quatre points sur un cercle est égal au birapport des tangentes en ces points
+		
+		iii) Soient $A,B$ des points et $M$ le milieu de $[AB]$. Alors $A,B,M,\infty$ sont harmoniques. Réciproquement, si $A,B,M,\infty$ sont harmoniques, alors $M$ le milieu de $[AB]$.
+		
+		Début de la solution :
+		
+		Soit $T_1$ le point de contact de la tangente (autre que $(TC)$) au cercle inscrit. Et soit $M_1$ le point d'intersection de $TT_1$ avec $(GH)$. Montrons que $M_1$ est le mileu de $(GH)$.
+				
+		D'après i) $T_1 F E D$ sont en division harmonique
+		
+		D'après ii) $$-1 =b_{T_1,D,F,E}=b_{T_1M_1,DB,FH,EG}=b_{M_1,\infty,H,G}$$
+		
+		Donc, d'après iii), $M_1$ est bien le milieu de $[HG]$.
+				
+		
+	\end{sol}
+	

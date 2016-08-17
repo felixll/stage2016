@@ -1,0 +1,575 @@
+\documentclass[12pt,A4]{book}
+
+%\addtolength{\hoffset}{-0.5cm}
+\addtolength{\textwidth}{2cm}
+
+\textwidth 173mm 
+\textheight 235mm
+\topmargin -50pt 
+\oddsidemargin -0.25cm 
+\evensidemargin -0.25cm
+
+%\textwidth 173mm 
+%\textheight 235mm 
+%\topmargin -50pt 
+%\oddsidemargin -0.25cm 
+%\evensidemargin -0.25cm
+%\usepackage{geometry}           % Définir les marges
+
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[tbtags]{amsmath}
+\usepackage{amssymb,amsthm}
+\usepackage{bbm,yhmath,stmaryrd}
+\usepackage{array,multirow}
+\usepackage[all]{xy}
+\usepackage{url}
+\usepackage{color}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+\usepackage{titlesec,verbatim}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{palatino}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.markings}
+
+%nicolas
+\usepackage{mathrsfs}
+
+\pagestyle{fancy}
+
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\rightmark}
+
+\headheight 15.35402pt
+ 
+%cecile
+%\usepackage{pstricks}
+
+%%% MINITOC %%%%
+\usepackage{memhfixc}
+\usepackage{minitoc}
+\dominitoc
+\renewcommand\mtctitle {Contenu de cette partie}
+
+\usepackage{ifpdf}
+
+\ifpdf
+
+\usepackage[pdftex]{thumbpdf}
+\usepackage[pdftex,                %
+    bookmarks         = true,%     % Signets
+    bookmarksnumbered = true,%     % Signets numérotés
+    pdfpagemode       = None,%     % Signets/vignettes fermé ? l'ouverture
+    pdfstartview     = FitH,%     % La page prend toute la largeur
+   pdfpagelayout     = OneColumn, % Vue par page
+    colorlinks        = true,%     % Liens en couleur
+    linkcolor         = blue,
+    urlcolor          = magenta,%  % Couleur des liens externes
+    pdfborder         = {0 0 0}%   % Style de bordure : ici, pas de bordure
+    ]{hyperref}%
+
+\else
+\usepackage{hyperref}
+\hypersetup{ colorlinks=falses } \fi
+
+
+\theoremstyle{definition}
+\def \style {\displaystyle}
+% --------------------------------------------------------------------------------------------------------------
+% --------------------------------------------------------------------------------------------------------------
+
+\def \N {\mathbb{N}}
+\def \Z {\mathbb{Z}}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def \K {\mathbb{K}}
+\def \S {\mathfrak{K}}
+\def\calC{\mathcal C}
+\def \cyc {\textrm{cyc}}
+\def \rec {\textrm{rec}}
+\def \inv {\textrm{inv}}
+
+
+	\newcommand{\pgcd}[1]{\mathop{\mathrm{pgcd}{(#1)}}\nolimits}
+	%\renewcommand{\mod}[1]{\mathop{(\mathrm{mod}{\; #1)}}\nolimits}
+	\newcommand{\ppcm}[1]{\mathop{\mathrm{ppcm}{(#1)}}\nolimits}
+	
+	
+\newcommand{\ligne}{\begin{center}\vrule depth 0pt height 0.4pt
+width 5cm\end{center}}
+
+\newcommand{\etoile}{\begin{center}$\ast\ast\ast$\end{center}}
+
+\newcommand{ \cor}{\begin{center} - \textbf {Correction} - \end{center}}
+
+\newcommand{\cen}[1]{ \begin{center} - \textbf{#1} - \end{center}}
+
+\thispagestyle{empty}
+
+%%% environnement Gabriel %%%
+\newtheorem{alg}{Algorithme}
+
+%%%% environnements Mathieu %%%%
+
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{\par
+  \normalfont
+  \topsep6\p@\@plus6\p@ \trivlist
+  \item[\hskip5\labelsep\itshape
+    #1\@addpunct{.}]\ignorespaces
+}{%
+  \qed\endtrivlist
+}
+\makeatother
+
+\newtheoremstyle{thm}{3pt}{3pt}{}{\parindent}{\bfseries}{.}{.5em}{}
+\theoremstyle{thm}
+\newtheorem*{proposition}{Proposition}
+
+\newtheorem*{theoreme}{Théorème}
+\newtheorem{lemme}{Lemme}
+\newtheorem{propriete}{Propriété}
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{corollaire}{Corollaire}
+\newtheoremstyle{def}{3pt}{3pt}{}{\parindent}{\bfseries}{.}{.5em}{}
+\theoremstyle{def}
+\newtheorem*{definition}{Définition}
+\newtheorem*{remarque}{Remarque}
+
+%%%% fin environnements Mathieu %%%%
+
+\makeatletter
+\newcounter{exo}[subsection]
+\newenvironment{exo}[1][]
+  {\edef\@exer{#1}%
+   \ifx\@exer\empty{}\else{\setcounter{exo}{#1}\addtocounter{exo}{-1}}\fi%
+   \refstepcounter{exo}%
+   \noindent {\bf Exercice \theexo}%
+   \hspace{0.5em}}
+  {\medskip}
+
+\newcounter{sol}[subsection]
+\newenvironment{sol}[1][]
+  {\edef\@exer{#1}%
+   \ifx\@exer\empty{}\else{\setcounter{sol}{#1}\addtocounter{sol}{-1}}\fi%
+   \refstepcounter{sol}%
+   \noindent {\it \underline{Solution de l'exercice \thesol}%
+   \hspace{0.5em}}}
+  {\medskip}
+\makeatother
+
+\newcounter{compteurexo}
+\newcounter{compteurfeuille}
+
+%Triangle Pascal Eva
+
+\makeatletter
+\let\@nil\relax
+\def\Row#1 {%
+  \begingroup
+  \par\centering
+  \baselineskip=0pt
+  \nointerlineskip
+  \printrow#1\@nil
+  \par\vskip-\fboxrule
+  \endgroup
+}
+\def\printrow#1#2\@nil{%
+  \fbox{%
+    \hbox to\Boxwd{%
+      \hss
+      \vbox to\Boxht{%
+        \vss#1\vss
+      }%
+      \hss
+    }%
+  }%
+  \hskip-\fboxrule
+  \def\@arg{#2}%
+  \ifx\empty\@arg
+    \let\next\relax
+  \else
+    \let\next\printrow
+  \fi
+  \expandafter\next\@arg\@nil
+}
+\def\setBoxdim#1#2{%
+  \def\Boxht{#2}%
+  \def\Boxwd{#1}%
+}
+\makeatother
+
+%Fin triangle Pascal Eva
+
+\newenvironment{resume}
+  {\vspace{-0.5cm}\begin{center}\begin{minipage}{12cm}\small}
+  {\end{minipage}\end{center}\bigskip}
+
+\newtheorem{theo}{Théorème}[section]
+\newenvironment{preuve}{
+  \noindent \textbf{Démonstration. }}{\hfill \(\square\) }
+
+\newtheorem{defn}{Définition}
+\newtheorem{rem}[defn]{Remarque}
+\newtheorem{rems}[defn]{Remarques}
+\newtheorem{ex}[defn]{Exemple}
+\newtheorem{prop}[defn]{Proposition}
+\newtheorem{dem}[defn]{Démonstration}
+\newtheorem{corr}[defn]{Corollaire}
+\newtheorem{thm}[defn]{Théoréme}
+\newtheorem{lem}[defn]{Lemme}
+\newtheorem{nott}[defn]{Notation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\@addtoreset{footnote}{part} % Pourquoi éa marche pas ?
+\renewcommand\thechapter{\@Roman\c@chapter}
+\renewcommand\thesection{\@arabic\c@section}
+\renewcommand\thesubsection{\@arabic\c@subsection}
+\renewcommand\thefigure{\@arabic\c@figure}
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+    \setlength\@tempdima{2em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \Huge\bfseries \thechapter. ~
+      \fi
+    \fi
+    \Huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+\renewcommand*\l@section{\@dottedtocline{1}{2em}{1.5em}}
+\renewcommand*\l@subsection{\@dottedtocline{2}{3.5em}{2.4em}}
+\renewcommand*\l@subsubsection{\@dottedtocline{3}{5.9em}{3.3em}}
+\renewcommand\@chapapp{}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%cecile
+%\usepackage{tikz,fancybox,pifont}
+\usetikzlibrary{shapes,backgrounds,patterns,arrows}
+\newcommand{\demo}[1]{\vspace{-1mm}{\small {\it Démonstration.} #1\hfill$\Box$} \medskip}
+
+%baptiste
+\newtheorem{rap}[defn]{Rappel}
+%\newtheorem{thm}[defn]{Théorème}
+%\newenvironment{preuve}{
+%  \noindent \textbf{Démonstration. }}{\hfill \(\square\) }
+
+%arsene
+\newtheorem{exemple}[defn]{Exemple}
+%\DeclareMathOperator{\card}{card}
+\def \Card {\textrm{Card}}
+\newtheorem{fig}[defn]{Figure}
+
+
+%conf Nicolas
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\Ker}{Ker}
+
+%pierre_antoine
+\newcommand{\Ai}{\mathcal A}
+%\newtheorem{theoreme}[lemme]{Th\'eor\`eme}
+\definecolor{ffffff}{rgb}{1.0,1.0,1.0}
+\definecolor{zzccff}{rgb}{0.6,0.8,1.0}
+\newcommand{\B}{\mathcal{B}}
+%\newcommand{\C}{\mathbf{C}}
+\newcommand{\D}{D}
+\newcommand{\Fp}{\mathbf{F}}
+%\newcommand{\F}{\mathcal{F}}
+%\newcommand{\N}{\mathbf{N}}
+\newcommand{\Pb}{\mathcal{P}}
+%\newcommand{\R}{\mathbf{R}}
+\newcommand{\Sn}{\mathfrak{S}}
+\newcommand{\T}{\mathbf{T}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\V}{\mathcal{V}}
+%\newcommand{\Q}{\mathbf{Q}}
+%\newcommand{\Z}{\mathbf{Z}}
+\newcommand{\varep}{\varepsilon}
+\newcommand{\Hom}{\mathrm{Homeo}}
+\newcommand{\Aut}{\mathrm{Auto}}
+\newcommand{\Leb}{\mathrm{Leb}}
+\newcommand{\Diff}{\mathrm{Diff}}
+\newcommand{\ud}{\mathrm{d}}
+\newcommand{\Prb}{\mathcal{P}}
+\newcommand{\tT}{\mathcal{T}}
+\newcommand{\Th}{\operatorname{th}}
+\newcommand{\card}{\operatorname{Card}}
+\newcommand{\Un}{(u_n)_{n\in\N}}
+%\newcommand{\Ai}{\operatorname{Aire}}
+
+%vincent
+\definecolor{VJgray}{RGB}{195,195,195}
+
+%thomas
+\newcommand{\A}{\mathcal{A}}
+
+%alix
+\newcommand\parmi[2]{\begin{pmatrix}#2\\#1\end{pmatrix}}
+\definecolor{ffqqtt}{rgb}{1,0,0.2}
+\definecolor{ffwwww}{rgb}{1,0.4,0.4}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\definecolor{qqwuqq}{rgb}{0,0.39,0}
+\definecolor{ttfftt}{rgb}{0.2,1,0.2}
+\definecolor{uququq}{rgb}{0.25,0.25,0.25}
+\definecolor{wwwwqq}{rgb}{0.4,0.4,0}
+\definecolor{xdxdff}{rgb}{0.49,0.49,1}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0}
+
+
+\DeclareMathOperator{\F}{\mathbb{F}}
+\DeclareMathOperator{\Div}{Div}
+\DeclareMathOperator{\val}{val}
+%\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\Prob}{\mathbb{P}}
+\DeclareMathOperator{\aire}{aire}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \newcommand{\nstar}[1]
+{
+  \ifthenelse{\equal{#1}{0}}{}{}
+  \ifthenelse{\equal{#1}{1}}{(\mbox{}$^ {\star}$)}{}
+  \ifthenelse{\equal{#1}{2}}{(\mbox{}$^ {\star \star}$)}{}
+  \ifthenelse{\equal{#1}{3}}{(\mbox{}$^ {\star \star \star}$)}{}
+  \ifthenelse{\equal{#1}{4}}{(\mbox{}$^ {\star \star \star \star}$)}{}
+  \ifthenelse{\equal{#1}{5}}{(\mbox{}$^ {\star \star \star \star \star}$)}{}
+  \ifthenelse{\equal{#1}{6}}{(\mbox{}$^ {\star \star \star \star \star \star}$)}{}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\import{misc/}{premieres_pages.tex}
+
+
+%\newcommand{\ssspas}{2.45cm}
+\newcommand{\ssspas}{2cm}
+
+\addtolength{\voffset}{-0.5cm}
+ 
+ \textheight 240 mm
+
+\pagestyle {plain}
+
+%\setlength{\tabcolsep}{1cm}
+
+\footnotesize
+
+\import {trombinoscope/}{trombi_profs}
+
+\pagestyle {plain}
+\setlength{\tabcolsep}{6pt}
+
+\import {trombinoscope/}{trombi}
+
+\normalsize
+\pagestyle {empty}
+\addtolength{\voffset}{+0.5cm}
+
+\textheight 235mm
+
+\tableofcontents
+
+\chapter{Déroulement du stage}
+\pagestyle {fancy}
+
+\import{misc/}{deroulement.tex}
+
+%%%%%%%%%%%%%%%%
+
+\chapter{Coupe Animath et évaluation initiale}
+
+\subsection{Présentation}
+
+\import{coupe/}{presentation}
+
+\subsection{Eliminatoires collégiens : énoncés}
+
+\import{coupe/}{eliminatoire_college.tex}
+
+\subsection{Eliminatoires lycéens : énoncés}
+
+\import{coupe/}{eliminatoire_lycee.tex}
+
+\subsection{Eliminatoires collégiens : solutions}
+
+\import{coupe/}{eliminatoire_college_solution.tex}
+
+\subsection{Eliminatoires lycéens : solutions}
+
+\import{coupe/}{eliminatoire_lycee_solution.tex}
+
+\subsection {Enoncés de la coupe Animath - 2 juin 2015}
+
+\import{coupe/}{enonce}
+
+\subsection{Solutions}
+
+\import{coupe/}{solution}
+
+\subsection{Evaluation initiale}
+
+\import{coupe/}{evaluation}
+
+
+%%%%%%%%%%%%%%%%
+
+
+\chapter{Première période}
+\minitoc \bigskip
+
+
+
+
+\section {Groupe A : stratégies de base}
+
+\subsection{mercredi 17 matin : Joon Kwon}
+
+\import{cours/A/}{17_AM}
+
+\subsection{mercredi 17 après-midi : Victor Vermès}
+
+\import{cours/A/}{17_PM}
+
+\subsection{jeudi 18 matin : Wassim Trabelsi}
+
+\import{cours/A/}{18_AM}
+
+\subsection{vendredi 19 matin : Mehdi Trense}
+
+\import{cours/A/}{19_AM}
+
+\subsection{vendredi 19 après-midi : Eva Philippe}
+
+\import{cours/A/}{19_PM}
+
+
+
+
+
+\chapter{Samedi 20 matin : Test de mi-parcours}
+\minitoc \bigskip
+
+
+\section{Groupe A}
+
+\subsection{Enoncé}
+
+\import{tests/1/A/}{enonce}
+
+\subsection{Solution}
+
+\import{tests/1/A/}{solution}
+
+
+\section{Groupe B}
+
+\subsection{Enoncé}
+
+\import{tests/1/B/}{enonce}
+
+\subsection{Solution}
+
+\import{tests/1/B/}{solution}
+
+
+
+\section{Groupe C}
+
+\subsection{Enoncé}
+
+\import{tests/1/C/}{enonce}
+
+\subsection{Solution}
+
+\import{tests/1/C/}{solution}
+
+
+
+\section{Groupe }
+
+\subsection{Enoncé}
+
+\import{tests/1/D/}{enonce}
+
+\subsection{Solution}
+
+\import{tests/1/D/}{solution}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Les soirées}
+\minitoc \bigskip
+
+
+\section{mercredi 17 : Qu'est-ce qu'une preuve ?}
+
+\import{conf/}{preuve}
+
+
+
+\section{jeudi 18 : Les Olympiades de Mathématiques}
+
+\import{conf/}{olympiades}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%
+
+\chapter{La muraille}
+\minitoc \bigskip
+
+
+
+\subsection{Présentation}
+
+\import{muraille/}{presentation}
+
+\subsection{Enoncés}
+
+\import{muraille/}{muraille}
+
+\subsection{Solutions des élèves}
+
+\import{muraille/}{solutions}
+
+
+
+%%%%%%%%%%%%%%%%%%%
+
+\chapter{Citations mémorables}
+
+\import{misc/}{citations}
+
+
+\end{document}
