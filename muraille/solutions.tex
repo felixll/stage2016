@@ -57,6 +57,21 @@
 		Donc, d'après iii), $M_1$ est bien le milieu de $[HG]$.
 \end{sol}
 
+\begin{sol}[130](Résolu par Thibaut Maron)
+
+Soit $x_1,x_2,\dots,x_{13}$ $13$ r\'eels deux \`a deux distincts.\\
+La fonction tangente réalise une surjection (en fait une bijection) de $]-\frac{\pi}{2},\frac{\pi}{2}[$ dans $\mathbb{R}$, donc il existe $13$ réels $a_1,a_2,\dots,a_{13}$ appartenant tous \`a $]-\frac{\pi}{2},\frac{\pi}{2}[$ (intervalle de largeur $\pi$),
+vérifiant $\forall i \in [[1,13]], \tan(a_i)=x_i$. \\
+Or, par le principe des tiroirs, il existe $i$ et $j$ distincts tels que $ 0 \leq a_i-a_j \leq \frac{\pi}{12}$
+Or la fonction tangente est croissante sur $]-\frac{\pi}{2},\frac{\pi}{2}[$, donc on peut composer l'in\'egalit\'e pr\'ec\'edente par tangente, \\
+on obtient ainsi $\tan(0) \leq \tan(a_i-a_j) \leq \tan(\frac{\pi}{12})$, \\
+en appliquant une formule de trigonométrie, \\
+on a donc $0 \leq \frac{\tan(a_i)-\tan(a_j)}{1+\tan(a_i)\tan(a_j)} \leq 2-\sqrt{3} $ \\
+Or $\forall i \in [[1,13]], \tan(a_i)=x_i$, \\
+ainsi $0 \leq \frac{x_i-x_j}{1+x_i x_j} \leq 2-\sqrt{3}$,
+ce qui conclut.
+
+\end{sol}
 
 \begin{sol}[1](Résolu par ....)
 Lorem Ipsum
