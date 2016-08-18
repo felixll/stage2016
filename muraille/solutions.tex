@@ -1,6 +1,8 @@
 \begin{sol}[99](Résolu par Baptiste Serraille)
+
 		\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
 		\definecolor{qqqqff}{rgb}{0.,0.,1.}
+		\begin{center}
 		\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
 		\clip(-4.8866410764292,-5.572904036609516) rectangle (24.92335892357077,7.055095963390474);
 		\draw (3.38,4.66)-- (4.6,-3.1);
@@ -37,7 +39,7 @@
 		\draw[color=uuuuuu] (4.595358923570791,1.3790959633904787) node {$T_1$};
 		\end{scriptsize}
 		\end{tikzpicture}
-				
+		\end{center}			
 		La solution utilise deux résultats de géométrie projective avancés : 
 		
 		i) Pour un point et un cercle donnés, les deux points de contact avec les tangentes par ce point et deux points sur une sécantes sont en division harmonique
@@ -70,9 +72,71 @@ on a donc $0 \leq \frac{\tan(a_i)-\tan(a_j)}{1+\tan(a_i)\tan(a_j)} \leq 2-\sqrt{
 Or $\forall i \in [[1,13]], \tan(a_i)=x_i$, \\
 ainsi $0 \leq \frac{x_i-x_j}{1+x_i x_j} \leq 2-\sqrt{3}$,
 ce qui conclut.
+\end{sol}
 
+\begin{sol}[59](R\'esolu par Th\'eodore Fougereux et Timoth\'ee Roquet)
+
+		Soit, pour $0 < x < \frac{\pi}{2}$, $f(x)=\left(1+\frac{1}{(\cos x)^{10}}\right)\left(1+\frac{1}{(\sin x)^{10}}\right)$.
+		$f$ est d\'erivable et sa d\'eriv\'ee est \\ $f':~x \longmapsto \frac{10\sin(x)}{(\cos(x))^{11}}\left(1+\frac{1}{(\sin(x))^{10}}\right) - \frac{10 \cos(x)}{(\sin(x))^{11}}\left(1+\frac{1}{(\cos(x))^{10}}\right)$. \\
+		Si $0 < x < \frac{\pi}{2}$, $f'(x) = \frac{10}{(\sin(x))^{11}(\cos(x))^{11}}\left((\sin(x))^{12}+(\sin(x))^2 - ((\cos(x))^{12}+(\cos(x))^2)\right)$, donc $f'(x)$ a le signe de $g(\sin(x))-g(\cos(x))$, o\`u $g:~x \longmapsto x^{12}+x^2$ qui est strictement croissante sur $\mathbb{R}^+$, et par cons\'equent $f$ d\'ecro\^it avant $\frac{\pi}{4}$ et cro\^it apr\`es. Par cons\'equent, $f$ est minimale en $\frac{\pi}{4}$ et on calcule $f\left(\frac{\pi}{4}\right)=1089$, ce qui conclut.\\
+		
+		\textit{Une autre preuve est possible}: pour $x > 0$, on note $f(x)=\ln\left(1+\frac{1}{x^5}\right)$, $f$ est d\'erivable et pour $x > 0$, $f'(x)=\frac{\frac{-5}{x^6}}{1+\frac{1}{x^5}}=\frac{-5}{x^6+x}$, et en cons\'equence $f'$ est croissante, donc $f$ est convexe. On a, pour $0 < x < \frac{\pi}{2}$, 
+		\[\ln\left(\left(1+\frac{1}{(\cos(x))^{10}}\right)\left(1+\frac{1}{(\sin(x))^{10}}\right)\right) = f((\cos(x))^2)+f((\cos(x))^2) \geq 2f\left(\frac{(\cos(x))^2+(\sin (x))^2}{2}\right) = 2 \ln(33) = \ln (1089).\]
+\end{sol}
+
+\begin{sol}[64](R\'esolu par Humbert Tristan)
+
+		Si $p!^k | (p^2)!$, $k*v_p(p!) = v_p(p!^k) \leq v_p((p^2)!)$. 
+		Or, la formule de Legendre donne $v_p(p!)=p$, et $v_p((p^2)!)=p+1$. En cons\'equence, si $p!^k | p^2!$, $k \leq p+1$. \\
+		On va montrer que $p!^{p+1} | p^2!$. Soit $q$ un premier divisant $p!$ et distinct de $p$ (le r\'esultat du paragraphe est, on l'a vu, vrai pour $p$), soit $i \in \N$, \'ecrivons $p=q^i*a+r$, avec $0 \leq r < q^i$, et $a,r$ entiers. Par primalit\'e de $p$, $r > 0$, on a alors \\ $\left\lfloor \frac{p^2}{q^i}\right\rfloor = \left\lfloor \frac{a^2q^{2i}+2arq^i+r^2}{q^i}\right\rfloor=a^2q^i+2ar+\left\lfloor \frac{r^2}{q^i}\right\rfloor \geq a(aq^i+r+r) \geq (p+1) \left\lfloor \frac{p}{q^i}\right\rfloor$. En sommant, on obtient, pour tout premier $q < p$, $(p+1)v_q(p!) \leq v_q(p^2!)$. \\
+		On a alors $p!^{p+1} | p^2!$, et tel n'est pas le cas pour $p!^{p+2}$. 
+\end{sol}
+
+\begin{sol}[133](Résolu par Yakob Kahane)
+
+		Si on a deux points sur un cercle, alors le centre dudit cercle se trouve sur la m\'ediatrice des deux points. Si lesdits deux points sont \`a coordonn\'ees rationnelles, leur m\'ediatrice poss\`ede une \'equation \`a coefficients rationnels. \\
+			On suppose d\`es lors qu'il existe $A$, $B$, $C$ trois points \`a coordonn\'ees rationnelles sur un m\^eme cercle $\Gamma$ dont le centre n'est pas \`a coordonn\'ees rationnelles. On note $L_1$, $L_2$ des \'equations respectives des m\'ediatrices de $[AB]$ et $[AC]$ \`a coefficients rationnels:
+			\[L_1: a_1x+b_1y=c_1\]
+			\[L_2: a_2x+b_2y=c_2\]
+			Leur point d'intersection est la solution d'un syst\`eme de deux \'equations \`a deux inconnues \`a coefficients rationnels; le calcul de la solution (ie du point d'intersection) se fait en restant dans $\Q$; or ce point $O$ d'intersection est le centre d'un cercle circonscrit \`a $ABC$ donc de $\Gamma$, ce qui contredit l'hypoth\`ese. \\
+			Il reste \`a trouver deux points rationnels sur un cercle de centre de coordonn\'ees irrationnelles. Le lecteur v\'erifiera qu'un cercle de centre $O(\sqrt{2};1-\sqrt{2})$ passe par $A(0;0)$ et $B(1;1)$,ce qui conclut.  
+\end{sol}
+
+\begin{sol}[13](R\'esolu par Jules Bouton)
+
+		\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-4.3,-2.56) rectangle (7.06,6.3);
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (-0.78,2.78) -- (3.64,-0.96) -- (-2.06,-1.18) -- cycle;
+\draw [color=zzttqq] (-0.78,2.78)-- (3.64,-0.96);
+\draw [color=zzttqq] (3.64,-0.96)-- (-2.06,-1.18);
+\draw [color=zzttqq] (-2.06,-1.18)-- (-0.78,2.78);
+\draw [domain=-2.06:7.0600000000000005] plot(\x,{(--1.6788--2.9*\x)/3.64});
+\begin{scriptsize}
+\draw [fill=qqqqff] (-0.78,2.78) circle (2.5pt);
+\draw[color=qqqqff] (-0.64,3.14) node {$A$};
+\draw [fill=qqqqff] (3.64,-0.96) circle (2.5pt);
+\draw[color=qqqqff] (3.78,-0.6) node {$B$};
+\draw [fill=qqqqff] (-2.06,-1.18) circle (2.5pt);
+\draw[color=qqqqff] (-1.92,-0.82) node {$C$};
+\draw [fill=uuuuuu] (1.0096989966555185,1.2656393105222536) circle (1.5pt);
+\draw[color=uuuuuu] (1.14,1.54) node {$I$};
+\end{scriptsize}
+\end{tikzpicture}
+
+		\begin{itemize}
+				\item[$\Rightarrow$] La loi des sinus donne $\frac{AI}{\sin(\widehat{ACI})}=\frac{AC}{\sin(\widehat{AIC})}$ et $\frac{BI}{\sin(\widehat{ICB})}=\frac{BC}{\sin(\widehat{CIB})}$, ce qui donne $\frac{AI}{AC}=\frac{\sin(\widehat{ACI})}{\sin(\widehat{AIC})}$ et $\frac{BI}{BC}=\frac{\sin(\widehat{ICB})}{\sin(\widehat{CIB})}$. Comme $\widehat{AIC}$ et $\widehat{CIB}$ sont suppl\'ementaires, ils ont m\^eme sinus. Comme $\widehat{ACI}=\widehat{ICB}$ par hypoth\`ese, on d\'eduit$\frac{BI}{BC}=\frac{AI}{AC}$, c'est-\`a-dire $\frac{CB}{CA}=\frac{IB}{IA}$. \\
+				\item[$\Leftarrow$] La loi des sinus donne $\frac{AI}{\sin(\widehat{ACI})}=\frac{AC}{\sin(\widehat{AIC})}$ et $\frac{BI}{\sin(\widehat{ICB})}=\frac{BC}{\sin(\widehat{CIB})}$, ce qui donne $\frac{AI}{AC}=\frac{\sin(\widehat{ACI})}{\sin(\widehat{AIC})}$ et $\frac{BI}{BC}=\frac{\sin(\widehat{ICB})}{\sin(\widehat{CIB})}$. De $\frac{CA}{CB} = \frac{IA}{IB}$ vient $\frac{AI}{AC}=\frac{BI}{BC}$, et en cons\'equence $\frac{\sin(\widehat{ACI})}{\sin(\widehat{AIC})}=\frac{\sin(\widehat{BCI})}{\sin(\widehat{BIC})}$. Comme $\widehat{ACI}$ et $\widehat{BIC}$ sont suppl\'ementaires, ils ont m\^eme sinus.
+				On d\'eduit \\ $\sin(\widehat{ACI})=\sin(\widehat{ICB})$, donc les deux angles sont \'egaux (ils ne peuvent pas \^etre suppl\'ementaires) et $(CI)$ est la bissectrice int\'erieure de $\widehat{ACB}$. 
+		\end{itemize}~\\
+		\textit{On peut aussi prouver le r\'esultat comme suit:} soient $ABC$ un triangle acutangle, $I$ un point du segment $[AB]$, $a = \frac{AI}{AC}$, $b = \frac{BI}{BC}$. De la loi des sinus on d\'eduit $\frac{AI}{\sin(\widehat{ACI})}=\frac{AC}{\sin(\widehat{AIC})}$ et \\ $\frac{BI}{\sin(\widehat{ICB})}=\frac{BC}{\sin(\widehat{CIB})}$, c'est-\`a-dire $a = \frac{\sin(\widehat{ACI})}{\sin(\widehat{AIC})}$ et $b=\frac{\sin(\widehat{BCI})}{\sin(\widehat{BIC})}$. Comme $\widehat{ACI}$ et $\widehat{BIC}$ sont suppl\'ementaires, ils ont m\^eme sinus, d'o\`u $\frac{b}{a}=\frac{\sin(\widehat{ACI})}{\sin(\widehat{ICB})}$. \\
+		Finalement, $\frac{CA}{CB}=\frac{IA}{IB} \Leftrightarrow a = b \Leftrightarrow \widehat{ACI}=\widehat{ICB}$, le dernier point \'etant \'equivalent \`a "$(CI)$ est la bissectrice int\'erieure de $\widehat{ACB}$"'.
 \end{sol}
 
 \begin{sol}[1](Résolu par ....)
+
 Lorem Ipsum
+
 \end{sol}
