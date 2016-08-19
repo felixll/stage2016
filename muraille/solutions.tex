@@ -116,6 +116,20 @@ Réciproquement, les deux figures suivantes montrent que ces $2$ valeurs convien
 
 \end{sol}
 
+
+\begin{sol}[130](Résolu par Pierre-Marie Esmenjaud Thibaut Maron)
+
+Soit $a,b,c$ les longueurs des côtés d'un triangle. Montrons que l'on a toujours $a^2b(a-b)+b^2c(b-c)+c^2a(c-a) \geq 0$.\\
+On utilise la substitution de Ravi, il existe $x,y,z$ positifs tels que 
+$a=x+y$,$b=y+z$, $c=z+x$.
+En développant l'inégalité et en la simplifiant, on obtient alors
+$2(x^3y+y^3x+z^3y-x^2yz-y^2xz-z^2xy) \geq 0$,
+c'est-\`a-dire $x^3y+y^3x+z^3y \geq x^2yz+y^2xz+z^2xy$
+Or les suites $(x^2,y^2,z^2)$ et $(yz,xz,xy)$ sont dans l'ordre opposé, donc par l'in\'egalit\'e de r\'eordonnement,
+on a $x^2xy+y^2yz+z^2zy \geq x^2yz+y^2xz+z^2xy$, ce qui correspond \`a l'in\'egalit\'e initiale.
+
+\end{sol}
+
 \begin{sol}[99](Résolu par Baptiste Serraille)
 		\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
 		\definecolor{qqqqff}{rgb}{0.,0.,1.}
