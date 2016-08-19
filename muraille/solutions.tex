@@ -153,6 +153,29 @@ Ainsi, si $b$ est rationnel, alors le produit $\frac{\sqrt[4]{3}}{2}b$ sera auss
 Par conséquent, $a$ et $b$ ne peuvent pas être tous les deux rationnels.
 
 \end{sol}
+\begin{sol}[75](Résolu par Dario Shariatan)
+
+Déterminons d'abord de combien de manières différentes il est possible de carreler un rectangle de taille $2 \times n$ avec des carreaux incolores. Notons $F(n)$ ce nombre.
+
+Pour les rectangles de taille $2 \times 1$ ou $2 \times 2$ on voit aisément que :
+\begin{itemize}
+\item Il n'y a qu'une seule façon de carreler le rectangle $2\times 1$
+\item Il y a deux façons de carreler le rectangle $2 \times 2$ (carreaux horizontaux ou verticaux)
+\end{itemize}
+
+Pour carreler un carreau de taille $2 \times (n+1)$ il n'y a qu'une seule manière de s'y prendre :
+\begin{itemize}
+\item Soit on commence par un carreau $2 \times 1$ au début du rectangle et on carrele le rectangle de taille $2 \times (n-1)$ restant, il y a $F(n-1)$ possibilités
+\item Soit on commence par deux carreaux $1 \times 2$ et on a $F(n-2)$ possibilités pour compléter le rectangle.
+\end{itemize}
+
+On a donc la relation de récurrence $F(n) = F(n-1) + F(n-2)$.
+
+Étudions maintenant l'influence des couleurs. Pour carreler un rectangle, on utilise $n$ carreaux, qui peuvent chacun être colorés de deux manières différentes. Considérons un carrelage incolore donné, comme la position des carreaux est importante, il y a $2^n$ manières de colorier cette disposition. 
+
+Ainsi, le nombre de manières de carreler un rectangle $2 \times n$ est $2^n \times F(n)$ où $F(n)$ est le $(n+1)$-ième terme de la suite de Fibonacci.
+
+\end{solution}
 
 
 \begin{sol}[130](Résolu par Pierre-Marie Esmenjaud Thibaut Maron)
