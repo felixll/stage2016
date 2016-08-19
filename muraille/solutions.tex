@@ -116,6 +116,26 @@ Réciproquement, les deux figures suivantes montrent que ces $2$ valeurs convien
 
 \end{sol}
 
+\begin{sol}[42](Résolu par Maël Laoufi et Thibaut Desort)
+
+Soit $x=1+\dfrac{1}{2+\dfrac{1}{2+\dfrac{1}{\cdots}}}$.
+
+On remarque que $x=1+\dfrac{1}{1+1+\dfrac{1}{2+\dfrac{1}{\cdots}}}$, 
+d'où 
+\begin{eqnarray*}
+x &=& 1+\frac{1}{1+x} \\
+x-1 &=& \frac{1}{1+x}\\
+(x+1)(x-1) &=& 1\\
+x^2-1 &=& 1\\
+x^2 &=& 2\\
+\end{eqnarray*}
+
+D'où $x=\sqrt{2}$ puisque $x$ est strictement positif.
+
+
+\end{sol}
+
+
 \begin{sol}[56](Résolu par Barthélémy Pelletier et Gaël Gallot)
 
 Barthélémy Pelletier groupe B
@@ -252,6 +272,24 @@ ce qui conclut.
 		Or, la formule de Legendre donne $v_p(p!)=p$, et $v_p((p^2)!)=p+1$. En cons\'equence, si $p!^k | p^2!$, $k \leq p+1$. \\
 		On va montrer que $p!^{p+1} | p^2!$. Soit $q$ un premier divisant $p!$ et distinct de $p$ (le r\'esultat du paragraphe est, on l'a vu, vrai pour $p$), soit $i \in \N$, \'ecrivons $p=q^i*a+r$, avec $0 \leq r < q^i$, et $a,r$ entiers. Par primalit\'e de $p$, $r > 0$, on a alors \\ $\left\lfloor \frac{p^2}{q^i}\right\rfloor = \left\lfloor \frac{a^2q^{2i}+2arq^i+r^2}{q^i}\right\rfloor=a^2q^i+2ar+\left\lfloor \frac{r^2}{q^i}\right\rfloor \geq a(aq^i+r+r) \geq (p+1) \left\lfloor \frac{p}{q^i}\right\rfloor$. En sommant, on obtient, pour tout premier $q < p$, $(p+1)v_q(p!) \leq v_q(p^2!)$. \\
 		On a alors $p!^{p+1} | p^2!$, et tel n'est pas le cas pour $p!^{p+2}$. 
+\end{sol}
+
+\begin{sol}[126](Résolu par Joachim Studnia)
+
+Notons $p=3k+2$ avec $p$ premier divisant $a^2+ab+b^2$. Supposons par l'absurde que $p$ ne divise pas $a$. Alors clairement $p$ ne divise pas $b$.
+
+$a^3-b^3 = (a-b)(a^2+ab+b^2)$ donc $p | a^3-b^3$ et $a^3 \equiv b^3 \pmod p$ (I).
+
+D'après le petit théorème de Fermat, \mbox{$a^{p-1} \equiv b^{p-1} \equiv 1 \pmod p$}, d'où \mbox{$a^{3k+1} \equiv b^{3k+1} \pmod p$}. (II)
+
+D'après (I), $a^{3k} \equiv b^{3k} \pmod p$ donc $(a^{3k})^{-1} \equiv (b^{3k})^{-1} \pmod p$, c'est-à-dire $a^{-3k} \equiv b^{-3k} \pmod p$.
+
+D'après (II), on en déduit que $a \equiv b \pmod p$, donc \mbox{$a^2+ab+b^2 \equiv 3a^2 \pmod p$}.
+
+On a donc $p | 3a^2$ par hypothèse, donc soit $p | 3$, ce qui est exclu car \mbox{$p \equiv 2 \pmod 3$}, soit $p |a$, ce qui est en contradiction avec l'hypothèse de départ.
+
+Ainsi, $p$ divise $a$ et $b$.
+
 \end{sol}
 
 \begin{sol}[133](Résolu par Yakob Kahane)
