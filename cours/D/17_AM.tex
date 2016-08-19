@@ -1,0 +1,127 @@
+\begin{defn}
+
+Soit $x \in \Z$. On dit que $x$ est un \textbf{r\'esidu quadratique} modulo $p$ (ou encore que $\overline{x}$ est un r\'esidu quadratique dans $\Z/p\Z$) si $x$ n'est pas divisible par $p$ et si $\overline{x}$ est le carr\'e d'un \'el\'ement de $\Z/p\Z$.
+
+\smallskip
+
+On note $\displaystyle \left (\frac{x}{p} \right) = 1$ si $x$ est un r\'esidu quadratique modulo $p$, $\displaystyle \left (\frac{x}{p} \right) = 0$ si $p \mid x$ et $\displaystyle \left (\frac{x}{p} \right) = - 1$ sinon. Le symbole $\displaystyle \left (\frac{x}{p} \right)$ s'appelle le \textbf{symbole de Legendre}.
+
+\end{defn}
+
+\medskip
+
+\begin{thm}[Crit\`ere d'Euler]
+
+Soit $p$ un nombre premier impair, et $x \in (\Z/p\Z)^*$. Alors $x$ est un r\'esidu quadratique si et seulement si $x^{\frac{p - 1}{2}} = \overline{1}$. Sinon, on a $x^{\frac{p - 1}{2}} = - \overline{1}$.
+
+\end{thm}
+
+\begin{proof}
+
+Commen\c cons par d\'enombrer les r\'esidus quadratiques de $(\Z/p\Z)^*$. Soit $x$ un r\'esidu quadratique, disons que $x = y^2$ avec $y \in (\Z/p\Z)^*$. On a alors aussi $x = (-y)^2$, or $y \neq -y$ puisque $p$ est impair, donc $x$ est le carr\'e d'au moins deux \'el\'ements de $(\Z/p\Z)^*$. En fait, c'est le carr\'e d'exactement deux \'el\'ements, car le polyn\^ome $X^2 - x$ est de degr\'e 2, donc admet au plus deux racines dans $\Z/p\Z$. Puisque $(\Z/p\Z)^*$ poss\`ede $p - 1$ \'el\'ements, et puisque chaque r\'esidu quadratique est le carr\'e d'exactement deux de ces \'el\'ements, on en d\'eduit qu'il y a exactement $\frac{p - 1}{2}$ r\'esidus quadratiques.
+
+\smallskip
+
+Tous ces r\'esidus quadratiques v\'erifient $x^{\frac{p - 1}{2}} = \overline{1}$, puisqu'en les \'ecrivant $x = y^2$, on obtient $x^{\frac{p - 1}{2}} = y^{p - 1} = \overline{1}$, par petit Fermat. Il s'agit de montrer que c'est les seuls. Mais le polyn\^ome $X^{\frac{p - 1}{2}} - \overline{1}$ a au plus $\frac{p - 1}{2}$ racines dans $\Z/p\Z$, et tous les r\'esidus quadratiques, qui sont au nombre de $\frac{p - 1}{2}$, en sont racines. Donc ce sont les seules, ce qui conclut la premi\`ere affirmation du th\'eor\`eme.
+
+\smallskip
+
+Pour d\'emontrer la seconde partie, il suffit de montrer que la fonction $f(x) = x^{\frac{p - 1}{2}}$ ne prend que les valeurs $\overline{1}$ et $- \overline{1}$ lorsque $x$ parcourt $(\Z / p\Z)^*$. Mais $f(x)^2 = x^{p - 1} = \overline{1}$, donc les valeurs prises par $f$ sur $(\Z / p\Z)^*$ sont des racines carr\'ees de $1$ : ce sont donc $\overline{1}$ et $- \overline{1}$.
+
+\end{proof}
+
+\medskip
+
+Cette preuve, ou du moins le premier paragraphe, est \`a conna\^itre, car elle donne des informations sur la r\'epartition des r\'esidus quadratiques : leur nombre, et le fait que chacun soit le carr\'e d'exactement deux \'el\'ements \textit{oppos\'es}. On peut en d\'eduire, par exemple, que $1^2, \, 2^2, \, ..., \, \left (\frac{p - 1}{2} \right)^2$ forme un syst\`eme complet de repr\'esentants des r\'esidus quadratiques de $\Z / p\Z$, car ils sont au nombre de $\frac{p - 1}{2}$ et sont deux-\`a-deux non-oppos\'es.
+
+\smallskip
+
+Une autre remarque importante est que le crit\`ere d'Euler peut se reformuler de la fa\c con suivante \`a l'aide du symbole de Legendre : pour tout nombre premier impair $p$ et pour tout $x \in \Z$, on a $\displaystyle \left (\frac{x}{p} \right) \equiv x^{\frac{p - 1}{2}} \mod p$ (on remarquera que ceci marche \textit{m\^eme} si $p \mid x$). On en d\'eduit imm\'ediatement que le symbole de Legendre est \textit{compl\`etement multiplicatif} par rapport \`a son argument sup\'erieur, autrement dit, pour tous $x, \, y \in \Z$, on a $\displaystyle \left (\frac{x}{p} \right)\displaystyle \left (\frac{y}{p} \right) = \displaystyle \left (\frac{xy}{p} \right)$. En particulier, le produit de deux r\'esidus quadratiques est un r\'esidu quadratique, et l'inverse d'un r\'esidu quadratique est un r\'esidu quadratique (on dit que l'ensemble des r\'esidus quadratiques est un \textit{sous-groupe} de $(\Z/p\Z)^*$), mais aussi, le produit de deux non-r\'esidus quadratiques est un r\'esidu quadratique, et le produit d'un r\'esidu quadratique et d'un non-r\'esidu quadratique n'est pas un r\'esidu quadratique.
+
+\bigskip
+
+\begin{exo}
+
+\begin{description}
+
+\item[(1)]Trouver tous les nombres premiers $p$ v\'erifiant la propri\'et\'e suivante : pour tous entiers $a, \, b \in \Z$, si $p \mid (a^2 + b^2)$ alors $p \mid a$ et $p \mid b$.
+
+\item[(2)]Montrer qu'il existe une infinit\'e de nombres premiers congrus \`a $1$ modulo $4$.
+
+\end{description}
+
+\end{exo}
+
+\bigskip
+
+Voici un c\'el\`ebre r\'esultat d\^u \`a Gauss :
+
+\medskip
+
+\begin{thm} (R\'eciprocit\'e quadratique) Soient $p$ et $q$ deux nombres premiers impairs distincts. Vous pouvez utiliser les trois formules suivantes :
+\[{p\overwithdelims () q}{q\overwithdelims () p}=(-1)^{\frac{(p-1)(q-1)}{4}} \ ;\ {-1\overwithdelims () p}= (-1)^{\frac{p-1)}{2}}\ ;\ {2\overwithdelims () p}= (-1)^{frac{p^2-1)}{8}}\] \end{thm}
+
+\medskip
+
+Avec la loi de r\'eciprocit\'e quadratique, on peut d\'eterminer tr\`es rapidement si un entier est o\`u non un r\'esidu quadratique modulo un nombre premier $p$.
+
+\bigskip
+
+\begin{exo} Quand 5 est-il un carr\'e mod p ? Et 7? Et les deux ?\end{exo}
+
+\begin{exo}
+$219$ est-il un r\'esidu quadratique modulo $383$ ?
+\end{exo}
+
+\begin{exo} Combien y a-t-il de ``r\'esidus quadratiques" mod $pq$ ? Et mod $p^n$ ? \textit{Vous pouvez utiliser le fait que $(\Z/p^{n}\Z)^{\ast}$ est cyclique.}\end{exo}
+
+\begin{exo} Trouver les solutions enti\`eres de $4x^2+77y^2=487z^2$. \end{exo}
+
+
+
+
+
+
+\begin{sol}
+
+\begin{description}
+
+\item[(1)]Il est clair que cette propri\'et\'e n'est pas v\'erifi\'ee par $2$, en prenant par exemple $a = b = 1$. Soit maintenant $p$ un nombre premier impair. On a $(- 1)^{\frac{p - 1}{2}} = 1$ si $p \equiv 1 \mod 4$ et $-1$ si $p \equiv 3 \mod 4$, donc par le crit\`ere d'Euler, $- 1$ est un r\'esidu quadratique modulo $p$ si et seulement si $p \equiv 1 \mod 4$. Ceci montre imm\'ediatement qu'aucun nombre premier congru \`a $1$ modulo $4$ ne v\'erifie la propri\'et\'e demand\'ee, car un tel nombre premier divise un entier de la forme $n^2 + 1$ (prendre pour $n$ un repr\'esentant de la classe dont le carr\'e vaut $-\overline{1}$).
+
+\smallskip
+
+Montrons maintenant que tout nombre premier congru \`a $3$ modulo $4$ v\'erifie la propri\'et\'e demand\'ee. Supposons qu'il existe $a, \, b \in \Z$, avec $a$ non divisible par $p$, tel que $p \mid (a^2 + b^2)$. Il est alors clair que $p$ ne divise pas $b$ non plus, donc $\overline{a}$ et $\overline{b}$ sont inversibles dans $\Z/p\Z$. On a alors $\overline{a}^2 = - \overline{b}^2$, donc $(\overline{a}\overline{b}^{- 1})^2 = - \overline{1}$, ce qui contredit le fait que $- 1$ ne soit pas un r\'esidu quadratique modulo $p$.
+
+\item[(2)]Supposons que l'ensemble des nombres premiers congrus \`a $1$ modulo $4$ soit fini et notons-le $\{p_1, \, ..., \, p_n\}$. Posons alors $N = (2p_1...p_n)^2 + 1$. Il est clair que ni $2$ ni aucun des $p_i$ ne divise $N$, donc tous ses diviseurs premiers sont congrus \`a $3$ modulo $4$. Soit $p$ un des diviseurs premiers de $N$ ; comme $p$ divise $(2p_1...p_n)^2 + 1^2$, alors par la question pr\'ec\'edente il divise $1$, absurde.
+
+\end{description}
+
+\end{sol}
+
+
+\begin{sol}
+Nous allons utiliser la r\'eciprocit\'e quadratique : ${p\overwithdelims () 5}{5\overwithdelims () p}=1$ puisque $5\equiv 1[4]$, donc 5 est un carr\'e mod $p$ ssi $p$ est un carr\'e mod 5 ssi $p\equiv \pm 1[5]$.
+
+M\^eme topo pour 7 mais il faut faire une disjonction de cas : \begin{itemize}
+\item si $p\equiv 1[4]$, alors ${p\overwithdelims () 7}{7\overwithdelims () p}=1$ et 7 est un carr\'e mod $p$ ssi $p$ est un carr\'e mod 7 ssi $p\equiv 1,2$ ou $4[7]$.
+\item si $p\equiv 3[4]$, alors ${p\overwithdelims () 7}{7\overwithdelims () p}=-1$ et 7 est un carr\'e mod $p$ ssi $p$ n'est pas un carr\'e mod 7 ssi $p\equiv 3,5$ ou $6[7]$.\end{itemize}
+Nous pouvons tout regrouper en disant que 7 est un carr\'e mod $p$ ssi $p\equiv 1,3,9,19,25$ ou $27 [28]$.
+
+Pour que 5 et 7 soient tous les deux des carr\'e mod $p$, il faut que les deux conditions soient v\'erifi\'ees. Je laisse au lecteur le soin de d\'eterminer les 12 classes d'\'equivalences mod $140$ que cela donnera en utilisant le th\'eor\`eme chinois.
+\end{sol}
+
+\begin{sol}
+
+Par multiplicativit\'e du symbole de Legendre, on a $\displaystyle \left (\frac{219}{383} \right) = \left (\frac{3}{383} \right) \left (\frac{7}{383} \right)$. Par deux applications de la loi de r\'eciprocit\'e quadratique, on en d\'eduit que $\displaystyle \left (\frac{219}{383} \right) = - \left (\frac{383}{3} \right) \left (\frac{383}{73} \right)$. Puis en r\'eduisant modulo $3$ et $73$ respectivement, $\displaystyle \left (\frac{219}{383} \right) = - \left (\frac{-1}{3} \right) \left (\frac{18}{73} \right) = \left (\frac{18}{73} \right)$. Une nouvelle fois par multiplicativit\'e, on a $\displaystyle \left (\frac{219}{383} \right) = \left (\frac{2}{73} \right) \left (\frac{3}{73} \right)^2 = \left (\frac{2}{73} \right) $, puis on finit par en d\'eduire que $\displaystyle \left (\frac{2}{73} \right) = 1$, donc que $219$ est un r\'esidu quadratique modulo $383$.
+\end{sol}
+
+
+\begin{sol}
+Nous allons juste consid\'erer que les ``r\'esidus quadratiques" mod $n$ sont parmi les entier premiers avec $n$. La technique pour \'etudier $\Z/pq\Z$ est d'\'etudier s\'epar\'ement $\Z/p\Z$ et $\Z/q\Z$ et d'utiliser le th\'eor\`eme chinois. Je laisse au lecteur le soin de v\'erifier que $a$ r\'esidu quadratique mod $pq$ ssi $a$ r\'esidu quadratique mod $p$ et $a$ r\'esidu quadratique mod $q$. Modulo $p$ il y a $\frac{p-1}{2}$ r\'esidus quadratiques, et mod $q$ il y en a $\frac{q-1}{2}$. Le nombre total de r\'esidus quadratiques mod $pq$ est donc $\frac{(p-1)(q-1)}{4}$.
+
+Pour regarder mod $p^k$ nous allons proc\'eder autrement et profiter du fait que $(\Z/p^k\Z)^\ast$ est cyclique. On \'ecrit tous les \'elements comme les puissances $x^n$ d'une racine primitive $x$. Il est facile de v\'erifier que $x^n$ est un r\'esidu quadratique ssi $n$ est pair. Les r\'esidus quadratiques correspondent donc \`a la moiti\'e des \'el\'ements, c'est-\`a-dire $\frac{(p-1)p^{k-1}}{2}$.
+\end{sol}
+
+\begin{sol}
+Nous allons profiter que 487 est premier. L'\'esuation implique que $4x^2= -77y^2[487]$, donc si $-77$ n'est pas un carr\'e mod 487, l'\'equation n'a pas de solutions. Je laisse au lecteur le soin de v\'erifier que ${-77\overwithdelims () 487}=-1$.
+\end{sol}
