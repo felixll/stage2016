@@ -116,8 +116,42 @@ Réciproquement, les deux figures suivantes montrent que ces $2$ valeurs convien
 
 \end{sol}
 
+\begin{sol}[62](Résolu par Vincent Geffroy)
+On cherche \`a relier $n$ puits \`a $n$ villages sans que deux segments ne se croisent.
+On remarque tout d'abord que lorsque deux chemins sont crois\'es et qu'on les d\'ecroise, par in\'egalit\'e triangulaire, la longueur des segments d\'ecroit strictement.
+\[\begin{tikzpicture}[scale=1]
+\draw (0, 0)--(2,2 );
+\draw (2, 0)--(0,2 );
+\node at (0,0) {$V_1$};
+\node at (2,0) {$V_2$};
+\node at (0,2) {$P_1$};
+\node at (2,2) {$P_2$};
 
-\begin{sol}[130](Résolu par Pierre-Marie Esmenjaud Thibaut Maron)
+\end{tikzpicture}\]
+
+\[\begin{tikzpicture}[scale=1]
+\draw (0, 0)--(0,2 );
+\draw (2, 0)--(2,2 );
+\node at (0,0) {$V_1$};
+\node at (2,0) {$V_2$};
+\node at (0,2) {$P_1$};
+\node at (2,2) {$P_2$};
+
+\end{tikzpicture}\]
+
+On sait qu'il n'existe qu'un nombre fini de mani\`eres de relier les $n$ puits aux $n$ villages (avec ou sans croisements), \`a chacune de ces mani\`eres, on associe la longueur totale des segments de la configuration. Il existe donc une configuration qui minimise cette longueur totale.
+Montrons que dans celle-ci, aucun segment ne se croise.
+En effet, si deux chemins se croisent, alors en les d\'ecroisant, on obtient une configuration de longueur plus petite, ce qui contredit la minimalit\'e de la configuration pr\'ec\'edente.
+Ainsi le prince peut r\'eussir.
+
+
+
+
+\end{sol}
+
+
+
+\begin{sol}[69](Résolu par Pierre-Marie Esmenjaud et Thibaut Maron)
 
 Soit $a,b,c$ les longueurs des côtés d'un triangle. Montrons que l'on a toujours $a^2b(a-b)+b^2c(b-c)+c^2a(c-a) \geq 0$.\\
 On utilise la substitution de Ravi, il existe $x,y,z$ positifs tels que 
