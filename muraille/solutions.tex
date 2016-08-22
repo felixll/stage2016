@@ -177,6 +177,25 @@ Ainsi, le nombre de manières de carreler un rectangle $2 \times n$ est $2^n \ti
 
 \end{solution}
 
+\begin{sol}[102](Résolu par Olivier Garçonnet)
+On va montrer que $n = 7$.
+On montre d'abord, par récurrence sur le nombre $k$ de députés,
+que séparer les députés en $7$ groupes (éventuellement vides) est toujours faisable.
+Si $k \geq 7$, c'est évident. Ensuite, si $k \geq 8$, un député étant détesté
+par $3$ collègues en moyenne, il existe nécessairement un député détesté par au plus $3$ collègues.
+Appelons-le X, et excluons-le temporairement.
+
+Par hypothèse de récurrence, on peut répartir les $k-1$ députés restants en $7$ groupes.
+Au plus $6$ de ces groupes contiennent un député qui déteste ou est détesté par X.
+On peut donc mettre X dans le groupe restant (ou un des groupes restants),
+ce qui montre bien que l'on peut en fait répartir convenablement n'importe quelle famille de $k$ députés.
+Cela conclut la récurrence, montrant que $n \geq 7$.
+
+D'autre part, considérons six députés $X_0,\ldots,X_6$.
+Supposons que chaque député $X_i$ déteste les députés $X_j$ avec $j-i \in \{1,2,3\} \pmod{6}$.
+Alors on ne peut jamais mettre deux députés dans un même groupe, donc il nous faut au moins $7$ groupes.
+Cela montre que $n \geq 7$, donc que $n = 7$.
+\end{sol}
 
 \begin{sol}[130](Résolu par Pierre-Marie Esmenjaud Thibaut Maron)
 
