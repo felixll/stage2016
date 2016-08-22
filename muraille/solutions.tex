@@ -177,6 +177,19 @@ Ainsi, le nombre de manières de carreler un rectangle $2 \times n$ est $2^n \ti
 
 \end{solution}
 
+\begin{sol}[97](Résolu par Baptiste Serraille)
+
+On veut montrer que cinq droites rouges sont concourantes. Comme le problème est d\'efini de manière cyclique, il nous suffira de montrer que trois droites cons\'ecutives le sont. 
+
+On va montrer ceci par la m\'ethode dynamique de g\'eom\'etrie projective suivante : 
+on d\'efinit une transformation projective d'un espace unidimensionnel projectif sur lui-même (comme compos\'ee de transformations projectives \'el\'ementaires). Si l'\'enonc\'e final est vrai, cette transformation devrait être l'identit\'e (elle est construite dans cette optique). Or, \'etant une transformation projective, il suffira de montrer qu'elle est bien l'identit\'e pour trois points distincts de l'espace de d\'efinition pour montrer qu'elle est bien l'identit\'e sur tout l'espace. 
+
+En pratique, on fixe les points B, F, I, Y, H, J, E et donc les cercles circonscrits à IYFB, IYHJ et les droites (IY), (IHE), (JHFB), (BCE) et (IFC). On fait varier un point $P_1$ sur la droite (IY). Les projections suivantes sont des transformations projectives : $P_1$ est envoy\'e sur X, X est envoy\'e sur A, A est envoy\'e sur G, G est envoy\'e sur Z et Z est envoy\'e sur $P_2$ (point d'intersection de (JZ) et (IY)). 
+
+Il suffit maintenant de montrer que $P_1=P_2$ pour $3$ positions distinctes de $P_1$. Or $P_1=I$ et $P_1=(BFHJ)\cap (IY)$ sont des cas faciles. La troisième position qui correspond à $A = \infty$ (de la droite (IFC)) se montre en r\'eit\'erant la même m\'ethode projective que pr\'ec\'edemment. 
+	
+\end{sol}
+
 \begin{sol}[102](Résolu par Olivier Garçonnet)
 On va montrer que $n = 7$.
 On montre d'abord, par récurrence sur le nombre $k$ de députés,
