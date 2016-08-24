@@ -326,12 +326,42 @@ D'où $x=\sqrt{2}$ puisque $x$ est strictement positif.
 
 \end{sol}
 
+\begin{sol}[53](R\'esolu par Pierre-Marie Esmenjaud)
+		Soit $f$ une solution. 
+		On a, pour tous r\'eels $x,y,z,t$,$(f(x)+f(y))(f(z)+f(t))=f(xz+yt)+f(xt-yz)$.
+		En posant $x=y$ et $z=t=0$, on trouve $2f(x)*2f(0)=f(0)+f(0)=2*f(0)$. Par cons\'equent, si $f(0) \neq 0$, on a $f(x)=\frac{1}{2}$. \\
+		On suppose dans la suite que $f(0)=0$. En posant dans  $t=y=0$ on obtient 
+		\begin{align}
+		\label{d}
+				f(x)f(z)=f(xz)
+		\end{align}
+		et notamment 
+		\begin{align}
+		\label{db}
+				f(x^2)=f(x)^2 
+		\end{align}
+		En posant dans  $x=t=0$, il vient 
+		\begin{align}
+		\label{dt}
+				f(y)f(z)=f(-yz)
+		\end{align}
+		En posant $x=z$ et $y=t$, on trouve 
+		\begin{align}
+		\label{dq}
+				0 \leq (f(x)+f(y))^2=f(x^2+y^2)
+		\end{align}
+		En posant dans \ref{d} et \ref{dt}, toutes les variables \'egales \`a $x$, on trouve $f(x^2)=f(x)^2=f(-x^2)$; tout r\'eel positif \'etant un carr\'e, $f$ est paire. 
+		On s'aperçoit dans \ref{dq}, qu'avec $y=0$, $x=\sqrt(b)$, $b \geq 0$, on a $f(b) \geq 0$ et par parit\'e $f$ est positive. 
+		L'\'equation est en somme une \'equation de "Cauchy multiplicative", dont, pour des raisons similaires \`a celle de Cauchy additive, (consid\'erer l'application $g:x \longmapsto \ln(f(\exp(x)))$) les solutions croissantes sur $\R^{+*}$ sont les fonctions puissances et la fonction nulle. \\
+		S'il existe $y>0$ tel que $f(y)=0$, alors, pour $x>0$, $f(x)=f(y)f(\frac{x}{y})=0$ donc par parit\'e $f$ est nulle. 
+		Sinon, $f$ est strictement positive sur $\R^{+*}$ et pour $b > 0$ et $t > 0$, $f(b+t)=f(\sqrt{b}^2+\sqrt{t}^2)=(f(\sqrt{b})+f(\sqrt{t}))^2 > f(\sqrt{b})^2=f(b)$ (cf \ref{dq}), d'o\`u la croissance de $f$, et $f(x)=x^a$ pour tout $x > 0$, pour un r\'eel $a$ strictement positif. 
+		En posant dans l'\'equation \ref{dq} $x=y > 0$ il vient $(2f(x))^2=f(2x^2)$, d'o\`u $4x^{2a} = 2^ax^{2a}$, d'o\`u $4=2^a$ et $a=2$. \\
+		R\'eciproquement, on v\'erifie que les fonctions constantes \'egales \`a $\frac{1}{2}$ et $0$, ainsi que la fonction carr\'e  sont des solutions. 
+\end{sol}
 
-\begin{sol}[56](Résolu par Barthélémy Pelletier et Gaël Gallot)
 
-Barthélémy Pelletier groupe B
-Gaël Gallot groupe B
 
+\begin{sol}[53](Résolu par Barthélémy Pelletier et Gaël Gallot)
 L'aire du carré est $a^2$.
 
 L'aire du triangle est $\frac{\sqrt{3}}{4}b^2$.
@@ -396,6 +426,151 @@ Ainsi le prince peut r\'eussir.
 		On a alors $p!^{p+1} | p^2!$, et tel n'est pas le cas pour $p!^{p+2}$. 
 \end{sol}
 
+\begin{sol}[66](r\'esolu par Baptiste Serraille)
+\begin{center}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.50cm,y=0.50cm]
+\clip(3.34,1.66) rectangle (37.42,19.02);
+\draw (11.42,17.44)-- (7.02,8.38);
+\draw (7.02,8.38)-- (18.02,7.62);
+\draw (18.02,7.62)-- (20.74,11.6);
+\draw (20.74,11.6)-- (11.42,17.44);
+\draw (13.75,15.98)-- (9.77,8.19);
+\draw (12.52,8.)-- (16.08,14.52);
+\draw (18.41,13.06)-- (15.27,7.81);
+\draw (10.32,15.175)-- (20.06,10.605);
+\draw (9.22,12.91)-- (19.38,9.61);
+\draw (8.12,10.645)-- (18.7,8.615);
+\begin{scriptsize}
+\draw [fill=qqqqff] (11.42,17.44) circle (0.5pt);
+\draw [fill=qqqqff] (7.02,8.38) circle (0.5pt);
+\draw [fill=qqqqff] (20.74,11.6) circle (0.5pt);
+\draw [fill=qqqqff] (18.02,7.62) circle (0.5pt);
+\draw [fill=uuuuuu] (16.08,14.52) circle (0.5pt);
+\draw [fill=uuuuuu] (9.22,12.91) circle (0.5pt);
+\draw [fill=uuuuuu] (12.52,8.) circle (0.5pt);
+\draw [fill=uuuuuu] (19.38,9.61) circle (0.5pt);
+\draw [fill=uuuuuu] (20.06,10.605) circle (0.5pt);
+\draw[color=uuuuuu] (20.36,10.74) node {$X_5$};
+\draw [fill=uuuuuu] (18.41,13.06) circle (0.5pt);
+\draw [fill=uuuuuu] (13.75,15.98) circle (0.5pt);
+\draw [fill=uuuuuu] (10.32,15.175) circle (0.5pt);
+\draw[color=uuuuuu] (10.68,15.4) node {$X_1$};
+\draw [fill=uuuuuu] (8.12,10.645) circle (0.5pt);
+\draw [fill=uuuuuu] (9.77,8.19) circle (0.5pt);
+\draw [fill=uuuuuu] (15.27,7.81) circle (0.5pt);
+\draw [fill=uuuuuu] (18.7,8.615) circle (0.5pt);
+\draw [fill=uuuuuu] (12.755,14.0325) circle (0.5pt);
+\draw[color=uuuuuu] (13.14,14.14) node {$X_2$};
+\draw [fill=uuuuuu] (15.19,12.89) circle (0.5pt);
+\draw[color=uuuuuu] (15.62,13.04) node {$X_3$};
+\draw [fill=uuuuuu] (17.625,11.7475) circle (0.5pt);
+\draw[color=uuuuuu] (18.06,11.88) node {$X_4$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+
+On considère la $j$-\`eme ligne du rectangle $ABCD$.
+Nous allons montrer que $\overrightarrow{X_1X_2}=\overrightarrow{X_iX_{i+1}}$ pour tout $0\leq i\leq n$. En effet en identifiant les points à des vecteurs on pose:
+
+$$X'_i=\frac{j\left(\frac{iD+(n-i)A}{n}\right)+(n-j)\left(\frac{iC+(n-i)B}{n}\right)}{n}$$
+
+$$X'_i=\frac{i\left(\frac{jD+(n-j)C}{n}\right)+(n-i)\left(\frac{jA+(n-j)B}{n}\right)}{n}$$
+
+Ainsi $X'_i=X_i$ car il appartient aux deux droites s'intersectant en $X_i$.
+On en déduit que $\overrightarrow{X_1X_2}=\overrightarrow{X_iX_{i+1}}$.
+
+A présent il suffit de montrer que si l'on consid\`ere 4 carrés comme suit, alors $|AX_1Z_1X_2|+|Z_3X_1CY_2|=|XZ_4YD|+|Y_3BX_3Z_2|$
+
+En effet $(n-1)^2|X_2Y_1Z_1|=|Z_1X_3Y|$, et on en déduit que :
+
+$$(n-1)^2(|AX_1Z_1X_2|+|Z_3X_1CY_2|)=|AY_3Z_3X|+|Z_1X_3CY|$$
+
+$$(n-1)^2(|XZ_4YD|+|Z_2X_3BY_3|)=|X_2Z_2Y_2D|+|Y_1BX_1Z_4|$$
+
+On en déduit le résultat car:
+
+
+$$((n-1)^2-1)(|AX_1Z_1X_2|+|Z_3X_1CY_2|)=((n-1)^2-1)(|AY_3Z_3X|+|XZ_4YD|+|Y_3BX_3Z_2|)$$
+
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.50cm,y=0.50cm]
+\clip(1.42,3.4) rectangle (35.5,20.76);
+\fill[fill=black,fill opacity=0.1] (11.86,17.52) -- (10.65,15.235) -- (13.0025,14.0775) -- (14.08,16.04) -- cycle;
+\fill[fill=black,fill opacity=0.1] (18.52,13.08) -- (17.7075,11.7625) -- (20.06,10.605) -- (20.74,11.6) -- cycle;
+\fill[fill=black,fill opacity=0.1] (10.8475,10.1525) -- (8.23,10.665) -- (7.02,8.38) -- (9.77,8.19) -- cycle;
+\fill[fill=black,fill opacity=0.1] (16.0825,9.1275) -- (15.27,7.81) -- (18.02,7.62) -- (18.7,8.615) -- cycle;
+\draw (11.86,17.52)-- (7.02,8.38);
+\draw (7.02,8.38)-- (18.02,7.62);
+\draw (18.02,7.62)-- (20.74,11.6);
+\draw (20.74,11.6)-- (11.86,17.52);
+\draw (14.08,16.04)-- (9.77,8.19);
+\draw (12.52,8.)-- (16.3,14.56);
+\draw (18.52,13.08)-- (15.27,7.81);
+\draw (10.65,15.235)-- (20.06,10.605);
+\draw (9.44,12.95)-- (19.38,9.61);
+\draw (8.23,10.665)-- (18.7,8.615);
+\draw (11.86,17.52)-- (10.65,15.235);
+\draw (10.65,15.235)-- (13.0025,14.0775);
+\draw (13.0025,14.0775)-- (14.08,16.04);
+\draw (14.08,16.04)-- (11.86,17.52);
+\draw (18.52,13.08)-- (17.7075,11.7625);
+\draw (17.7075,11.7625)-- (20.06,10.605);
+\draw (20.06,10.605)-- (20.74,11.6);
+\draw (20.74,11.6)-- (18.52,13.08);
+\draw (10.8475,10.1525)-- (8.23,10.665);
+\draw (8.23,10.665)-- (7.02,8.38);
+\draw (7.02,8.38)-- (9.77,8.19);
+\draw (9.77,8.19)-- (10.8475,10.1525);
+\draw (16.0825,9.1275)-- (15.27,7.81);
+\draw (15.27,7.81)-- (18.02,7.62);
+\draw (18.02,7.62)-- (18.7,8.615);
+\draw (18.7,8.615)-- (16.0825,9.1275);
+\begin{scriptsize}
+\draw [fill=qqqqff] (11.86,17.52) circle (0.5pt);
+\draw[color=qqqqff] (12.,17.72) node {$A$};
+\draw [fill=qqqqff] (7.02,8.38) circle (0.5pt);
+\draw[color=qqqqff] (6.7,8.56) node {$C$};
+\draw [fill=qqqqff] (20.74,11.6) circle (0.5pt);
+\draw[color=qqqqff] (20.88,11.8) node {$B$};
+\draw [fill=qqqqff] (18.02,7.62) circle (0.5pt);
+\draw[color=qqqqff] (18.14,7.24) node {$C$};
+\draw [fill=uuuuuu] (16.3,14.56) circle (0.5pt);
+\draw [fill=uuuuuu] (9.44,12.95) circle (0.5pt);
+\draw [fill=uuuuuu] (12.52,8.) circle (0.5pt);
+\draw [fill=uuuuuu] (19.38,9.61) circle (0.5pt);
+\draw [fill=uuuuuu] (20.06,10.605) circle (0.5pt);
+\draw[color=uuuuuu] (20.38,10.3) node {$X_3$};
+\draw [fill=uuuuuu] (18.52,13.08) circle (0.5pt);
+\draw[color=uuuuuu] (18.68,13.56) node {$Y_3$};
+\draw [fill=uuuuuu] (14.08,16.04) circle (0.5pt);
+\draw[color=uuuuuu] (14.26,16.3) node {$Y_4$};
+\draw [fill=uuuuuu] (10.65,15.235) circle (0.5pt);
+\draw[color=uuuuuu] (10.3,15.6) node {$X_2$};
+\draw [fill=uuuuuu] (8.23,10.665) circle (0.5pt);
+\draw[color=uuuuuu] (7.92,11.02) node {$X$};
+\draw [fill=uuuuuu] (9.77,8.19) circle (0.5pt);
+\draw[color=uuuuuu] (9.66,7.84) node {$Y$};
+\draw [fill=uuuuuu] (15.27,7.81) circle (0.5pt);
+\draw[color=uuuuuu] (15.2,7.52) node {$Y_2$};
+\draw [fill=uuuuuu] (18.7,8.615) circle (0.5pt);
+\draw[color=uuuuuu] (19.06,8.54) node {$Y_1$};
+\draw [fill=uuuuuu] (13.0025,14.0775) circle (0.5pt);
+\draw[color=uuuuuu] (13.16,13.66) node {$Z_1$};
+\draw [fill=uuuuuu] (15.355,12.92) circle (0.5pt);
+\draw [fill=uuuuuu] (17.7075,11.7625) circle (0.5pt);
+\draw[color=uuuuuu] (17.4,12.44) node {$Z_2$};
+\draw [fill=uuuuuu] (10.8475,10.1525) circle (1.5pt);
+\draw[color=uuuuuu] (10.36,10.78) node {$Z_4$};
+\draw [fill=uuuuuu] (16.0825,9.1275) circle (1.5pt);
+\draw[color=uuuuuu] (15.74,9.7) node {$Z_3$};
+\end{scriptsize}
+\end{tikzpicture}
+
+On applique cette opération pour montrer que l'aire de nos cases est la même que l'aire des cases de  chaque diagonale, ainsi on a une aire de $\frac{|ABCD|}{n}$
+\end{sol}
 
 \begin{sol}[67](Résolu par Joris Leroy-Savin et \'Etienne Massart et d'autre part par Thomas Grenier)
 
@@ -951,7 +1126,50 @@ avec $m-n\geq 1$. Mais $m^2+mn+n^2 >3mn$ d'apr\`es l'in\'egalit\'e arithm\'etico
 ce qui est absurde. Sinon, des calculs directs pour $mn\leq 7$ et $m>n$ (qui font en tout 7 cas \`a v\'erifier \`a la main) montrent qu'il n'y pas de solutions non plus dans ces cas. Donc l'\'equation n'a pas d'autres solutions que $(0,4)$ et $(0,-4)$.
 \end{sol}
 
-
+\begin{sol}[119](R\'esolu par Baptiste S\'erail et Ilyes Hamdi)
+\definecolor{zzttqq}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqqqff}{rgb}{0.3333333333333333,0.3333333333333333,0.3333333333333333}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+\clip(-5.,-5.) rectangle (5.,5.);
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (-0.66,1.64) -- (-1.58,-1.44) -- (2.7,-1.34) -- cycle;
+\draw [color=zzttqq] (-0.66,1.64)-- (-1.58,-1.44);
+\draw [color=zzttqq] (-1.58,-1.44)-- (2.7,-1.34);
+\draw [color=zzttqq] (2.7,-1.34)-- (-0.66,1.64);
+\draw [domain=-5.:5.] plot(\x,{(-1.0176-3.36*\x)/-2.98});
+\draw(-1.6798540915480051,-0.5312448817454015) circle (1.1994172235457525cm);
+\draw [domain=-5.:5.] plot(\x,{(-1.5008-1.49*\x)/1.68});
+\draw(0.45519097964920857,-1.5081739289861273) circle (1.1255498665362311cm);
+\draw [domain=-5.:5.] plot(\x,{(--0.05511616622834137-3.642458273645066*\x)/-1.6666736168200937});
+\begin{scriptsize}
+\draw [fill=qqqqff] (-0.66,1.64) circle (2.5pt);
+\draw[color=qqqqff] (-0.52,2.) node {$A$};
+\draw [fill=qqqqff] (-1.58,-1.44) circle (2.5pt);
+\draw[color=qqqqff] (-2.,-1.38) node {$B$};
+\draw [fill=qqqqff] (2.7,-1.34) circle (2.5pt);
+\draw[color=qqqqff] (2.84,-0.98) node {$C$};
+\draw[color=black] (4.04,5.28) node {$f$};
+\draw [fill=zzttqq] (0.35403034209221595,0.7406516608824988) circle (1.5pt);
+\draw[color=zzttqq] (0.28,1.22) node {$H$};
+\draw [fill=zzttqq] (-1.12,0.1) circle (1.5pt);
+\draw[color=zzttqq] (-1.26,0.62) node {$M$};
+\draw [fill=zzttqq] (0.56,-1.39) circle (1.5pt);
+\draw[color=zzttqq] (0.7,-1.12) node {$N$};
+\draw[color=black] (-6.66,5.28) node {$g$};
+\draw [fill=zzttqq] (-2.8,1.59) circle (1.5pt);
+\draw[color=zzttqq] (-2.6,1.86) node {$N'$};
+\draw [fill=zzttqq] (-1.3126432747278778,-2.9018066127625675) circle (1.5pt);
+\draw[color=zzttqq] (-1.06,-3.56) node {$P$};
+\draw[color=black] (2.14,5.28) node {$h$};
+\draw [fill=zzttqq] (-0.28,-0.645) circle (1.5pt);
+\draw[color=zzttqq] (-0.6,-0.82) node {$X$};
+\draw [fill=zzttqq] (2.24,-2.88) circle (1.5pt);
+\draw[color=zzttqq] (2.68,-2.9) node {$M'$};
+\end{scriptsize}
+\end{tikzpicture}
+		On d\'efinit les points $X$,$N'$,$M'$ comme apparent sur la figure. On rappelle que le cercle de diam\`etre $[AB]$ passe par $H$ et donc $MA=MH$, et de m\^eme $NH=NC$. On rappelle enfin que $(MN)$ et $(BC)$ sont parall\`eles. \\
+		$X$ est sur $(PH)$, axe radical des cercles circonscrits \`a $BMH$ et \`a $ANH$, et donc $XM.XM'=XN.XN'=p$. Puisque $AHNN'$ est un trap\`eze inscriptible, il est isoc\`ele. Comme $AM=MH$, la droite liant $M$ et le milieu de $[AH]$ est la m\'ediatrice de $[AH]$ et est alors un axe de sym\'etrie du trap\`eze. Il s'ensuit que $M$ est le milieu de $[NN']$. De m\^eme, comme $MHCM'$ est un trap\`eze inscriptible et $NH=NC$, $N$ est milieu de $[MM']$, d'o\`u il suit $N'M=MN=NM'$ et donc $XN+XN'=NN'=NM+NM'=MN+MN'=MM'=XM+XM'=s$. Par suite, $XM,XM'$ et $XN,XN'$ sont deux paires de racines du polyn\^ome $X^2-sX+p$: on a en cons\'equence ou bien $XM=XN'$ et $XN=XM'$, ou bien $XM=XN$ et $XM'=XN'$. Le premier cas est clairement impossible, parce que $XM < MN=MN' <XN'$. Ainsi, $XM=XN$ et $X$ est le milieu de $[MN]$.  
+\end{sol}
+ 
 
 \begin{sol}[126](Résolu par Joachim Studnia)
 

@@ -1,0 +1,119 @@
+\subsubsection*{Autour de la symédiane}
+
+\begin{defn}
+Soit $ABC$ un triangle. La \textit{symédiane issue de $A$} dans $ABC$ est le symétrique de la médiane issue de $A$ par rapport à la bissectrice de $\widehat{BAC}$.
+\end{defn}
+
+\begin{lem}
+Soit $S$ le point où la symédiane issue de $A$ recoupe $[BC]$. On a $\frac{SB}{SC}=\Big( \frac{AB}{AC} \Big)^2$.
+\end{lem}
+
+\begin{proof}
+On utilise la loi des sinus. Soit $M$ le milieu de $BC$. On a :
+\[\frac{SB}{SC}=\frac{AB \frac{\sin \widehat{SAB}}{\sin \widehat{ASB}}}{AC \frac{\sin \widehat{SAC}}{\sin \widehat{ASC}}}=\frac{AB}{AC} \frac{\sin \widehat{CAM}}{\sin \widehat{BAM}}=\frac{AB}{AC} \frac{\frac{CM}{AC} \sin \widehat{AMC}}{\frac{BM}{AB} \sin \widehat{AMB}}=\Big( \frac{AB}{AC} \Big)^2.\]
+\end{proof}
+
+\begin{lem}
+Soit $ABC$ un triangle et $\Gamma$ son cercle circonscrit. Les tangentes à $\Gamma$ en $B$ et $C$ se recoupent en $D$. Alors $(AD)$ est la symédiane issue de $A$ dans $ABC$.
+\end{lem}
+
+\begin{proof}
+On présente une preuve trigonométrique : soit $(d)$ le symétrique de $(AD)$ par rapport à la bissectrice de $\widehat{BAC}$ : il suffit de montrer que $(d)$ est la médiane issue de $A$. Soit donc $M$ son intersection avec $[BC]$ : on veut montrer que $M$ est le milieu de $[BC]$. En utilisant la loi des sinus, on obtient :
+\[\frac{MB}{MC}=\frac{AM \frac{\sin \widehat{BAM}}{\sin \widehat{ABM}}}{AM \frac{\sin \widehat{CAM}}{\sin \widehat{ACM}}}=\frac{\sin \widehat{ACB}}{\sin \widehat{ABC}} \frac{\sin \widehat{CAD}}{\sin \widehat{BAD}}=\frac{\sin \widehat{ABD}}{\sin \widehat{BAD}} \frac{\sin \widehat{CAD}}{\sin \widehat{ACD}}=\frac{AD}{BD} \frac{CD}{AD}=\frac{CD}{BD}=1.\]
+
+Voici également une preuve synthétique : soit $\Gamma$ le cercle de centre $D$ passant par $B$ et $C$. Il recoupe $(AB)$ en $P$ et $(AC)$ en $Q$. On vérifie par chasse aux angles que $P$, $D$ et $Q$ sont alignés, donc $D$ est le milieu de $[PQ]$. D'autre part, toujours par chasse aux angles, les triangles $ABC$ et $APQ$ sont indirectement semblables. La similitude qui envoie $APQ$ sur $ABC$ envoie donc $D$ sur le milieu $M$ de $[BC]$, donc $\widehat{PAD}=\widehat{BAM}$, ce qui permet de conclure.
+\end{proof}
+
+\begin{exo}
+Soit $ABC$ un triangle isocèle en $C$ et $P$ un point à l'intérieur de $ABC$ vérifiant $\widehat{PAB}=\widehat{PBC}$. Soit aussi $M$ le milieu de $ABC$. Montrer $\widehat{APM}+\widehat{BPC}=180^{\circ}$.
+\end{exo}
+
+\begin{sol}
+On a $\widehat{PAC}=\widehat{BAC}-\widehat{PAB}=\widehat{ABC}-\widehat{PBC}=\widehat{PBA}$, donc le cercle circonscrit à $PAB$ est tangent à $(AC)$, et de même à $(BC)$. D'après le lemme, $(PC)$ est donc la symédiane issue de $P$ dans $PAB$, d'où on déduit aisément l'égalité voulue.
+\end{sol}
+
+\begin{exo}
+On fixe trois points $A$, $B$ et $C$ sur une droite dans cet ordre. Soit $\Gamma$ un cercle passant par $A$ et $C$. Les tangentes à $\Gamma$ en $A$ et $C$ se coupent en $P$. Soit $Q$ l'intersection de $[BP]$ avec $\Gamma$ et $X$ l'intersection de la bissectrice de $\widehat{AQC}$ avec $(AC)$. Montrer que $X$ est fixe quand $\Gamma$ varie.
+\end{exo}
+
+\begin{sol}
+D'après le lemme $(PQ)$ est la symédiane issue de $Q$ dans $AQC$ donc son pied est $B$, donc $\frac{BA}{BC}=\Big( \frac{XA}{XC} \Big)^2$, donc $\frac{XA}{XC}$ est fixe et $X$ est fixe.
+\end{sol}
+
+%\begin{exo} (TEST ?)
+%Deux cercles $\Gamma_1$ et $\Gamma_2$ se coupent en $A$ et $B$. Une tangente commune extérieure touche $\Gamma_1$ en $P$ et $\Gamma_2$ en $Q$. Les tangentes en $P$ et $Q$ au cercle circonscrit à $APQ$ s'intersectent en $S$. Soit $C$ le symétrique de $B$ par rapport à $(PQ)$. Montrer que $A$, $C$ et $H$ sont alignés.
+%\end{exo}
+%
+%\begin{sol}
+%On sait que $(AS)$ est la symédiane issue de $A$ dans $APQ$, donc il suffit de montrer que $H$ est sur la symédiane. De plus, comme $(AB)$ est l'axe radical de $\Gamma_1$ et $\Gamma_2$, elle recoupe $[PQ]$ en son milieu donc $(AB)$ est la médiane issue de $A$, donc il suffit de montrer $\widehat{PAH}=\widehat{QAB}$.
+%
+%Or, par chasse aux angles on a $\widehat{PHQ}=\widehat{PBQ}=180^{\circ}-\widehat{PAQ}$ donc $A$, $P$, $Q$ et $H$ sont cocycliques. On en déduit 
+%\[\widehat{PAH}=\widehat{PQH}=\widehat{PQB}=\widehat{QAB}.\]
+%\end{sol}
+
+\begin{exo}
+Soit $ABC$ un triangle et $S$ le centre de la similitude directe qui envoie $B$ sur $A$ et $A$ sur $C$. Montrer que $(AS)$ est la symédiane issue de $A$ dans $ABC$.
+\end{exo}
+
+\begin{sol}
+Soit $D$ le point d'intersection des tangentes à $\Gamma$ en $B$ et $C$ : il suffit de montrer que $A$, $S$ et $D$ sont alignés. Par chasse aux angles, on a $\widehat{BSC}=2 \widehat{BAC}$ et $BDC=180^{\circ} - 2 \widehat{BAC}$ donc $B$, $C$, $D$ et $S$ sont cocycliques. On obtient donc $\widehat{BSD}=\widehat{BCD}=\widehat{BAC}$ et $\widehat{BSA}=180^{\circ}-\widehat{BAC}$, donc $A$, $S$ et $D$ sont bien alignés.
+\end{sol}
+
+\begin{exo}
+ Soit $ABC$ un triangle acutangle scal\`ene, et soient $M,N$ et $P$ les milieux respectifs de
+$[BC]$, $[CA]$ et $[AB]$. Les m\'ediatrices de $[AB]$ et $[AC]$ coupent la droite $(AM)$ aux
+points $D$ et $E$ respectivement. Soit $F$ le point d'intersection entre $(BD)$ et $(CE)$.
+Montrer que $A,N,F$ et $P$ sont cocycliques.
+\end{exo}
+
+\begin{sol}
+Soit $S$ le centre de la similitude de l'exercice précédent. On va montrer $S=F$. On a ${SBA}=\widehat{SAC}=\widehat{MAB}=\widehat{FBA}$, et de même $\widehat{SCA}=\widehat{FCA}$ donc $S=F$. Le point $F$ est donc le centre d'une similitude qui envoie $B$ sur $A$, $A$ sur $C$ et donc $P$ sur $N$. On peut donc conclure par chasse aux angles :
+\[\widehat{FNP}=\widehat{FAB}=\widehat{FAP}.\]
+\end{sol}
+
+\begin{exo}
+Soient $\Gamma_1$ et $\Gamma_2$ deux cercles de centres $O_1$ et $O_2$, et $A$ un de leurs points d'intersection. Une tangente commune à $\Gamma_1$ et $\Gamma_2$ les touche respectivement en $B$ et $C$. Soit $O_3$ le centre du cercle circonscrit à $ABC$. Soient $M$ le milieu de $[O_1 O_2]$ et $D$ le symétrique de $O_3$ par rapport à $A$. Montrer que $\widehat{O_1 DA}=\widehat{O_2 DM}$.
+\end{exo}
+
+\begin{sol}
+On a $\widehat{AO_1 B}=2 \widehat{ABC}=\widehat{AO_3 C}$ et les triangles $AO_1B$ et $AO_3 C$ sont isocèles donc ils sont semblables. On en déduit que $AO_1 O_3$ et $ABC$ sont semblables et, de même, $AO_3 O_2$ et $ABC$ sont semblables, donc $AO_1 O_3$ et $AO_3 O_2$ sont semblables.
+
+Pour conclure que $(DA)$ est la symédiane issue de $D$ dans $DO_1 O_2$, il suffirait de montrer que $A$ est le centre de la similitude directe qui envoie $O_1$ sur $D$ et $D$ sur $O_2$, donc il suffit de montrer que $AO_1 D$ et $ADO_2$ sont semblables. Or, on a $\widehat{O_1 AD}=180^{\circ}-\widehat{O_1 A O_3}=180^{\circ}-\widehat{O_3 A O_2}=\widehat{DAO_2}$. De plus, $\frac{AO_1}{AD}=\frac{AO_1}{AO_3}=\frac{AO_3}{AO_2}=\frac{AD}{A0_2}$, ce qui permet de conclure.
+\end{sol}
+
+\begin{exo}
+Soit $ABC$ un triangle. Les tangentes en $B$ et $C$ au cercle
+circonscrit \`a $ABC$ se coupent en $T$. Soit $S$ le point de $(BC)$ tel que $(AS)\perp (AT)$.
+Les points $B_1$ et $C_1$ se trouvent sur la droite $(ST)$ de sorte que $B_1$ se trouve
+entre $C_1$ et $S$, et $B_1T=BT=C_1T$. Montrer que les triangles $ABC$ et $AB_1C_1$ sont semblables.
+\end{exo}
+
+\begin{sol}
+Soit $M$ le milieu de $[BC]$. Il suffit de montrer que $AMC$ et $ATC_1$ sont semblables. Comme $A$, $M$, $S$ et $T$ sont cocycliques sur le cercle de diamètre $[ST]$, on a $\widehat{AMC}=\widehat{ATC_1}$ donc il suffit de montrer $\frac{AM}{CM}=\frac{AT}{C_1 T}$, soit $\frac{AM}{CM}=\frac{AT}{BT}$. On a fait disparaître tous les points "gênants", et la relation doit être facile à montrer, par exemple à coups de trigonométrie :
+\[\frac{AT}{BT}=\frac{\sin \widehat{ABT}}{\sin \widehat{BAT}}=\frac{\sin \widehat{ACM}}{\sin \widehat{CAM}}=\frac{AM}{CM}.\]
+\end{sol}
+
+\begin{exo}
+Soit $ABC$ un triangle et $\Gamma$ son cercle circonscrit. La bissectrice de $\widehat{BAC}$ coupe $[BC]$ en $D$ et $\Gamma$ en $E$. Le cercle de diamètre $[DE]$ recoupe $\Gamma$ en $F$. Soit $M$ le milieu de $[BC]$. Montrer que $\widehat{BAF}=\widehat{CAM}$.
+\end{exo}
+
+\begin{sol}
+On montre $FCM \sim FAB$ par chasse aux angles, et on termine en trigo.
+\end{sol}
+
+\begin{exo}(BMO 2009)
+Soit $ABC$ un triangle. Une droite parallèle \`a $(BC)$ coupe $[AB]$ en $M$ et $[AC]$ en $N$. Soit $P$ le point d'intersection de $(BN)$ et $(CM)$. Les cercles circonscrits \`a $BMP$ et $CNP$ se recoupent en $Q$.
+
+Montrer que $\widehat{PAB}=\widehat{QAC}$.
+\end{exo}
+
+\begin{sol}
+Commençons par nous occuper de $P$ : d'après le th\'eorème de Ceva et celui de Thalès, $(AP)$  est une m\'ediane de $ABC$, ce qui signifie que $\widehat{PAB}$ ne pourra pas s'exprimer de manière simple. On va donc utiliser de la trigonom\'etrie.
+
+On remarque que $Q$ est le centre de la similitude directe $s$ qui envoie $B$ sur $N$ et $M$ sur $C$. Pour pouvoir faire des calculs trigonom\'etriques sur $\widehat{QAB}$ et $\widehat{QAC}$, on introduit les projet\'es orthogonaux $R$ et $S$ de $Q$ sur $(AB)$ et $(AC)$. On a $s(R)=S$ donc $\frac{QS}{QR}$ est \'egal au rapport de $s$, soit $\frac{NC}{BM}=\frac{AC}{AB}$ par Thalès. On en d\'eduit $\frac{\sin{\widehat{QAC}}}{\sin{\widehat{QAB}}}=\frac{QS/QA}{QR/QA}=\frac{AC}{AB}$.
+
+D'un autre c\^ot\'e, si $M$ est le milieu de $[BC]$, on a en utilisant plusieurs fois la loi des sinus :
+\[ \frac{\sin{\widehat{PAB}}}{\sin{\widehat{PAC}}}=\frac{\sin{\widehat{MAB}}}{\sin{\widehat{MAC}}}=\frac{\frac{BM}{AM} \sin{\widehat{ABM}}}{\frac{CM}{AM} \sin{\widehat{ACM}}}=\frac{\sin{\widehat{ABC}}}{\sin{\widehat{ACB}}}=\frac{AC}{AB}=\frac{\sin{\widehat{QAC}}}{\sin{\widehat{QAB}}} \]
+
+Autrement dit, $f(\widehat{PAB})=f(\widehat{QAC})$ avec $f(x)=\frac{\sin{x}}{\sin{ (\widehat{BAC}-x)}}$. On peut v\'erifier que cette fonction est strictement croissante, par exemple en la d\'erivant (exercice), d'o\`u $\widehat{PAB}=\widehat{QAC}$.
+\end{sol}

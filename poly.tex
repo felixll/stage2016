@@ -349,6 +349,7 @@ width 5cm\end{center}}
 %\DeclareMathOperator{\Z}{\mathbb{Z}}
 \DeclareMathOperator{\Prob}{\mathbb{P}}
 \DeclareMathOperator{\aire}{aire}
+\newcommand\TFJM{\mathbb{T}\mathbb{F}\mathbb{J}\mathbb{M}^2}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \newcommand{\nstar}[1]
@@ -366,7 +367,7 @@ width 5cm\end{center}}
 % détermine si le poly est en version courte ou longue
 \newif\ifcourt
 
-\courtfalse
+\courttrue
 \begin{document}
 
 \import{misc/}{premieres_pages.tex}
@@ -441,10 +442,10 @@ width 5cm\end{center}}
 
 \import{coupe/}{evaluation}
 
-
 %%%%%%%%%%%%%%%%
 
-
+\ifcourt
+\else
 \chapter{Première période}
 \minitoc \bigskip
 
@@ -461,18 +462,43 @@ width 5cm\end{center}}
 
 \import{cours/A/}{17_PM}
 
-\subsection{jeudi 18 matin : Wassim Trabelsi}
+\subsection{jeudi 18 matin : Eva Philippe}
 
 \import{cours/A/}{18_AM}
 
-\subsection{vendredi 19 matin : Mehdi Trense}
+\subsection{vendredi 19 matin : Wassim Trabelsi}
 
 \import{cours/A/}{19_AM}
 
-\subsection{vendredi 19 après-midi : Eva Philippe}
+\subsection{vendredi 19 après-midi : Mehdi Trense}
 
 \import{cours/A/}{19_PM}
 
+\section {Groupe C : arithmétique}
+
+\subsection{mercredi 17 matin : Giancarlo Lucchini-Artecche}
+
+\import{cours/C/}{17_AM}
+
+\subsection{mercredi 17 après-midi : Mehdi Trense}
+
+\import{cours/C/}{17_PM}
+
+\subsection{jeudi 18 matin : Élie Studnia}
+
+\import{cours/C/}{18_AM}
+
+\subsection{jeudi 18 après-midi : Élie Studnia}
+
+\import{cours/C/}{18_PM}
+
+\subsection{vendredi 19 matin : Jean-Louis Tu}
+
+\import{cours/C/}{19_AM}
+
+\subsection{vendredi 19 après-midi : Igor Kortchemski}
+
+\import{cours/A/}{19_PM}
 
 \section {Groupe D : arithmétique}
 
@@ -480,7 +506,27 @@ width 5cm\end{center}}
 
 \import{cours/D/}{17_AM}
 
+\subsection{mercredi 17 après-midi : François Lo Jacomo}
 
+\import{cours/D/}{17_PM}
+
+\subsection{jeudi 18 matin : Igor Kortchemski}
+
+\import{cours/D/}{18_AM}
+
+\subsection{jeudi 18 après-midi : Thomas Budzinski}
+
+\import{cours/D/}{18_PM}
+
+\subsection{vendredi 19 matin : François Lo Jacomo}
+
+\import{cours/D/}{19_AM}
+
+\subsection{vendredi 19 après-midi : Jean-Louis Tu}
+
+\import{cours/D/}{19_PM}
+
+\fi
 
 \chapter{Samedi 20 matin : Test de mi-parcours}
 \minitoc \bigskip
@@ -532,8 +578,9 @@ width 5cm\end{center}}
 \import{tests/1/D/}{solution}
 
 
-
-\chapter{Première période}
+ \ifcourt
+\else
+\chapter{Deuxième période}
 \minitoc \bigskip
 
 
@@ -567,7 +614,7 @@ width 5cm\end{center}}
 \subsection{mercredi 17 matin : Matthieu Lequesne}
 
 \import{cours/D/}{17_AM}
-
+\fi
 \chapter{Mercredi 24 matin : Test de fin de parcours}
 \minitoc \bigskip
 
@@ -615,7 +662,7 @@ width 5cm\end{center}}
 
 \subsection{Solution}
 
-\import{tests/1/D/}{solution}
+\import{tests/2/D/}{solution}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -632,6 +679,10 @@ width 5cm\end{center}}
 \section{jeudi 18 : Les Olympiades de Mathématiques}
 
 \import{conf/}{olympiades}
+
+\section{dimanche 21 : $\TFJM$}
+
+\import{conf/}{tfjm}
 
 \section{lundi 22 : Tresses et treillis}
 \import{conf/}{tresses}

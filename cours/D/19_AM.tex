@@ -1,0 +1,365 @@
+\Large \textbf{Exercices sur les quadrilatères inscriptibles...}
+
+\normalsize
+
+\bigskip
+\bigskip
+
+
+\begin{exo}
+
+\medskip
+
+Soit $ABCD$ un quadrilatère convexe inscriptible. Les droites $(AD)$ et $(BC)$ se coupent en $P$, les droites $(AB)$ et $(CD)$ se coupent en $Q$. On suppose en outre que l'angle $\widehat{APQ} = 90^o$. Montrer que la perpendiculaire à $(AB)$ issue de $P$ passe par le milieu $M$ de la diagonale $[BD]$.
+
+\end{exo}
+
+%\bigskip
+\begin{center}
+
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-1.,-8.) rectangle (9.,5.);
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (4.733816910610175,-2.200395443517777) -- (4.743794927594294,-2.6635351329860395) -- (5.206934617062557,-2.6535571160019207) -- (5.196956600078438,-2.190417426533658) -- cycle; 
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.05] (5.068119415635349,3.789690012640549) -- (0.9752579456365513,-1.2636488412624867) -- (2.1200325312746386,-2.674263452328116) -- (5.22,-3.26) -- cycle;
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (4.711900980404406,-1.1831455103833926) -- (4.721878997388525,-1.6462851998516554) -- (5.185018686856788,-1.6363071828675362) -- (5.1750406698726685,-1.1731674933992735) -- cycle; 
+\draw(4.277166937444032,0.2461684148233778) circle (3.630723225054995cm);
+\draw (0.13633338420845914,-2.299444973829707)-- (5.068119415635349,3.789690012640549);
+\draw (5.068119415635349,3.789690012640549)-- (5.291576709403076,-6.58230492480231);
+\draw (0.13633338420845914,-2.299444973829707)-- (5.291576709403076,-6.58230492480231);
+\draw (0.13633338420845914,-2.299444973829707)-- (5.22,-3.26);
+\draw (0.13633338420845914,-2.299444973829707)-- (5.196956600078438,-2.190417426533658);
+\draw (0.9752579456365513,-1.2636488412624867)-- (5.291576709403076,-6.58230492480231);
+\draw (0.9752579456365513,-1.2636488412624867)-- (5.22,-3.26);
+\draw [line width=2.pt,color=zzttqq] (5.068119415635349,3.789690012640549)-- (0.9752579456365513,-1.2636488412624867);
+\draw [line width=2.pt,color=zzttqq] (0.9752579456365513,-1.2636488412624867)-- (2.1200325312746386,-2.674263452328116);
+\draw [line width=2.pt,color=zzttqq] (2.1200325312746386,-2.674263452328116)-- (5.22,-3.26);
+\draw [line width=2.pt,color=zzttqq] (5.22,-3.26)-- (5.068119415635349,3.789690012640549);
+\draw [dash pattern=on 5pt off 5pt] (0.9752579456365513,-1.2636488412624867)-- (5.1750406698726685,-1.1731674933992735);
+\draw [dash pattern=on 5pt off 5pt] (3.1444098359598187,-3.92274005721417) circle (3.418129732371377cm);
+\draw [dash pattern=on 5pt off 5pt] (0.13633338420845914,-2.299444973829707)-- (5.1750406698726685,-1.1731674933992735);
+%\begin{scriptsize}
+\draw [fill=qqqqff] (5.068119415635349,3.789690012640549) circle (2.5pt);
+\draw[color=qqqqff] (5.220983180009602,4.182768263888639) node {$A$};
+\draw [fill=qqqqff] (5.22,-3.26) circle (2.5pt);
+\draw[color=qqqqff] (5.504873028133225,-3.4167445935745158) node {$B$};
+\draw [fill=qqqqff] (2.1200325312746386,-2.674263452328116) circle (2.5pt);
+\draw[color=qqqqff] (1.9234934056505888,-2.936315619826845) node {$C$};
+\draw [fill=xdxdff] (0.9752579456365513,-1.2636488412624867) circle (2.5pt);
+\draw[color=xdxdff] (0.5477195262822592,-1.0582750860859502) node {$D$};
+\draw [fill=uuuuuu] (0.13633338420845914,-2.299444973829707) circle (1.5pt);
+\draw[color=uuuuuu] (-0.17292393433924697,-2.2593475204551274) node {$P$};
+\draw [fill=uuuuuu] (5.291576709403076,-6.58230492480231) circle (1.5pt);
+\draw[color=uuuuuu] (5.592223750632802,-6.40850683918501) node {$Q$};
+\draw [fill=uuuuuu] (5.196956600078438,-2.190417426533658) circle (1.5pt);
+\draw[color=uuuuuu] (5.461197666883438,-2.040970714206186) node {$N$};
+\draw [fill=uuuuuu] (3.0444051135650043,-2.2367926255935386) circle (1.5pt);
+\draw[color=uuuuuu] (3.1900788818944483,-1.9317823110817154) node {$M$};
+\draw [fill=uuuuuu] (5.1750406698726685,-1.1731674933992735) circle (1.5pt);
+\draw[color=uuuuuu] (5.461197666883438,-1.0801127667108443) node {$E$};
+%\end{scriptsize}
+\end{tikzpicture}
+
+\end{center}
+
+\bigskip
+
+\begin{sol}
+
+\medskip
+
+L'hypothèse fondamentale, ce sont deux angles droits : d'une part $\widehat{APQ} = 90^o$, d'autre part la droite qui nous intéresse, c'est la perpendiculaire à $(AB)$ issue de $P$. Appelons $N$ l'intersection de cette perpendiculaire avec $(AB)$. Pour tirer le meilleur parti de ces deux angles droits, il faut introduire un nouvel angle droit : traçons donc la perpendiculaire à $(AB)$ passant par $D$, qui coupe $(AB)$ en $E$. D'une part, du fait des deux angles droits, $P, \ Q, \ E, \ D$ sont cocycliques. D'autre part, $(DE)$ étant parallèle à $(PN)$, $(PN)$ passe par le milieu $M$ de $[BC]$ si et seulement si $N$ est milieu de $[BE]$. Pour ne pas avoir à envisager plusieurs cas de figures, utilisons les angles de droites : $P, \ Q, \ E, \ D$ sont cocycliques donc $(PE, \ QE)$ = $(PD, \ QD)$, sans avoir à se soucier si $D$ et $E$ sont du même côté ou de part et d'autre de $(PQ)$. Mais par définition, $(PD) = (AD)$ et $(QD) = (CD)$, et comme $A,\ B, \ C, \ D$ sont cocycliques, $(AD, \ CD) = (AB, \ CB)$. Donc $(PE, \ QE) = (AB, \ CB)$, or $(QE) = (AB)= (EB)$ et $(CB) = (BP)$, d'où finalement : $(PE, \ EB) = (EB, \ BP)$, ce qui signifie précisément que le triangle $PEB$ est isocèle, donc que sa hauteur $(PN)$ est également médiane, ce qui achève la démonstration. 
+
+\end{sol}
+
+\bigskip
+
+\begin{exo}
+
+\medskip
+
+Soit $ABCD$ un quadrilatère convexe, inscrit dans un cercle $\Gamma$. La parallèle à $(BC)$ passant par $D$ coupe $(CA)$ en $P$, $(AB)$ en $Q$ et recoupe le cercle $\Gamma$ en $R$. La parallèle à $(AB)$ passant par $D$ coupe $(CA$) en $S$, $(BC)$ en $T$ et recoupe le cercle $\Gamma$ en $U$. 
+
+Montrer que si $PQ = QR$, alors $ST = TU$.
+
+\end{exo}
+
+%\vspace{1cm}
+%\bigskip
+\begin{center}
+
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-3.,-6.) rectangle (5.,3.5);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.05] (2.88,2.44) -- (3.36,-2.88) -- (-0.48,-3.22) -- (-2.056476080643951,0.04977722953344432) -- cycle;
+\draw(1.204727661227661,-0.3928065268065269) circle (3.2910986353151745cm);
+\draw [line width=2.pt,color=zzttqq] (2.88,2.44)-- (3.36,-2.88);
+\draw [line width=2.pt,color=zzttqq] (3.36,-2.88)-- (-0.48,-3.22);
+\draw [line width=2.pt,color=zzttqq] (-0.48,-3.22)-- (-2.056476080643951,0.04977722953344432);
+\draw [line width=2.pt,color=zzttqq] (-2.056476080643951,0.04977722953344432)-- (2.88,2.44);
+\draw (2.88,2.44)-- (-0.48,-3.22);
+\draw (0.6010056054581103,2.842444608229329)-- (3.36,-2.88);
+\draw (3.36,-2.88)-- (-1.7457487841538943,-5.352183963783047);
+\draw (-1.7457487841538943,-5.352183963783047)-- (2.88,2.44);
+\draw (-2.056476080643951,0.04977722953344432)-- (0.11387579831035041,-4.45176087879049);
+\draw [dash pattern=on 4pt off 4pt] (0.6010056054581103,2.842444608229329)-- (2.88,2.44);
+\draw [dash pattern=on 4pt off 4pt] (-0.48,-3.22)-- (1.8192556255512098,-3.626022512236167);
+%\begin{scriptsize}
+\draw [fill=qqqqff] (2.88,2.44) circle (2.5pt);
+\draw[color=qqqqff] (3.02,2.8) node {$A$};
+\draw [fill=qqqqff] (3.36,-2.88) circle (2.5pt);
+\draw[color=qqqqff] (3.68,-2.94) node {$D$};
+\draw [fill=qqqqff] (-0.48,-3.22) circle (2.5pt);
+\draw[color=qqqqff] (-0.86,-3.22) node {$C$};
+\draw [fill=xdxdff] (-2.056476080643951,0.04977722953344432) circle (2.5pt);
+\draw[color=xdxdff] (-2.38,0.22) node {$B$};
+\draw [fill=uuuuuu] (0.6010056054581103,2.842444608229329) circle (1.5pt);
+\draw[color=uuuuuu] (0.74,3.12) node {$R$};
+\draw [fill=uuuuuu] (1.1896481210456984,1.6215381083239342) circle (1.5pt);
+\draw[color=uuuuuu] (0.74,1.88) node {$Q$};
+\draw [fill=uuuuuu] (1.7294662547730675,0.5018985125046318) circle (1.5pt);
+\draw[color=uuuuuu] (1.34,0.64) node {$P$};
+\draw [fill=uuuuuu] (-1.7457487841538943,-5.352183963783047) circle (1.5pt);
+\draw[color=uuuuuu] (-1.56,-5.58) node {$S$};
+\draw [fill=uuuuuu] (0.11387579831035041,-4.45176087879049) circle (1.5pt);
+\draw[color=uuuuuu] (0.26,-4.74) node {$T$};
+\draw [fill=uuuuuu] (1.8192556255512098,-3.626022512236167) circle (1.5pt);
+\draw[color=uuuuuu] (2,-3.86) node {$U$};
+%\end{scriptsize}
+\end{tikzpicture}
+
+\end{center}
+
+\begin{sol}
+
+\medskip
+
+Plusieurs méthodes intéressantes ont été trouvées par les élèves. Deux d'entre elles reposent sur le fait que les droites $(CU)$ et $(RA)$ sont parallèles. En effet, $(CU, \ DU) = (CB, \ DB)$ car $C, \ D, \ U, \ B$ sont cocycliques, ce qui est encore égal à $(DR, \ DB)$ car $(DR) \sslash (CB)$, donc à $(AR, \ AB)$ par cocyclicité, donc à $(AR, \ DU)$ par parallélisme, et l'égalité finale $(CU, \ DU) = (AR \ DU)$ entraîne bien que $(CU)$ et $(AR)$ sont parallèles. 
+
+A partir de là, Yakob définit : $X$ intersection de $(CU)$ et $(AB)$, et $Y$ intersection de $(AR)$ et $(BC)$. $Q$ étant le milieu de $[PR]$ par hypothèse, $B$ est le milieu de $[CY]$ par Thalès. La symétrie de centre $B$ envoie donc $(CX)$ sur sa parallèle $(YA)$, donc $X$ sur $A$ : $CXYA$ est un parallélogramme, et $B$ est également milieu de $(XA)$, d'où, d'après Thalès, $T$ est milieu de $[US]$.
+
+Linda raisonne en termes de triangles semblables. Les parallélismes entraînent que $AQP$ et $STC$ sont semblables, de même que $AQR$ et $UTC$, une fois démontré $(CU) \sslash (RA)$. Dès lors, $\dfrac{CT}{TS} = \dfrac{PQ}{QA} = \dfrac{RQ}{QA} = \dfrac{CT}{TU}$, donc $TS = TU$.
+
+Martin n'utilise pas le fait que $(CU) \sslash (RA)$, mais la puissance des points $T$ et $Q$ par rapport au cercle. $TU \times TD = TC \times TB$ peut s'écrire : $\dfrac{TU}{TC} = \dfrac{TB}{TD} = \dfrac{QD}{QB}$ car $QDTB$ est un parallélogramme, ce qui est encore égal à $\dfrac{QA}{QR}$ car $QA \times QB = QD \times QR$, donc à $\dfrac{QA}{QP} = \dfrac{TS}{TC}$ car les triangles $PQA$ et $CTS$ sont semblables. La solution que j'avais préparée était voisine de cette dernière.
+
+\end{sol}
+
+\bigskip
+
+\begin{exo}
+
+\medskip
+
+Soit $ABCD$ un quadrilatère convexe dont les côtés $(AD)$ et $(BC)$ sont non parallèles. Les diagonales $(AC)$ et $(BD)$ se coupent en $E$. Soit $F$ le point du segment $[AB]$ et $G$ le point du segment $[CD]$ tels que : $\dfrac{FA}{FB} = \dfrac{GD}{GC} = \dfrac{AD}{BC}$. Montrer que si $E, \ F, \ G$ sont alignés, alors $A, \ B, \ C, \ D$ sont cocycliques.
+
+\end{exo}
+
+%\vspace{1cm}
+%\bigskip
+
+\begin{center}
+
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-2.,-3.) rectangle (7.,5.);
+\draw(2.4763786985555023,1.1668964264759292) circle (3.366361342747561cm);
+\draw (-0.36,2.98)-- (5.78,0.52);
+\draw (5.26,3.06)-- (0.09648984757137447,-1.213968489244114);
+\draw (-0.36,2.98)-- (5.26,3.06);
+\draw (-0.36,2.98)-- (3.1190103447839244,3.0295232789293087);
+\draw (-0.36,2.98)-- (0.09648984757137447,-1.213968489244114);
+\draw (5.78,0.52)-- (5.26,3.06);
+\draw (0.09648984757137447,-1.213968489244114)-- (5.78,0.52);
+\draw (3.1190103447839244,3.0295232789293087)-- (3.618469753009621,-0.13945608194749012);
+%\begin{scriptsize}
+\draw [fill=qqqqff] (-0.36,2.98) circle (2.5pt);
+\draw[color=qqqqff] (-0.5355791805094114,3.310956810631231) node {$A$};
+\draw [fill=qqqqff] (5.26,3.06) circle (2.5pt);
+\draw[color=qqqqff] (5.382471760797341,3.381831672203767) node {$B$};
+\draw [fill=qqqqff] (5.78,0.52) circle (2.5pt);
+\draw[color=qqqqff] (6.038064230343299,0.4405249169435217) node {$C$};
+\draw [fill=xdxdff] (0.09648984757137447,-1.213968489244114) circle (2.5pt);
+\draw[color=xdxdff] (-0.18120487264673169,-1.2959091915836112) node {$D$};
+\draw [fill=uuuuuu] (3.361835593795068,1.488841113886667) circle (1.5pt);
+\draw[color=uuuuuu] (3.4865692137320043,1.8934595791805102) node {$E$};
+\draw [fill=xdxdff] (3.1190103447839244,3.0295232789293087) circle (2.5pt);
+\draw[color=xdxdff] (3.2385071982281284,3.346394241417499) node {$F$};
+\draw [fill=uuuuuu] (3.618469753009621,-0.13945608194749012) circle (1.5pt);
+\draw[color=uuuuuu] (3.63463122923588,-0.40366112956810665) node {$G$};
+%\end{scriptsize}
+\end{tikzpicture}
+
+\end{center}
+
+\begin{sol}
+
+Une des manières d'utiliser l'alignement ainsi que les rapports $\dfrac{FA}{FB}$ et $\dfrac{GD}{GC}$, c'est le théorème de Ménélaüs, dans les triangles $ABC$ et $DBC$ par exemple. Si l'on appelle $S$ l'intersection de la droite $(FE) = (EG)$ avec $(BC)$ (le cas où $S$ serait à l'infini ne pose pas problème), on a dans le triangle $ABC$ : $\dfrac{FA}{FB} \times \dfrac{SB}{SC} \times \dfrac{EC}{EA} = 1$ et $\dfrac{GD}{GC} \times \dfrac{SC}{SB} \times \dfrac{EB}{ED} = 1$. En principe, les rapports sont en mesures algébriques, mais pour le présent problème, le signe importe peu. En multipliant ces deux égalités, comme $\dfrac{FA}{FB} = \dfrac{GD}{GC} = \dfrac{AD}{BC}$, on obtient : $\left( \dfrac{AD}{BC} \right)^2 \times \dfrac{EC}{EA} \times \dfrac{EB}{ED} = 1$, ou encore : $\dfrac{EC \times EB}{BC^2} = \dfrac{EA \times ED}{AD^2}$. Appelons $\alpha = \widehat{CAD}$, $\beta = \widehat{CBD}$, $\gamma = \widehat{BCA}$, $\delta = \widehat{BDA}$, et enfin $\epsilon = \widehat{BEC} = \widehat{AED}$. Dans le triangle $EBC$, $\left( \dfrac{EC}{BC} \right) \left( \dfrac{EB}{BC} \right) = \left( \dfrac{\sin \beta}{\sin \epsilon} \right) \left( \dfrac{\sin \gamma}{\sin \epsilon} \right)$, et de même dans le triangle $EAD$, ce qui aboutit finalement, après multiplication par $(\sin \epsilon)^2$, à : $\sin \beta \times \sin \gamma = \sin \alpha \times \sin \delta$. Il reste à se souvenir des formules de trigonométrie : $\sin \beta \times \sin \gamma = \frac12 (\cos(\beta - \gamma) - \cos(\beta + \gamma))$. Comme $\beta + \gamma = \pi - \epsilon = \alpha + \delta$, cela aboutit à : $\cos (\beta - \gamma) = \cos (\alpha - \delta)$, donc soit $\beta - \gamma = \alpha - \delta$, soit $\beta - \gamma = - \alpha + \delta$. En rapprochant cela de $\beta + \gamma = \alpha + \delta$, on obtient : soit $\beta = \alpha$ et $\gamma = \delta$, soit $\beta = \delta$ et $\gamma = \alpha$. La première solution équivaut précisément à : $A, \ B, \ C, \ D$ cocycliques. La seconde, à $(AD) \sslash (BC)$, ce qui a été exclu par hypothèse. Effectivement, si l'on considère deux droites parallèles, quelle que soit la position des points $A, \ D$ sur l'une des droites, $B, \ C$ sur l'autre (donc même s'ils ne sont pas cocycliques), si $(AC)$ coupe $(BD)$ en $E$, et si la parallèle aux deux droites passant par $E$ coupe $(AB)$ et $(CD)$ en $F$ et $G$, il est facile de prouver par Thalès que $\dfrac{FB}{FA} = \dfrac{GC}{GD} = \dfrac{BC}{AD}$.
+
+\end{sol}
+
+\bigskip
+
+
+\begin{exo}
+
+\medskip
+
+Soit $ABC$ un triangle rectangle en $A$. Par le milieu $D$ de $[BC]$, on trace une droite qui coupe $(AB)$ en $X$ et $(AC)$ en $Y$. Sur cette droite, on place le point $P$ tel que $[PD]$ et $[XY]$ aient même milieu $M$. La perpendiculaire à $(BC)$ passant par $P$ coupe $(BC)$ en $T$. 
+
+Montrer que $(AM)$ est la bissectrice de $\widehat{TAD}$.
+
+\end{exo}
+
+%\vspace{1cm}
+%\bigskip
+
+\begin{center}
+
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-5.76,-3.9) rectangle (6.78,4.9);
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (-1.001163432497974,3.63635979000429) -- (-0.6175232225022643,3.455196357506316) -- (-0.43635979000429026,3.8388365675020255) -- (-0.82,4.02) -- cycle; 
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (-1.9586971655655232,-0.5746109571489042) -- (-1.5406454738981024,-0.5022729789216416) -- (-1.612983452125365,-0.0842212872542208) -- (-2.031035143792786,-0.15655926548148336) -- cycle; 
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (1.2339684542586749,0.4084037854889585) -- (3.6040252365930603,1.930876971608832) -- (5.32793690851735,1.116807570977917) -- cycle;
+\draw [line width=1.6pt] (-0.82,4.02)-- (-2.86,-0.3);
+\draw [line width=1.6pt] (-0.82,4.02)-- (5.32793690851735,1.116807570977917);
+\draw [line width=1.6pt] (-2.86,-0.3)-- (5.32793690851735,1.116807570977917);
+\draw (-1.7923994760774582,-1.535669478752265)-- (-2.031035143792786,-0.15655926548148336);
+\draw (-4.162456258411844,-3.0581426648721384)-- (3.6040252365930603,1.930876971608832);
+\draw (-4.162456258411844,-3.0581426648721384)-- (-0.82,4.02);
+\draw (-0.82,4.02)-- (-2.031035143792786,-0.15655926548148336);
+\draw (-0.82,4.02)-- (-0.2792155109093917,-0.5636328466316531);
+\draw (-0.82,4.02)-- (1.2339684542586749,0.4084037854889585);
+\draw [dash pattern=on 4pt off 4pt] (-2.031035143792786,-0.15655926548148336)-- (-0.2792155109093917,-0.5636328466316531);
+\draw [color=zzttqq] (1.2339684542586749,0.4084037854889585)-- (3.6040252365930603,1.930876971608832);
+\draw [color=zzttqq] (3.6040252365930603,1.930876971608832)-- (5.32793690851735,1.116807570977917);
+\draw [color=zzttqq] (5.32793690851735,1.116807570977917)-- (1.2339684542586749,0.4084037854889585);
+\draw [dash pattern=on 4pt off 4pt] (-0.6732578542740706,1.7135951360840107) circle (2.3110682927225623cm);
+%\begin{scriptsize}
+\draw [fill=qqqqff] (-0.82,4.02) circle (2.5pt);
+\draw[color=qqqqff] (-0.68,4.38) node {$A$};
+\draw [fill=qqqqff] (-2.86,-0.3) circle (2.5pt);
+\draw[color=qqqqff] (-3.12,0.) node {$B$};
+\draw [fill=xdxdff] (5.32793690851735,1.116807570977917) circle (2.5pt);
+\draw[color=xdxdff] (5.46,1.48) node {$C$};
+\draw [fill=uuuuuu] (1.2339684542586749,0.4084037854889585) circle (1.5pt);
+\draw[color=uuuuuu] (1.34,0.2) node {$D$};
+\draw [fill=xdxdff] (3.6040252365930603,1.930876971608832) circle (2.5pt);
+\draw[color=xdxdff] (3.74,2.3) node {$Y$};
+\draw [fill=uuuuuu] (-4.162456258411844,-3.0581426648721384) circle (1.5pt);
+\draw[color=uuuuuu] (-4.48,-3.02) node {$X$};
+\draw [fill=uuuuuu] (-0.2792155109093917,-0.5636328466316531) circle (1.5pt);
+\draw[color=uuuuuu] (-0.1,-0.74) node {$M$};
+\draw [fill=uuuuuu] (-1.7923994760774582,-1.535669478752265) circle (1.5pt);
+\draw[color=uuuuuu] (-1.66,-1.78) node {$P$};
+\draw [fill=uuuuuu] (-2.031035143792786,-0.15655926548148336) circle (1.5pt);
+\draw[color=uuuuuu] (-1.7,0.12) node {$T$};
+%\end{scriptsize}
+\end{tikzpicture}
+
+\end{center}
+
+\begin{sol}
+
+\medskip
+
+Il est difficile d'étudier des angles formés par des médianes, sauf dans un cas particulier - et c'est précisément le cas ici - lorsqu'il s'agit de médianes de triangles rectangles issues du sommet de l'angle droit. Le fait que $ABC$ soit rectangle en $A$ et $D$, milieu de l'hypoténuse, soit centre du cercle circonscrit, permet de conclure : $\widehat{BDA} = 2 \times \widehat{BCA}$, et de même, $M$, milieu de l'hypoténuse (donc centre du cercle circonscrit) de $AXY$, vérifie : $\widehat{AMX} = 2 \times \widehat{AYX}$ et dans le triangle rectangle $TPD$, $\widehat{TMP} = 2 \times \widehat{TDP}$. Or dans le triangle $DYC$, $\widehat{DYA} = \widehat{DCY} + \widehat{CDY}$, donc $\widehat{TMA} = \widehat{PMA} - \widehat{PMT} = 2 \times \left( \widehat{DYA} - \widehat{MDT} \right) = 2 \times \widehat{DCA} = \widehat{TDA}$. Il en résulte que $T, \ M, \ D, \ A$ sont cocycliques, et comme les cordes $MT$ et $MD$ sont égales, les angles qui les interceptent, $\widehat{TAM}$ et $\widehat{MAD}$ sont égaux, ce qui achève la démonstration.
+
+\end{sol}
+
+\bigskip
+
+
+\begin{exo}
+
+\medskip
+
+On considère deux points distincts $P$ et $Q$ sur le côté $[BC]$ d'un triangle $ABC$. Soient $K$ et $L$ les pieds des perpendiculaires à $(AC)$ issues de $P$ et $Q$ respectivement. Sur la droite $(AB)$, on place les points $M$ et $N$ de sorte que $PM = PA$ et $QN = QA$. On suppose qu'aucun des points $K, \ L, \ M, \ N$ n'est confondu avec $A$. On suppose en outre que les cercles circonscrits à $AKM$ et $ALN$ se recoupent en $R$, milieu de $BC$. 
+
+Calculer les rapports de longueurs des côtés : $\dfrac{BC}{CA}$  et  $\dfrac{CA}{AB}$. 
+
+\end{exo}
+
+%\bigskip
+
+\begin{center}
+
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=2.0cm,y=2.0cm]
+\clip(-2.840708357946768,-1.0400915371820942) rectangle (4.595886540019385,3.6155052687468525);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.05] (-2.,0.) -- (4.,0.) -- (0.,1.42) -- cycle;
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0.5868261051386341,0.9798213407817898) -- (0.7927321835063388,0.9067246829612546) -- (0.865828841326874,1.1126307613289594) -- (0.6599227629591693,1.1857274191494946) -- cycle; 
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (2.8095993853353294,0.19073682631196318) -- (3.0155054637030343,0.11764016849142805) -- (3.0886021215235693,0.3235462468591329) -- (2.8826960431558644,0.396642904679668) -- cycle; 
+\draw [line width=2.pt,color=zzttqq] (-2.,0.)-- (4.,0.);
+\draw [line width=2.pt,color=zzttqq] (4.,0.)-- (0.,1.42);
+\draw [line width=2.pt,color=zzttqq] (0.,1.42)-- (-2.,0.);
+\draw (0.2389895291610986,0.)-- (0.6599227629591693,1.1857274191494946);
+\draw [dash pattern=on 2pt off 2pt] (2.7418878119945824,0.)-- (2.8826960431558644,0.396642904679668);
+\draw (0.,1.42)-- (0.2389895291610986,0.);
+\draw (0.1423483368243035,0.7138463130071716) -- (0.09664119233679523,0.7061536869928279);
+\draw [dash pattern=on 2pt off 2pt] (0.,1.42)-- (2.7418878119945824,0.);
+\draw [dash pattern=on 2pt off 2pt] (1.3762533815328875,0.7594472365347738) -- (1.3336227012277149,0.6771313613616818);
+\draw [dash pattern=on 2pt off 2pt] (1.4082651107668676,0.7428686386383178) -- (1.365634430461695,0.6605527634652257);
+\draw (-1.0228182578803287,0.6937990369049666)-- (0.2389895291610986,0.);
+\draw (-0.3807483175902107,0.3672071349446544) -- (-0.4030804111290199,0.32659190196031285);
+\draw(-0.010073647225934205,0.35079320617891957) circle (2.1385084954908047cm);
+\draw [dash pattern=on 2pt off 2pt] (2.3052826434340568,3.0567506768381802)-- (2.7418878119945824,0.);
+\draw [dash pattern=on 2pt off 2pt] (2.566920811991724,1.552773020004129) -- (2.4751522479938997,1.539665431722094);
+\draw [dash pattern=on 2pt off 2pt] (2.572018207434739,1.5170852451160863) -- (2.4802496434369146,1.5039776568340513);
+\draw (-2.,0.)-- (2.3052826434340568,3.0567506768381802);
+\draw [dash pattern=on 2pt off 2pt] (1.6585252079963881,1.525862822532668) circle (3.323800717704987cm);
+%\begin{scriptsize}
+\draw [fill=xdxdff] (-2.,0.) circle (2.5pt);
+\draw[color=xdxdff] (-2.0785088808699044,0.19590761483444027) node {$B$};
+\draw [fill=xdxdff] (4.,0.) circle (2.5pt);
+\draw[color=xdxdff] (4.070586900412358,0.18560762190096916) node {$C$};
+\draw [fill=xdxdff] (0.,1.42) circle (2.5pt);
+\draw[color=xdxdff] (-0.1318102164438618,1.6070066467199837) node {$A$};
+\draw [fill=uuuuuu] (1.,0.) circle (1.5pt);
+\draw[color=uuuuuu] (1.0629889638387888,-0.12339216610316447) node {$R$};
+\draw [fill=xdxdff] (0.2389895291610986,0.) circle (2.5pt);
+\draw[color=xdxdff] (0.24928952209456987,-0.1439921519701067) node {$P$};
+\draw [fill=xdxdff] (2.7418878119945824,0.) circle (2.5pt);
+\draw[color=xdxdff] (2.8345877483958226,-0.1439921519701067) node {$Q$};
+\draw [fill=uuuuuu] (0.6599227629591693,1.1857274191494946) circle (1.5pt);
+\draw[color=uuuuuu] (0.7333891899677129,1.3289068375162636) node {$K$};
+\draw [fill=uuuuuu] (2.8826960431558644,0.396642904679668) circle (1.5pt);
+\draw[color=uuuuuu] (2.865487727196236,0.5461073745724584) node {$L$};
+\draw [fill=uuuuuu] (-1.0228182578803287,0.6937990369049666) circle (1.5pt);
+\draw[color=uuuuuu] (-1.1618095097909744,0.8242071837761786) node {$M$};
+\draw [fill=uuuuuu] (2.3052826434340568,3.0567506768381802) circle (1.5pt);
+\draw[color=uuuuuu] (2.381388059323093,3.2035055514080075) node {$N$};
+%\end{scriptsize}
+\end{tikzpicture}
+
+\end{center}
+
+\begin{sol}
+
+\medskip
+
+L'idée de la solution est de montrer que, $ABC$ étant donné, $x = CP$ est solution d'une équation du premier degré. Or $Q$ est défini de la même manière que $P$, de sorte que $y = CQ$ est solution de la même équation du premier degré. Une équation du premier degré admettant deux solutions distinctes est nécessairement : $0 \times x = 0$. Il en résultera que n'importe quel point de $(BC)$ vérifiera la même propriété que $P$ et $Q$. 
+
+\smallskip
+
+Appelons $a = BC$, $b = CA$, $c = AB$ les longueurs des côtés du triangle, et $\widehat{A}, \ \widehat{B}, \ \widehat{C}$ les trois angles de ce même triangle $ABC$. Calculons de deux manières différentes la puissance de $B$ et la puissance de $C$ par rapport au cercle circonscrit à $AKM$, qui recoupe $(BC)$ en $X$. La puissance de $B$ vaut $BR \times BX = BA \times BM$, or le milieu de $MA$ est la projection orthogonale de $P$ sur $(AB)$, vérifiant donc : $\dfrac{BM + c}{2} = (a-x)\cos \widehat{B}$, d'où : $BM = 2(a-x) \cos \widehat{B} - c$, et $BX \times BR = BM \times BA = 2c(a-x)\cos \widehat{B} - c^2 = \dfrac{a}{2} \times BX$. La puissance de $C$ vaut, elle, $CK \times CA = CR \times CX = bx \cos \widehat{C} = \dfrac{a}{2} \times CX$. Comme $BX + CX = a$, en additionnant ces deux égalités on obtient : $\dfrac{a^2}{2} = 2c(a-x) \cos \widehat{B} - c^2 + bx \cos \widehat{C}$, si bien que : $\left( 4c \cos \widehat{B} - 2b \cos \widehat{C} \right) x = 4ca \cos \widehat{B} - 2c^2 - a^2$.  Comme la même relation $\left( 4c.\cos \widehat{B} - 2b \cos \widehat{C} \right) y = 4ca.\cos \widehat{B} - 2c^2 - a^2$ est vérifiée également par $y = CQ \neq x$, on a nécessairement : $4c \cos \widehat{B} - 2b \cos \widehat{C} = 0$ et $4ca \cos \widehat{B} - 2c^2 - a^2 = 0$. Or d'après Al Kashi, $4ca \cos \widehat{B} = 2a^2 + 2c^2 - 2b^2$, donc $a^2 = 2b^2$, $a = b \sqrt2$. Et comme $a = c\cos\widehat{B} + b\cos\widehat{C}$, $b\cos\widehat{C} = 2c\cos\widehat{B}$ entraîne : $a = 3c\cos\widehat{B} = \dfrac32 b\cos\widehat{C}$. Donc $\cos\widehat{C} = \dfrac23 \sqrt2$, et $\sin\widehat{C} = \dfrac13$. $c \cos \widehat{B} = a - b\cos \widehat{C} = b \dfrac{\sqrt2}{3} $, $c \sin \widehat{B} = b \sin \widehat{C} = \dfrac{b}{3}$ (loi des sinus), d'où : $c^2 = \left( \dfrac29 + \dfrac19 \right) b^2$, soit $c = \dfrac{b}{\sqrt3}$. Donc $\dfrac{BC}{CA} = \dfrac{a}{b} = \sqrt2$ et $\dfrac{CA}{AB} = \dfrac{b}{c} = \sqrt3$. 
+
+
+\end{sol}
+

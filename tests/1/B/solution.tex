@@ -1,9 +1,28 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat tortor ex, id lacinia dui posuere vitae. Sed ultrices pulvinar urna, eu posuere nunc suscipit non. Aenean lacus arcu, dignissim vitae sapien a, gravida hendrerit turpis. Ut et molestie ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum eros quis neque dictum sollicitudin. Aliquam hendrerit mi non nisi tempor condimentum. Vivamus nunc diam, vestibulum sed risus eu, molestie consectetur mi. Donec consectetur ut nulla a molestie. Nunc interdum augue eros, non pharetra justo dignissim eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer et nibh nibh. Sed pharetra lacus ut ex congue, vitae lacinia ipsum accumsan. Sed mollis neque quis elementum vulputate. Duis dolor nisi, malesuada vel lorem ac, accumsan sollicitudin nisi.
+\begin{sol}
+D'apr\`es l'in\'egalit\'e arithm\'etico-g\'eom\'etrique (IAG),
+$\frac{\frac{x}{y}+\frac{y}{z}+\frac{z}{x}}{3} \geq \sqrt[3]{\frac{x}{y}\times\frac{y}{z}\times\frac{z}{x}} = 1$,
+d'o\`u l'in\'egalit\'e demand\'ee.
+\end{sol}
 
-Vivamus sit amet ante ac turpis cursus rhoncus id vel libero. Nulla facilisi. Donec maximus, massa ac dapibus lacinia, enim nibh maximus ligula, id varius erat turpis in libero. Sed eget neque scelerisque, lobortis erat eu, varius magna. Morbi sodales est a ipsum volutpat, at ultricies nisl dapibus. Pellentesque interdum nec lectus sed pulvinar. Vivamus finibus est in tortor imperdiet, sit amet consequat turpis aliquet. Duis cursus sollicitudin magna, eu condimentum nibh convallis in. Praesent rhoncus porta tempor. Quisque pellentesque ultricies nisi quis vehicula.
+\begin{sol}
+En faisant le tour du cercle, on d\'ecide de colorer un nid sur deux en blanc, et l'autre nid sur deux en noir. Chaque jour, les hirondelles nichant sur un nid noir migrent vers un nid blanc, et inversement. Comme au d\'ebut,
+autant d'oiseaux nichent dans des nids noirs que dans des nids blancs, cette propri\'et\'e est donc
+un invariant. Si tous les oiseaux nichaient dans un m\^eme nid, l'invariant ne serait pas
+respect\'e. Ainsi, cette situation n'arrivera jamais. 
+\end{sol}
 
-Suspendisse in lacus ac velit rutrum sagittis. Vivamus at volutpat quam. Quisque id erat dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent id augue felis. Proin convallis odio interdum purus malesuada tempus. Fusce eget libero non erat pulvinar molestie at ut augue. Sed suscipit turpis non malesuada cursus. Suspendisse imperdiet et neque vel rhoncus.
+\begin{sol}
+On peut une fois de plus appliquer IAG dans cet exercice :
+$\sqrt[n]{n!} = \sqrt[n]{1 \times 2 \times ... \times n} \leq \frac{1+2+...+n}{n} = \frac{n+1}{2}$,
+d'o\`u l'in\'egalit\'e demand\'ee.
+\end{sol}
 
-Sed accumsan sodales eros vel sagittis. In nec nisl vitae ligula aliquam pharetra. Fusce enim massa, vehicula dapibus ultricies sit amet, dignissim eget purus. Sed sodales ligula cursus vulputate venenatis. Praesent sed dignissim odio. Maecenas maximus at mi ut sagittis. Cras in sem vel ipsum dapibus gravida sit amet vitae turpis. Sed porta erat at nisl auctor commodo.
+\begin{sol}
+On proc\`ede par r\'ecurrence forte sur $n$. Le cas $n = 1$ est \'evident. Supposons l’assertion vraie pour $k$ temples pour tout $k < n$, et montrons-la pour $n$ temples. L’\'el\'ephant de gauche du premier temple et l’\'el\'ephant de droite du dernier temple sont inutiles, car ils ne peuvent que s'\'eloigner des temples : supprimons-les.
 
-Donec urna nulla, fringilla ac iaculis ac, lobortis vel leo. Vivamus ac elit neque. Praesent varius leo quis ante condimentum, vel hendrerit diam auctor. Praesent elementum urna vel diam vulputate tincidunt. Vivamus at erat vel magna molestie ultrices. Suspendisse nec nisi a nibh pellentesque bibendum ac et purus. Praesent mollis ultricies dui eu cursus. Nam posuere consequat massa, nec semper lacus. Pellentesque rhoncus enim non nisi iaculis iaculis. Vivamus facilisis velit sed urna porttitor, nec commodo nulla aliquam. Aliquam dapibus faucibus pulvinar.
+On consid\`ere l’\'el\'ephant le plus gros parmi les $2n-2$ \'el\'ephants centraux. Supposons WLOG qu’il s'agisse de l’\'el\'ephant de droite du temple $T_{k}$. On applique l’hypoth\`ese de r\'ecurrence aux temples  $T_{1}, ..., T_{k}$. Il existe un unique temple $T_{i}$ avec $i \leq k$ tel que aucun \'el\'ephant gardant l’un des temples  $T_{1}, ..., T_{k}$ ne puisse atteindre $T_{i}$.
+
+Il est \'evident qu’aucun  \'el\'ephant gardant l’un des temples  \`a droite de $T_{k}$ ne pourra atteindre $T_{i}$ puisqu’il doit d’abord passer par $T_{k}$. Donc aucun \'el\'ephant ne pourra atteindre $T_{i}$ : ceci prouve l’existence.
+
+Comme l’\'el\'ephant de droite gardant $T_{k}$ peut atteindre tous les temples \`a droite de $T_{k}$, ceci garantit l’unicit\'e.
+\end{sol}

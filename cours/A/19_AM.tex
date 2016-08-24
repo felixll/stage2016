@@ -1,9 +1,287 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat tortor ex, id lacinia dui posuere vitae. Sed ultrices pulvinar urna, eu posuere nunc suscipit non. Aenean lacus arcu, dignissim vitae sapien a, gravida hendrerit turpis. Ut et molestie ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum eros quis neque dictum sollicitudin. Aliquam hendrerit mi non nisi tempor condimentum. Vivamus nunc diam, vestibulum sed risus eu, molestie consectetur mi. Donec consectetur ut nulla a molestie. Nunc interdum augue eros, non pharetra justo dignissim eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer et nibh nibh. Sed pharetra lacus ut ex congue, vitae lacinia ipsum accumsan. Sed mollis neque quis elementum vulputate. Duis dolor nisi, malesuada vel lorem ac, accumsan sollicitudin nisi.
+\subsubsection{Calculs basiques}
 
-Vivamus sit amet ante ac turpis cursus rhoncus id vel libero. Nulla facilisi. Donec maximus, massa ac dapibus lacinia, enim nibh maximus ligula, id varius erat turpis in libero. Sed eget neque scelerisque, lobortis erat eu, varius magna. Morbi sodales est a ipsum volutpat, at ultricies nisl dapibus. Pellentesque interdum nec lectus sed pulvinar. Vivamus finibus est in tortor imperdiet, sit amet consequat turpis aliquet. Duis cursus sollicitudin magna, eu condimentum nibh convallis in. Praesent rhoncus porta tempor. Quisque pellentesque ultricies nisi quis vehicula.
+\begin{prop}[La factorisation simple] $k \times (a+b) = k \times a + k \times b$ \end{prop}
 
-Suspendisse in lacus ac velit rutrum sagittis. Vivamus at volutpat quam. Quisque id erat dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent id augue felis. Proin convallis odio interdum purus malesuada tempus. Fusce eget libero non erat pulvinar molestie at ut augue. Sed suscipit turpis non malesuada cursus. Suspendisse imperdiet et neque vel rhoncus.
+\begin{proof}
+	\begin{center}
+		
+		\definecolor{qqqqff}{rgb}{0,0,1}
+		\definecolor{dcrutc}{rgb}{0.86,0.08,0.24}
+		\definecolor{ffqqqq}{rgb}{1,0,0}
+		\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+		\clip(-1.92,1.24) rectangle (6.1,5.88);
+		\fill[color=dcrutc,fill=dcrutc,fill opacity=0.1] (-1,5) -- (3,5) -- (3,2) -- (-1,2) -- cycle;
+		\fill[color=qqqqff,fill=qqqqff,fill opacity=0.1] (3,5) -- (5,5) -- (5,2) -- (3,2) -- cycle;
+		\draw [color=dcrutc] (-1,5)-- (3,5);
+		\draw [color=dcrutc] (3,5)-- (3,2);
+		\draw [color=dcrutc] (3,2)-- (-1,2);
+		\draw [color=dcrutc] (-1,2)-- (-1,5);
+		\draw [color=qqqqff] (3,5)-- (5,5);
+		\draw [color=qqqqff] (5,5)-- (5,2);
+		\draw [color=qqqqff] (5,2)-- (3,2);
+		\draw [color=qqqqff] (3,2)-- (3,5);
+		\draw [color=ffqqqq](1.08,5.5) node[anchor=north west] {a};
+		\draw [color=qqqqff](3.82,5.46) node[anchor=north west] {b};
+		\draw (-1.52,3.66) node[anchor=north west] {k};
+		\draw [color=ffqqqq](0.88,3.6) node[anchor=north west] {\textbf{ka}};
+		\draw [color=qqqqff](3.7,3.56) node[anchor=north west] {\textbf{kb}};
+		\begin{scriptsize}
+		\fill [color=ffqqqq] (-1,5) circle (1.5pt);
+		\fill [color=black] (3,5) circle (1.5pt);
+		\fill [color=black] (3,2) circle (1.5pt);
+		\fill [color=ffqqqq] (-1,2) circle (1.5pt);
+		\fill [color=qqqqff] (5,5) circle (1.5pt);
+		\fill [color=qqqqff] (5,2) circle (1.5pt);
+		\end{scriptsize}
+		\end{tikzpicture}
+		
+		
+	\end{center}
+\end{proof}
 
-Sed accumsan sodales eros vel sagittis. In nec nisl vitae ligula aliquam pharetra. Fusce enim massa, vehicula dapibus ultricies sit amet, dignissim eget purus. Sed sodales ligula cursus vulputate venenatis. Praesent sed dignissim odio. Maecenas maximus at mi ut sagittis. Cras in sem vel ipsum dapibus gravida sit amet vitae turpis. Sed porta erat at nisl auctor commodo.
+\begin{prop}[La factorisation du rectangle] $(a+b) \times (c+d) = ac + ad + bc + bd$ \end{prop}
 
-Donec urna nulla, fringilla ac iaculis ac, lobortis vel leo. Vivamus ac elit neque. Praesent varius leo quis ante condimentum, vel hendrerit diam auctor. Praesent elementum urna vel diam vulputate tincidunt. Vivamus at erat vel magna molestie ultrices. Suspendisse nec nisi a nibh pellentesque bibendum ac et purus. Praesent mollis ultricies dui eu cursus. Nam posuere consequat massa, nec semper lacus. Pellentesque rhoncus enim non nisi iaculis iaculis. Vivamus facilisis velit sed urna porttitor, nec commodo nulla aliquam. Aliquam dapibus faucibus pulvinar.
+\begin{proof}
+	\begin{center}
+		
+		\definecolor{xfqqff}{rgb}{0.5,0,1}
+		\definecolor{qqffqq}{rgb}{0,1,0}
+		\definecolor{ffqqqq}{rgb}{1,0,0}
+		\definecolor{ffxfqq}{rgb}{1,0.5,0}
+		\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+		\clip(-3.98,-0.64) rectangle (5.88,6.06);
+		\fill[color=ffxfqq,fill=ffxfqq,fill opacity=0.1] (-3,5) -- (2,5) -- (2,2) -- (-3,2) -- cycle;
+		\fill[color=ffqqqq,fill=ffqqqq,fill opacity=0.1] (2,5) -- (5,5) -- (5,2) -- (2,2) -- cycle;
+		\fill[color=qqffqq,fill=qqffqq,fill opacity=0.1] (-3,2) -- (-3,0) -- (2,0) -- (2,2) -- cycle;
+		\fill[color=xfqqff,fill=xfqqff,fill opacity=0.1] (2,2) -- (5,2) -- (5,0) -- (2,0) -- cycle;
+		\draw [color=ffxfqq] (-3,5)-- (2,5);
+		\draw [color=ffxfqq] (2,5)-- (2,2);
+		\draw [color=ffxfqq] (2,2)-- (-3,2);
+		\draw [color=ffxfqq] (-3,2)-- (-3,5);
+		\draw [color=ffqqqq] (2,5)-- (5,5);
+		\draw [color=ffqqqq] (5,5)-- (5,2);
+		\draw [color=ffqqqq] (5,2)-- (2,2);
+		\draw [color=ffqqqq] (2,2)-- (2,5);
+		\draw [color=qqffqq] (-3,2)-- (-3,0);
+		\draw [color=qqffqq] (-3,0)-- (2,0);
+		\draw [color=qqffqq] (2,0)-- (2,2);
+		\draw [color=qqffqq] (2,2)-- (-3,2);
+		\draw [color=xfqqff] (2,2)-- (5,2);
+		\draw [color=xfqqff] (5,2)-- (5,0);
+		\draw [color=xfqqff] (5,0)-- (2,0);
+		\draw [color=xfqqff] (2,0)-- (2,2);
+		\draw (-0.98,5.54) node[anchor=north west] {a};
+		\draw (3.24,5.54) node[anchor=north west] {b};
+		\draw (-3.5,3.58) node[anchor=north west] {c};
+		\draw (-3.52,1.2) node[anchor=north west] {d};
+		\draw (-1,3.7) node[anchor=north west] {ab};
+		\draw (-0.96,1.12) node[anchor=north west] {ad};
+		\draw (3.24,3.68) node[anchor=north west] {bc};
+		\draw (3.2,1.22) node[anchor=north west] {bd};
+		\begin{scriptsize}
+		\fill [color=black] (-3,5) circle (0.5pt);
+		\fill [color=black] (5,5) circle (0.5pt);
+		\fill [color=black] (2,5) circle (0.5pt);
+		\fill [color=black] (2,2) circle (0.5pt);
+		\fill [color=black] (-3,2) circle (0.5pt);
+		\fill [color=black] (5,2) circle (0.5pt);
+		\fill [color=black] (-3,0) circle (0.5pt);
+		\fill [color=black] (2,0) circle (0.5pt);
+		\fill [color=black] (5,0) circle (0.5pt);
+		\end{scriptsize}
+		\end{tikzpicture}
+		
+	\end{center}
+\end{proof}
+
+\begin{prop}[Identités remarquable] $$(a+b)^2 = a^2 +2ab + b^2$$
+	$$(a-b)^2 = a^2 - 2ab + b^2$$
+	$$(a+b)(a-b) = a^2 - b^2$$
+	$$(a+b)^3 = a^3 +3a^{2}b + 3ab^{2} + b^3$$
+\end{prop}
+\begin{proof}
+	$$(a+b)^2 = (a+b)(a+b) = a^2 +ab+ ba + b^2 = a^2 +2ab +b^2$$
+\end{proof}
+
+Plus généralement on peut montrer que le triangle de Pascal permet d'obtenir les coefficients de le développement remarquable de $(a+b)^n$
+
+En pratique, ces formules sont aussi utiles dans les problèmes d'arithmétique avec les entiers : Une expression factorisée laisse apparaitre des diviseurs.
+
+\par\medskip
+\begin{prop}[Calculs avec puissances] $$a^m \times a^n = a^{m+n}$$
+$$\frac{a^m}{a^n}=a^{m-n}$$
+$$ (a^m)^n = a^{mn}$$
+\end{prop}
+\par\medskip
+
+\subsubsection{Quelques sommes classiques}
+
+\begin{exo}
+	Calculer $$ S_1= 1+2+3+4+.....+2014+2015+2016$$
+	et $$S_2 = 2016+2015+2014+2013+....+3+2+1$$
+\end{exo}
+\begin{sol}
+	Il est clair par commutation que $$ S_1= S_2 $$ 
+	De plus $$S_1 + S_2 = 2017+ 2017 + ... +2017= 2017\times 2016$$
+	Donc $$S_1=\frac{2016\times2017}{2}$$
+\end{sol}
+
+On peut généraliser ce calcul à toute suite ayant une progression constante : 
+
+\begin{prop}
+	Soit $(u_n)$ une suite telle que pour tout rang n entier : $u_{n+1} = u_n + b$ avec b réel. 
+	Alors :$$u_n = u_0 + nb$$
+	et $$ u_0 + u_1 + ... + u_n = \frac{(n+1)(u_0 + u_n)}{2}$$
+\end{prop}
+
+\begin{exo}
+	Calculer $$ S=7+10+13+16+...+994$$
+\end{exo}
+\begin{sol}
+	Il y a 329 termes dans la somme
+	$$S= \frac{(min + max)(nombre)}{2}=  \frac{(7 + 994)(329)}{2}=\frac{329329}{2}$$
+\end{sol}
+\begin{exo}
+	Calculer $$ P= 1+ \pi^1 + \pi^2 + \pi^3 +...+ \pi^{10}$$
+à l'aide de $$\pi\times P=\pi^1 + \pi^2 +...+ \pi^{11} $$
+\end{exo}
+\begin{sol}
+	$$\pi\times P - P = \pi^{11} - 1 $$
+	$$P = \frac{\pi^{11} - 1}{\pi - 1}$$
+\end{sol}
+
+Vous l'aurez compris, on peut remplacer $\pi$ par n'importe quel autre nombre entier, réel et (même complexe) à CONDITION que l'on ne divise pas par zéro. C'est à dire que l'on ne peux pas calculer $$1^0+1^1+1^2+1^3+...+1^n$$ avec cette technique. Cela dit, celle-ci n'est pas très difficile à calculer. 
+
+De ces affirmations, on en déduit une factorisation non triviale : 
+\begin{prop}
+	$$(x^n-1)= (x-1)(1+x+x^2+x^3+...+x^{n-1})$$
+	et même en posant $x=a/b$
+	$$a^n - b^n= (a-b)(a^{n-1}+a^{n-2}b+...+ab^{n-2}+b^{n-1})$$
+\end{prop}
+
+ 
+ \begin{exo}
+ 	1) Trouvez tous les $(x,y)\in \mathbb{N}$ tels que $x^2+y^2 = 25$
+ 	
+ 	2) Trouvez tous les $(x,y)\in \mathbb{R}$ tels que $x^2+y^2 = 25$
+ \end{exo}
+ 
+ \par \medskip
+ 
+ \begin{sol}
+ 	
+ 	1) $S=\{(0,5);(4;3);(3;4);(5;0)\}$
+ 	
+ 	2) $S=\{(x;\sqrt{25-x^2}) | x \leq 5\}$
+ 	
+On remarque que l'ensemble des solutions n'est pas le même
+ \end{sol}
+ 
+Nous travaillons désormais uniquement avec des nombres réels
+
+\subsubsection{L'\'equation du second degr\'e}
+Consid\'erons une \'equation de la forme $ax^2+bx+c=0$ d'inconnue $x$, avec $a,b,c$ fix\'es et $a\ne 0$.
+Comme
+\begin{eqnarray*}
+ ax^2+bx+c &=& a\left(x^2+\frac{b}{a}x+\frac{c}{a}\right)\\
+&=& a \left(x^2+2\frac{b}{2a}x+(\frac{b}{2a})^2-(\frac{b}{2a})^2+\frac{c}{a}\right)\\
+&=& a \left((x+\frac{b}{2a})^2-\frac{b^2-4ac}{a^2}\right),
+\end{eqnarray*}
+on est amen\'e \`a poser
+$$\Delta=b^2-4ac.$$
+On appelle $\Delta$ le discriminant. L'\'equation $ax^2+bx+c=0$ \'equivaut \`a $(x+\frac{b}{2a})^2=\frac{\Delta}{a^2}$.
+\par\medskip
+
+1) Si $\Delta>0$, alors $ax^2+bx+c=0$ \'equivaut \`a $x+\frac{b}{2a}=\pm \frac{\sqrt{\Delta}}{a}$, ce qui se simplifie en
+$$x=\frac{-b\pm\sqrt{\Delta}}{2a}.$$
+\par\medskip
+
+2) Si $\Delta=0$, l'\'equation a une et une seule solution $x=-\dfrac{b}{2a}$.
+\par\medskip
+
+3) Si $\Delta<0$, l'\'equation n'a pas de solution.
+\par\medskip
+
+Le graphe d'un polyn\^ome du second degr\'e est une parabole, orient\'ee vers le haut ou vers le bas selon le signe de $a$.
+
+Le signe de $\Delta$ est li\'e au nombre de points d'intersection de la parabole avec l'axe des abscisses.
+
+\begin{exo}
+	Pour quelles valeurs de $a$ l'équation suivante n'admet aucune solution réélle pour $x$ : 
+	$$(a^{2}+2a)x^{2}+(3a)x+1=0$$
+\end{exo}
+\begin{sol}
+	Il est important de considérer $a$ comme une constante qui ne change pas dans tous le problème. On est ramené à une équation de degré 2 en la variable $x$
+	Dès que l'on a une équation de degré 2 en une variable on la résout
+	$$\Delta  = (3a)^{2}-4(a^{2}+2a)$$
+	$$\Delta  =  5a^{2}-10a$$
+	On souhaite avoir aucune solution dans l'équation en $x$ donc $\Delta < 0$
+	$$5a^{2}-10a < 0$$
+	$$a(a-2)<0$$
+	Donc $$0<a<2$$
+\end{sol}
+
+
+\begin{prop}[Somme et produit des racines]
+ Consid\'erons une \'equation de la forme $x^2-Sx+P=0$ o\`u $S$ et $P$ sont deux r\'eels. Supposons qu'il y ait deux racines (une racine c'est une valeur de x qui annule le polynôme). Alors $S$ est la somme, et $P$ est le produit de ces deux racines.
+\end{prop}
+
+Il suffit en effet de calculer $x_1+x_2$ et $x_1x_2$ o\`u $x_1=\frac{S+\sqrt{S^2-4P}}{2}$ et $x_2=\frac{S-\sqrt{S^2-4P}}{2}$.
+
+\begin{exo}
+	Alice pense dans sa tête à deux nombres rééls.
+	Elle écrit sur un papier leurs produit ainsi que leurs sommes.
+	Alice à écrit les nombres $12$ et $7$.
+
+Quels sont les deux nombres d'Alice ? 
+\end{exo}
+
+
+\begin{sol}
+On résous d'une part l'équation : $$X^2 - 12X + 7$$
+$X= 3$ et$ Y=4 $ est une solution 
+
+MAIS on résous aussi l'équation : 
+$$ X^2 - 7X + 12 = 0$$
+$X= 6 + \sqrt{29}$ et $Y=6 - \sqrt{29} $
+\end{sol}
+
+
+\begin{exo}
+ Calculer $x_1^2+x_2^2$ en fonction de $S^2$ et de $P$.
+\end{exo}
+ 
+\begin{sol}
+ Comme $x_1^2=Sx_1-P$ et de m\^eme pour $x_2$, on a $x_1^2+x_2^2=S^2-2P$.
+\end{sol}
+
+
+\par\bigskip
+
+La technique de r\'esolution des \'equations du second degr\'e permet de r\'esoudre certains types d'\'equations de degr\'e sup\'erieur.
+
+\begin{exo}
+ R\'esoudre l'\'equation $x^4-3x^2-1=0$.
+\end{exo}
+
+\begin{sol}
+En posant $y=x^2$, on obtient $y=\frac{3\pm\sqrt{13}}{2}$. Une seule de ces solutions \'etant positive, on trouve
+$x=\pm\sqrt{\frac{3+\sqrt{13}}{2}}$.
+\end{sol}
+
+\begin{exo}
+ R\'esoudre l'\'equation $x^4-4x^3+3x^2-4x+1=0$.
+\end{exo}
+
+\begin{sol}
+ $x=0$ n'\'etant pas solution, on peut diviser l'\'equation par $x^2$, ce qui donne
+$$(x^2+\frac{1}{x^2})-4(x+\frac{1}{x})+3=0.$$
+Soit $y=x+\frac{1}{x}$. On a $y^2-2-4y+3=0$, donc $y^2-4y+1=0$, ce qui donne
+$y=2\pm\sqrt{3}$.
+
+Comme $x^2-yx+1=0$, on peut retrouver $x$ \`a partir de $y$. Le discriminant de cette
+derni\`ere \'equation est $y^2-4$, ce qui n\'ecessite $|y|\geqslant 2$. La seule solution
+v\'erifiant cette condition est $y=2+\sqrt{3}$.
+
+On trouve enfin $x=\dfrac{2+\sqrt{3}\pm\sqrt{3+4\sqrt{3}}}{2}$.
+\end{sol}

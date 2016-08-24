@@ -1,0 +1,172 @@
+\begin{exo}
+
+\medskip
+
+Montrer que pour tout entier strictement positif $n$ il existe $n$ entiers positifs consécutifs dont aucun n'est une puissance entière d'un nombre premier. 
+
+\end{exo}
+
+%\vspace{1cm}
+\bigskip
+
+\begin{sol}
+
+\medskip
+
+L'énoncé : "Montrer que pour tout entier strictement positif $n$ il existe $n$ entiers positifs consécutifs dont aucun n'est un nombre premier" est assez connu, et une solution classique consiste à considérer les entiers : $(n+1)! +k$ pour $k$ variant de $2$ à $n+1$. $k$ divise $(n+1)!$, donc $(n+1)! + k$, et comme $1 \neq k \neq (n+1)!+k$, $(n+1)! + k$ n'est pas premier. Mais l'énoncé du présent exercice, problème 5 de l'Olympiade Internationale 1989, nécessite un peu plus de finesse, car par exemple : $3! + 2 = 8$, $3! + 3 = 9$ et $4! + 3 = 27$ sont des puissances entières de nombres premiers. 
+
+Une des solutions possibles consiste à considérer les $n$ entiers : $(n+1)!^2 + k$ pour $k$ allant de $2$ à $n+1$. Il est clair que $k$ divise $(n+1)!^2 + k$, donc si ce dernier est une puissance entière d'un nombre premier $p$, $k$ est lui aussi une puissance entière de ce même nombre premier : $k = p^{\alpha}$ avec $\alpha \geq 1$. Or $k^2 = p^{2\alpha}$ divise $(n+1)!^2$, de sorte que $(n+1)!^2 + k \equiv p^{\alpha} \pmod{p^{2\alpha}}$ et ne peut pas être une puissance entière de $p$. 
+
+Yakob propose une solution différente et ingénieuse. Considérons $2n$ nombres premiers distincts : $p_1, \ p_2, \ \cdots p_{2n}$ et groupons-les deux par deux : $a_1 = p_1 \times p_2, \ a_2 = p_3 \times p_4, \ \cdots \ \ a_n = p_{2n-1} \times p_{2n}$. D'après le lemme chinois, il existe un entier $N$ tel que $N \equiv 1 \pmod{a_1}, \ N \equiv 2 \pmod{a_2}, \ \cdots \ N \equiv n \pmod{a_n}$. Chacun des $N$ entiers consécutifs $N-1, \ N-2, \ \cdots \ N-n$ a au moins deux facteurs premiers car pour $1 \leq k \leq n$, $N - k$ est divisible par $a_k$, donc aucun n'est une puissance entière d'un nombre premier.
+
+
+\end{sol}
+
+\bigskip
+
+\begin{exo}
+
+\medskip
+
+Soit $p$ un nombre premier. Montrer que l'ensemble $X = \left\{ p-n^2  \mid n \in \mathbb{N}^* \right\}$ contient deux éléments distincts $x$ et $y$ tels que $x \neq 1$ et $x$ divise $y$.
+
+\end{exo}
+
+%\vspace{1cm}
+
+\bigskip
+
+\begin{sol}
+
+\medskip
+
+Cet énoncé est étrange, pourtant il paraît qu'il a été posé à l'Olympiade Balkanique 1996, pour $p$ premier strictement supérieur à $5$. En effet, tel qu'il est posé, il admet des solutions évidentes, que $p$ soit ou non premier, qu'il soit ou non supérieur à $5$. Par exemple, Yakob propose : $n = p$ et $m = p^2$, car $x = p - p^2$ divise toujours $y = p - p^4$. Linda fait remarquer que pour que $x = p - n^2$ divise $y = p - m^2$, il faut et il suffit qu'il divise la différence : $n^2 - m^2 = (n - m)(n+m)$. Il suffit par exemple que $p - n^2 = n - m$, de sorte que pour n'importe quel entier $n > \sqrt{p} > 1$, on peut trouver $m = n^2 + n - p > n > 1$ vérifiant : $x = p - n^2$ divise $y = p - m^2$. 
+
+Il est vraisemblable que l'énoncé exact considérait l'ensemble $X = \left\{ p-n^2  \mid n \in \mathbb{N}^*, \ n < \sqrt{p} \right\}$ pour $p$ premier strictement supérieur à $5$. Avec cette restriction $n < \sqrt{p}$, le résultat n'est plus vrai pour $p = 2, \ 3,$ ou $5$, ni pour $p$ non premier. L'idée est de montrer que le plus petit élément de cet ensemble fini d'entiers divise un autre élément de $X$, sous réserve que ce plus petit élément de $X$ peut être égal à $1$, or $x = 1$ est exclu par hypothèse. 
+
+Dans ce premier cas où $p = n^2 + 1$, $n$ est nécessairement pair, donc l'élément suivant : $x = p - (n-1)^2 = 2n > 1$ divise l'élément le plus grand : $y = p - 1 = n^2$, et ces deux éléments sont distincts car par hypothèse $n > 2$.
+
+Dans le second cas, où $n^2 + 1 < p < (n+1)^2$ ($n \geq 2$), l'élément le plus petit : $x = p - n^2$ est compris entre $2$ et $2n$. Or il ne peut pas être égal à $2n$ ni à $n$ car $n^2 + 2n$ et $n^2 + n$ sont non premiers. Donc $0 < \mid x-n \mid < n$ de sorte que $y = p - (n-x)^2$ est bien un élément de $X$ distinct de $x$. Or $y = \left(p-n^2\right) + 2nx - x^2 = x(1+2n-x)$ est multiple de $x$ dans la mesure où $1+2n - x \geq 2$.
+
+\end{sol}
+
+\bigskip
+
+\begin{exo}
+
+\medskip
+
+Déterminer tous les entiers $n > 1$ tels que $\dfrac{2^n+1}{n^2}$ soit un entier.
+
+\end{exo}
+
+%\vspace{1cm}
+
+\bigskip
+
+\begin{sol}
+
+\medskip
+
+Cet exercice est un grand classique : c'est le problème 3 de l'Olympiade Internationale 1990, celle de Pékin où la France s'est classée 5ème avec trois médailles d'or, notamment grâce à Vincent Lafforgue (petit frère du médaillé Fields Laurent Lafforgue), qui a obtenu, en 1990 et 1991, deux scores maximums de 42/42. Notons toutefois qu'il y avait moitié moins de pays candidats qu'aujourd'hui : plusieurs pays d'Europe se sont subdivisés par la suite.
+
+Cet exercice utilise des techniques de raisonnement qui sont devenues classiques et utiles pour un grand nombre de problèmes. Tout d'abord, l'idée de chercher le plus petit facteur premier $p$ de $n$, en utilisant la notion d'ordre de $2$ modulo $p$. $n$ étant impair, $p \geq 3$. On appelle ordre de $2$ modulo $p$ le plus petit exposant non nul, $b$, tel que $2^b \equiv 1 \pmod{p}$, et on montre que $b$ divise tout autre exposant $a$ tel que $2^a \equiv 1 \pmod{p}$. Il suffit d'écrire la division euclidienne $a = bq + r$ et de remarquer que $2^{bq} \equiv 1 \pmod{p}$ pour en déduire $2^r \equiv 1 \pmod{p}$, avec $0 \leq r < b$. Comme $b$ est le plus petit entier strictement positif vérifiant cette relation, nécessairement $r = 0$ donc $a = bq$. 
+
+Or d'après le théorème de Fermat, $2^{p-1} \equiv 1 \pmod{p}$, ce qui entraîne que l'ordre de $2$ divise $p-1$. Et comme $p$ divise $n$, donc $2^n+1$, donc $2^{2n}-1 = \left(2^n+1\right)\left(2^n-1\right)$, l'ordre de $2$ divise également $2n$. Or il est premier avec $n$, vu qu'il est strictement inférieur à $p$ et que $p$ est, par hypothèse, le plus petit diviseur de $n$ autre que $1$ (l'ordre de $2$ ne peut évidemment pas être $1$, car pour aucun nombre premier $p$  $2$ n'est congru à $1$ modulo $p$). Donc, d'après le théorème de Gauss, il divise $2$ : il ne peut valoir que $2$, de sorte que $p$ divise $2^2 - 1 = 3$, et le plus petit facteur premier $p$ de $n$ est nécessairement $3$. 
+
+Si l'on cherchait les entiers $n$ tels que $n$ divise $2^n+1$, on en aurait beaucoup, et leurs facteurs premiers pourraient être nombreux, même si le plus petit d'entre eux est nécessairement 3. Par exemple, si $n$ divise $2^n+1 = nq$, $2^n+1$ divise $2^{nq}+1 = 2^{2^n+1}$ car $q$ est impair, donc $2^n+1$ est lui aussi solution. $3, \ 9$, mais aussi $513 = 2^9+1$ et même le tiers de $513$, $171 = 9 \times 19$ sont solutions. Seulement ces nombres ne vérifient pas : $2^n+1$ divisible par $n^2$, car par exemple, $2^9+1 = 3^3 \times 19$ n'est pas divisible par $9^2 = 3^4$. 
+
+La seconde étape de la démonstration consiste donc à prouver que $n$ ne peut pas être divisible par $9$. Posons $n = 3^kd$, avec $k \geq 1$ et $d$ impair non divisible par $3$. Montrons par récurrence sur $k$ que la plus grande puissance de $3$ divisant $2^n+1$ est $3^{k+1}$. Pour $k = 1$, $2^{3d} + 1 = \left( 2^3+1 \right) \left( 2^{3(d-1)} - 2^{3(d-2)} + \cdots - 2^3 + 1 \right)$. La seconde parenthèse contient une somme de $d$ termes tous congrus à $1$ modulo $9$, vu que $2^3 \equiv -1 \pmod{9}$, elle est donc congrue à $d$ modulo $9$, ce qui entraîne qu'elle est non multiple de $3$, et la première parenthèse vaut précisément $9$, ce qui initialise la récurrence en prouvant le résultat pour $k = 1$, quel que soit le facteur $d$. Maintenant si le résultat est vrai pour un $k \geq 1$ donné, vu que $2^{3n}+1 = \left(2^n+1\right)\left(2^{2n}-2^n+1\right)$ et que $2^n \equiv -1 \pmod{3^{k+1}}$, $2^{2n}-2^n+1 \equiv 1+1+1=3 \pmod{9}$ est divisible par $3$ et pas par $9$, ce qui achève la démonstration. Il en résulte que si $k \geq 2$ et $n = 3^kd$, la plus grande puissance de $3$ divisant $2^n+1$ est $3^{k+1}$, alors que $n^2$ est divisible par $3^2k$. Donc une solution de notre problème est nécessairement multiple de $3$ et non multiple de $9$.
+
+Ce résultat se généralise par une démonstration analogue : $p$ étant un nombre premier donné, si l'on note $v_p(n)$ l'exposant de la plus grande puissance de $p$ divisant $n$, et si $a$ et $b$ sont deux entiers tels que $p$ divise $a-b$ mais ne divise ni $a$ ni $b$, alors : $$v_p\left(a^n - b^n\right) = v_p(a-b) + v_p(n)$$ C'est le théorème LTE (Lifting The Exponent) qui permet de résoudre bien des exercices. Dans le présent problème, on applique ce théorème LTE pour $p = 3$,  $a = 2$ et $b = -1$. 
+
+Que peut-on dire, maintenant, du facteur $d$ ? Pour quelles valeurs de $d$ non multiples de $3$ $2^n+1$ est-il divisible par $n^2$ avec $n = 3d$ ? Soit $p$ le plus petit facteur premier de $d$ ($p\geq 5)$. L'ordre de $2$ modulo $p$ est divise $p-1$ en vertu du théorème de Fermat, mais il divise aussi $2n = 6d$ vu que $2^{2n} \equiv 1 \pmod{p}$, et il ne divise par $n$ vu que $2^n \equiv -1 \pmod{p}$, donc il est pair. Comme il est strictement inférieur à $p$, plus petit facteur premier de $d$, il est premier avec $d$. Donc il divise $6$ (théorème de Gauss). Les seuls diviseurs pairs de $6$ sont $2$ et $6$, or $2$ ne peut pas être d'ordre $2$ car $2^2 - 1 = 3$ n'a pas de facteur premier autre que $3$, il ne peut pas non plus être d'ordre $6$ car $2^6 - 1 = 3^2 \times 7$ admet $p = 7$ pour unique facteur premier différent de $3$, or $7$ n'est pas d'ordre $6$ mais d'ordre $3$ (il divise $2^3-1$, donc il divise également $2^{3d}-1$ et non pas $2^{3d}+1$). $d$ ne pouvant pas avoir de plus petit facteur premier, $d = 1$ donc l'unique entier $n$ tel que $\dfrac{2^n+1}{n^2}$ soit un entier, outre la solution triviale $n = 1$, est $n = 3$.
+
+\end{sol}
+
+\bigskip
+
+\begin{exo}
+
+\medskip
+
+Soit $p$ un nombre premier supérieur ou égal à $5$. On considère deux entiers strictement positifs $m$ et $n$ vérifiant : 
+$$ 1 + \dfrac12 + \dfrac13 + ... + \dfrac1{p-1} = \dfrac{m}{n}$$
+Montrer que $m$ est divisible par $p^2$. 
+
+\end{exo}
+
+%\vspace{1cm}
+
+\bigskip
+
+\begin{sol}
+
+\medskip
+
+Là encore, prouver que $m$ est divisible par $p$ est très classique et assez facile : il suffit de regrouper les termes : 
+$$ \dfrac{m}{n} = 1 + \dfrac12 + \dfrac13 + ... + \dfrac1{p-1} = \left( 1 + \dfrac1{p-1} \right) + \left( \dfrac12 + \dfrac1{p-2} \right) + \cdots + \left( \dfrac1{k} + \dfrac1{p-k} \right) + \left( \dfrac1{\left(\frac{p-1}{2}\right)} + \dfrac1{\left(\frac{p+1}{2}\right)} \right) $$
+
+$$ = \left( \dfrac{p}{1 \times (p-1)} \right) + \left( \dfrac{p}{2 \times (p-2)} \right) + \cdots + \left( \dfrac{p}{\left(\frac{p-1}{2}\right) \times \left(\frac{p+1}{2}\right)} \right) = p \left( \dfrac1{1 \times (p-1)} + \cdots +  \dfrac1{\left(\frac{p-1}{2}\right) \times \left(\frac{p+1}{2}\right)} \right)$$
+ 
+ 
+Il est clair que $p$ ne se simplifie avec aucun des termes du dénominateur, puisqu'il est premier et que tous les facteurs du dénominateur lui sont strictement inférieurs. Donc $p$ divise $m$. Mais pour montrer que $p^2$ divise $n$, il faut en outre démontrer que le numérateur de  $\dfrac1{1 \times (p-1)} + \cdots +  \dfrac1{\left(\frac{p-1}{2}\right) \times \left(\frac{p+1}{2}\right)}$ est lui aussi divisible par $p$. 
+
+\medskip
+
+Réduisons ces fractions au même dénominateur : $1 \times 2 \times \cdots \times (p-1) = (p-1)!$, qui bien évidemment n'est pas divisible par $p$, il est même congru à $-1$ modulo $p$, d'après le théorème de Wilson. Au numérateur, nous aurons une somme de termes $a_k$ pour $1 \leq k \leq \frac{p-1}{2}$, avec : $a_k$ produit de tous les entiers entre $1$ et $p-1$ à l'exception de $k$ et $p-k$. En d'autres termes, $a_k \times k \times (p-k) = (p-1! \equiv -1 \pmod{p}$. Or pour tout entier $k$, $k \times (p-k) = kp - k^2 \equiv -k^2 \pmod{p}$. Donc $a_k \times k^2 \equiv 1 \pmod{p}$. 
+
+\smallskip
+
+Or à tout $k$ vérifiant $1 \leq k \leq \frac{p-1}{2} $ on associe un et un seul élément de ce même sous-ensemble de $\mathbb{Z}/p\mathbb{Z}$, élément que nous noterons $(\pm1/k)$, vérifiant : $k^2 \times (\pm1/k)^2 = 1$. En effet $k$ admet un inverse dans $\mathbb{Z}/p\mathbb{Z}$, que l'on notera $(1/k)$, vérifiant $k \times (1/k) \equiv 1 \pmod{p}$, et l'inverse de $k^2$ est le carré de cet inverse $(1/k)$, mais c'est aussi le carré de son opposé $(-1/k)$, car pour tout $x$, $x^2 = (-x)^2$. Un et un seul des deux éléments $(1/k)$ et $(-1/k)$ de $\mathbb{Z}/p\mathbb{Z}$, celui que je note $(\pm1/k)$, est compris entre $1$ et $\frac{p-1}{2}$ modulo $p$. Si bien que la somme des $a_k$ est congrue à la somme des $(\pm1/k)^2$ modulo $p$, donc à la somme des $k^2$ modulo $p$, puisque les $\frac{p-1}{2}$ éléments $(\pm1/k)$ sont tous les éléments $1, \ 2, \ \cdots \ \frac{p-1}{2}$ dans le désordre. En d'autres termes, la somme des $a_k$ vaut, modulo $p$, $1^2 + 2^2 + \cdots + \left(\frac{p-1}{2}\right)^2 = \dfrac{\frac{p-1}{2} \times \frac{p+1}{2} \times p}{6}$, vu que pour tout entier $n$, $1^2 + 2^2 + \cdots + n^2 = \dfrac{n(n+1)(2n+1)}{6}$ (ce qui se démontre classiquement par récurrence). Si $p \geq 5$, $p$ est premier avec $6$ donc il ne se simplifie pas et divise obligatoirement le numérateur de $\dfrac{\frac{p-1}{2} \times \frac{p+1}{2} \times p}{6}$, donc la somme des $a_k$, donc le numérateur de  $\dfrac1{1 \times (p-1)} + \cdots +  \dfrac1{\left(\frac{p-1}{2}\right) \times \left(\frac{p+1}{2}\right)}$, ce qui prouve bien que $p^2$ divise le numérateur de $1 + \dfrac12 + \dfrac13 + ... + \dfrac1{p-1}$.
+
+%Or à tout élément $k \neq 0$ de $\mathbb{Z}/p\mathbb{Z}$ on associe bijectivement son inverse, que l'on notera $(1/k)$, à savoir l'unique élément non nul de $\mathbb{Z}/p\mathbb{Z}$ tel que $k \times (1/k) \equiv 1 \pmod{p}$. La somme des $k^2$ lorsque $k$ parcourt $\mathbb{Z}/p\mathbb{Z}^*$ vaut, modulo $p$, deux fois la somme des $k^2$ lorsque  
+
+\end{sol}
+
+\bigskip
+
+
+\begin{exo}
+
+\medskip
+
+Résoudre l'équation diophantienne :
+$$ x^2 = y^3 - 5 $$
+
+\end{exo}
+
+%\vspace{1cm}
+\bigskip
+
+\begin{sol}
+
+\medskip
+
+Commençons par chercher des informations modulo un entier donné, en l'occurrence modulo $4$ car $x^2$ ne prend que deux valeurs modulo $4$ : $0$ et $1$. Donc $y^3 = x^2 + 5$ doit être congru à $1$ ou $2$ modulo $4$. Le cube d'un nombre pair étant divisible par $8$, et le cube d'un nombre impair étant impair, $y^3$ ne peut pas être congru à $2$ modulo $4$. Donc $y^3 \equiv 1 \pmod{4}$, ce qui entraîne $y \equiv 1 \pmod{4}$ car $3^3 \equiv 3 \pmod{4}$.
+
+Dès lors, l'équation peut s'écrire : $x^2 + 4 = y^3 - 1 = (y-1)\left( y^2 + y + 1 \right)$. Or $y^2 + y + 1 \equiv 3 \pmod{4}$ possède nécessairement au moins un facteur premier congru à $3$ modulo (4). Et si $p \equiv 3 \pmod{4}$ divise une somme de carrés $a^2 + b^2$, alors il divise $a$ et il divise $b$. Ce résultat classique  peut se démontrer par l'absurde ainsi : si $p = 4k + 3$ divise $a^2 + b^2$ et ne divise pas $a$, il ne divise pas non plus $b$, mais $a^4 \equiv b^4 \pmod{p}$, donc $a^{4k} \equiv b^{4k} \pmod {p}$ soit, en multipliant par $a^2b^2$, $a^{4k+2}b^2 \equiv b^{4k+2}a^2 \pmod{p}$. Or comme $a$ et $b$ sont premiers avec $p$, $a^{4k+2} \equiv b^{4k+2} \equiv 1 \pmod{p}$. Dès lors $b^2 \equiv a^2 \pmod{p}$, d'où $p$ divise $2a^2$ et comme $p$ est premier impair, $p$ divise $a$, ce qui contredit l'hypothèse. Donc $p$ divise $a$, ce qui entraîne qu'il divise également $b$. Or ici, $b = 2$ n'a pas de diviseur congru à $3$ modulo $4$ : contradiction. Cela prouve que l'équation n'admet pas de solutions. Cette solution a été proposée par Joachim.
+
+\end{sol}
+
+\bigskip
+
+
+\begin{exo}
+
+\medskip
+
+Prouver qu'il n'existe pas d'entiers strictement positifs $a$ et $b$ tels que, pour tous nombres premiers distincts $p$ et $q$ supérieurs à 1000, le nombre $ap + bq$ soit lui aussi premier.
+
+\end{exo}
+
+\bigskip
+
+\begin{sol}
+
+\medskip
+
+La solution de Yakob est différente de celle que j'avais préparée, et elle est plus élégante. Supposons qu'il existe de tels nombres $a$ et $b$. Soient $p$ et $q$ deux nombres premiers distincts supérieurs à 1000, tels que $p$ ne divise ni $a$ ni $a-1$ (choisissons par exemple $p > a$). Par hypothèse, $p_1 = ap + bq$ est lui aussi un nombre premier, et $p_1 > p > 1000$. Plus généralement, par une récurrence immédiate, la suite des $p_n = ap_{n-1} + bq$ est une suite croissante de nombres premiers supérieurs à 1000. Or, toujours par récurrence, $p_2 = a(ap+bq) + bq = a^2p + (a+1)bq = a^2p + \dfrac{a^2-1}{a-1}$, et plus généralement $p_n = a^np + \dfrac{a^n-1}{a-1}bq$. Comme $a$ est premier avec $p$, $a^{p-1} \equiv 1 \pmod{p}$, donc $p$ divise $a^{p-1} - 1$ et ne divise pas $a-1$ par hypothèse. Dès lors $p$ divise $p_{p-1} = a^{p-1}p + \dfrac{a^{p-1}-1}{a-1}bq$, et $p < p_{p-1}$, donc $p_{p-1}$ n'est pas premier, contradiction : on a donc prouvé par l'absurde que de tels $a$ et $b$ n'existent pas. 
+
+\end{sol}
+

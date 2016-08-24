@@ -1,0 +1,864 @@
+\subsubsection{Groupes}
+
+\begin{defn}(Groupe)
+Soit $G$ un ensemble \emph{non vide},
+$\ast : G \times G \to G$ une application et
+$e_G$ un élément de $G$ tels que,
+pour tous les éléments $x$, $y$ et $z$ de $G$ :
+\begin{enumerate}
+\item $(x \ast y) \ast z = x \ast (y \ast z)$, \hfill(\textsc{associativité})
+\item $x \ast e_G = e_G \ast x = x$, \hfill(\textsc{élément neutre})
+\item $x \ast x^{-1} = x^{-1} \ast x = e_G$. \hfill(\textsc{inversibilité})
+\end{enumerate}
+Alors on dit que $G$ est un \emph{groupe} pour la loi $\ast$ ---
+ou que $(G, \ast)$ est un groupe ---
+et que $e_G$ est l'\emph{élément neutre} du groupe.
+\end{defn}
+
+\begin{exo}(Groupe ou non ?)
+Lesquels sont des groupes ? Lesquels n'en sont pas ?
+
+\begin{tabular}{llllll}
+$(\mathbb{N}, +)$ &
+$(\mathbb{Z}, +)$ &
+$(\mathbb{Q}, +)$ &
+$(\mathbb{R}, +)$ &
+$(\mathbb{C}, +)$ &
+$(\mathbb{D}, +)$ \\
+$(\mathbb{R}_+^\ast, +)$ &
+$(\mathbb{Z}, \times)$ &
+$(\mathbb{N}^\ast, \times)$ &
+$(\mathbb{Q}, \times)$ &
+$(\mathbb{Q}^\ast, \times)$ &
+$(\mathbb{Q}_+^\ast, \times)$ \\
+$(\mathbb{R}^\ast, \times)$ &
+$(\mathbb{R}_-^\ast, \times)$ &
+$(\mathbb{C}^\ast, \times)$ &
+$(\mathbb{Z}/n\mathbb{Z}, +)$ &
+$(\mathbb{Z}/n\mathbb{Z}, \times)$ &
+$((\mathbb{Z}/n\mathbb{Z})^\ast, \times)$
+\end{tabular}
+
+\noindent NB : $\mathbb{D}$ désigne l'ensemble des nombres décimaux.
+\end{exo}
+
+\begin{exo}(Unicité de l'élément neutre)
+Soit $(G, \ast)$ un groupe.
+Montrer qu'il admet un unique élément neutre.
+\end{exo}
+
+\begin{exo}(Groupe des permutations)
+Soit $E$ un ensemble non vide, $\mathfrak{S}_E$ l'ensemble des bijections de $E$
+--- ou ensemble des \emph{permutations} de $E$.
+Montrer que $(\mathfrak{S}_E, \circ)$ est un groupe.
+\end{exo}
+
+\begin{exo}(Groupe des isométries)
+Soit $E$ une partie non vide de l'espace $\mathbb{R}^n$ et soit $\mathbf{Iso}(E)$ l'ensemble des isométries de $E$.
+Montrer que $(\mathbf{Iso}(E), \circ)$ est un groupe.
+\end{exo}
+
+\begin{exo}(Unicité de l'inverse)
+Soit $(G, \ast)$ un groupe et $x$, $y$, $z$ trois éléments de $G$
+tels que $e_G = x \ast y = z \ast x$.
+Montrer que $y = z = x^{-1}$.
+\end{exo}
+
+\begin{exo}(Inverse d'un produit)
+Soit $(G, \ast)$ un groupe, et $x$, $y$ deux éléments de $G$.
+Montrer que $(x \ast y)^{-1} = y^{-1} \ast x^{-1}$ et que
+$\left(x^{-1}\right)^{-1} = x$.
+\end{exo}
+
+\begin{defn}(Groupe commutatif)
+Soit $(G, \ast)$ un groupe.
+On dit que $(G, \ast)$ est \emph{commutatif} ---
+ou \emph{abélien} --- si,
+pour tous les éléments $x$ et $y$ de $G$ :
+\begin{enumerate}
+\item $x \ast y = y \ast x$ (\textsc{commutativité}).
+\end{enumerate}
+\end{defn}
+
+\begin{exo}(Permutations et commutativité)
+Montrer que le groupe $(\mathfrak{S}_E, \circ)$ est abélien
+si et seulement si $\vert E \vert \leq 2$.
+\end{exo}
+
+\subsubsection{Sous-groupes}
+
+\begin{defn}(Sous-groupe)
+Soit $(G, \ast)$ et $(H, \ast)$ deux groupes tels que $H \subseteq G$.
+On dit que $H$ est un \emph{sous-groupe} de $G$ ---
+ou que $(H, \ast)$ est un sous-groupe de $(G, \ast)$.
+\end{defn}
+
+\begin{exo}(Neutre et sous-groupe)
+Soit $(G, \ast)$ un groupe et $H \subseteq G$ un sous-groupe de $G$.
+Montrer que $e_G = e_H$.
+\end{exo}
+
+\begin{exo}(Caractérisation des sous-groupes)
+Soit $(G, \ast)$ un groupe et $H \subseteq G$ une partie de $G$.
+Montrer que $H$ est un sous-groupe de $G$ si et seulement si
+les deux propriétés suivantes sont simultanément vérifiées :
+\begin{enumerate}
+\item $H$ est non vide ;
+\item pour tous les éléments $x$ et $y$ de $H$, $x \ast y^{-1}$ appartient à $H$.
+\end{enumerate}
+\end{exo}
+
+\begin{exo}(Intersection de groupes)
+Soit $I$ un ensemble, $(\Gamma, \ast)$ un groupe et
+$(G_i)_{i \in I}$ une famille de sous-groupes de $\Gamma$ indicés par $I$.
+Montrer que l'intersection $\bigcap_{i \in I}G_i$ est un sous-groupe de $\Gamma$.
+\end{exo}
+
+\begin{exo}(Sous-groupes de Z)
+Montrer que les sous-groupes de $(\mathbb{Z},+)$ sont exactement les ensembles
+de la forme $d \mathbb{Z} = \{d k \mid k \in \mathbb{Z}\}$, où $d \in \mathbb{Z}$.
+\end{exo}
+
+\begin{exo}(Réunion de sous-groupes)
+Soit $(\Gamma, \ast)$ un groupe et
+$G$, $H$ deux sous-groupes de $\Gamma$.
+Montrer que $G \cup H$ est un sous-groupe de $\Gamma$ si et seulement si
+$G \subseteq H$ ou $H \subseteq G$.
+\end{exo}
+
+\begin{defn}(Sous-groupe engendré)
+Soit $(G, \ast)$ un groupe et $S \subseteq G$ une partie de $G$.
+Le \emph{sous-groupe} de $G$ \emph{engendré} par $S$ est l'intersection de
+tous les sous-groupes $H$ de $G$ tels que $S \subseteq H$.
+On le note couramment $\langle S\rangle$ --- ou bien
+$\langle s_1, s_2, \dots, s_n \rangle$ si $S = \{s_1, s_2, \dots, s_n\}$ est un ensemble fini.
+\end{defn}
+
+\begin{exo}(Sous-groupe engendré et PGCD)
+Soit $S \subseteq \mathbb{Z}$ une partie de $\mathbb{Z}$.
+Montrer que le sous-groupe $d \mathbb{Z} = \langle S \rangle$, où
+$d$ est le plus grand commun diviseur des éléments de $S$.
+\end{exo}
+
+\begin{exo}(Invariance du sous-groupe engendré)
+Soit $(G, \ast)$ un groupe, $S \subseteq G$ une partie de $G$,
+$x$ un élément de $G$ et $s$ un élément de $\langle S \rangle$.
+Montrer que $\langle S \cup \{x\} \rangle = \langle S \cup \{x \ast s\} \rangle = \langle S \cup \{s \ast x\} \rangle$. 
+\end{exo}
+
+\begin{defn}(Partie génératrice)
+Soit $(G, \ast)$ un groupe et $S \subseteq G$ une partie de $G$ telle que
+$\langle S \rangle = G$.
+On dit que $S$ est une \emph{partie génératrice} de $G$ --- ou que
+$S$ \emph{engendre} $G$.
+\end{defn}
+
+\begin{exo}(Groupe des éléments mous)
+Soit $(G, \ast)$ un groupe.
+Un élément $x$ de $G$ est dit \emph{mou} si
+toute partie $S \subseteq G$ de $G$ telle que
+$S \cup \{x\}$ engendre $G$ est elle-même
+une partie génératrice de $G$.
+Montrer que l'ensemble des éléments mous forme un sous-groupe de $G$.
+\end{exo}
+
+\begin{exo}(Petites parties génératrices de $\Z \times \Z$)
+Trouver toutes les parties génératrices de cardinal au plus $2$
+du groupe $(\mathbb{Z}^2, +)$.
+\end{exo}
+
+\subsubsection{Morphismes de groupes}
+
+\begin{defn}(Morphisme de groupes)
+Soit $(G, \ast)$ et $(H, \circledast)$ deux groupes,
+et $\varphi : G \to H$ une application telle que,
+pour tous les éléments $x$, $y$ de $G$ :
+\begin{enumerate}
+\item $\varphi(x \ast y) = \varphi(x) \circledast \varphi(y)$. \hfill(\textsc{linéarité})
+\end{enumerate}
+On dit alors que $\varphi$ est un \emph{morphisme de groupes} ---
+ou \emph{endomorphisme de groupes} si $(G, \ast) = (H, \circledast)$.
+\end{defn}
+
+\begin{exo}(Endomorphismes de $\Z$)
+Trouver tous les endomorphismes du groupe $(\mathbb{Z},+)$.
+\end{exo}
+
+\begin{exo}(Endomorphismes de $\Z \times \Z$)
+Trouver l'ensemble des endomorphismes du groupe $(\mathbb{Z}^2,+)$.
+\end{exo}
+
+\begin{exo}(Composition et morphismes de groupes)
+Soit $(G, \ast)$, $(H, \circledast)$ et $(I, \odot)$ trois groupes et
+$\varphi : G \to H$, $\psi : H \to I$ deux morphismes de groupes.
+Montrer que $\psi \circ \varphi$ est un morphisme de groupes.
+\end{exo}
+
+\begin{exo}(Image de l'élément neutre et de l'inverse par un morphisme)
+Soit $(G, \ast)$ et $(H, \circledast)$ deux groupes,
+$\varphi : G \to H$ un morphisme de groupes et $x$ un élément de $G$.
+Montrer que $\varphi(e_G) = e_H$ et que $\varphi(x^{-1}) = \varphi(x)^{-1}$.
+\end{exo}
+
+\begin{defn}(Image d'un morphisme de groupes)
+Soit $(G, \ast)$ et $(H, \circledast)$ deux groupes,
+$H' \subseteq H$ un sous-groupe de $H$ et
+et $\varphi : G \to H$ un morphisme de groupes.
+L'ensemble $\mathrm{Im} = \{y \in H \mid \exists x \in G, y = \varphi(x)\}$
+est appelé \emph{image} de $\varphi$.
+\end{defn}
+
+\begin{exo}(Image)
+Soit $(G, \ast)$ et $(H, \circledast)$ deux groupes et
+$\varphi : G \to H$ un morphisme de groupes.
+Montrer que $\mathrm{Im}(\varphi)$ est un sous-groupe de $H$.
+\end{exo}
+
+\begin{defn}(Noyau d'un morphisme de groupes)
+Soit $(G, \ast)$ et $(H, \circledast)$ deux groupes
+et $\varphi : G \to H$ un morphisme de groupes.
+L'ensemble $\mathrm{Ker}(\varphi) = \{x \in G \mid \varphi(x) = e_H\}$
+est appelé \emph{noyau} de $\varphi$.
+\end{defn}
+
+\begin{exo}(Noyau)
+Soit $(G, \ast)$ et $(H, \circledast)$ deux groupes et
+$\varphi : G \to H$ un morphisme de groupes.
+Montrer que $\mathrm{Ker}(\varphi)$ est un sous-groupe de $G$.
+\end{exo}
+
+\begin{exo}(Noyau et morphisme injectif)
+Soit $(G, \ast)$ et $(H, \circledast)$ deux groupes et
+$\varphi : G \to H$ un morphisme de groupes.
+Montrer que $\varphi$ est injectif si et seulement si $\mathrm{Ker}(\varphi) = \{e_G\}$.
+\end{exo}
+
+\begin{defn}(Isomorphisme de groupes)
+Soit $(G, \ast)$ et $(H, \circledast)$ deux groupes
+et $\varphi : G \to H$ un morphisme de groupes bijectif.
+On dit que $\varphi$ est un \emph{isomorphisme de groupes} ---
+ou un \emph{automorphisme de groupes} si $(G, \ast) = (H, \circledast)$.
+\end{defn}
+
+\begin{exo}(Groupe des automorphismes)
+Soit $(G, \ast)$ un groupe et $\mathrm{Aut}_G$ l'ensemble des automorphismes de $G$.
+Montrer que $(\mathrm{Aut}_G, \circ)$ est un groupe.
+\end{exo}
+
+\begin{exo}(Groupe et sous-groupe de permutations)
+Soit $(G, \ast)$ un groupe.
+Montrer que $(G,\ast)$ est isomorphe à un sous-groupe de $(\mathfrak{S}_G, \circ)$.
+\end{exo}
+
+\begin{defn}(Conjugaison)
+Soit $(G, \ast)$ un groupe et $x$ un élément de $G$.
+L'application $\varphi_x : y \to x^{-1} \ast y \ast x$
+est appelée \emph{morphisme de conjugaison par} $x$
+--- ou \emph{automorphisme intérieur} induit par $x$.
+\end{defn}
+
+\begin{exo}(Conjugaison et automorphisme)
+Soit $(G, \ast)$ un groupe et $x$ un élément de $G$.
+Montrer que l'automorphisme intérieur $\varphi_x$
+est bien un automorphisme de $G$.
+\end{exo}
+
+\begin{exo}(Groupe des automorphismes intérieurs)
+Soit $(G, \ast)$ un groupe et $\mathrm{Int}_G$ l'ensemble des
+automorphismes intérieurs de $G$.
+Montrer que $(\mathrm{Int}_G, \circ)$ est un groupe.
+\end{exo}
+
+\subsubsection{Produit direct et quotients}
+
+\begin{defn}(Produit direct)
+Soit $(G, \ast)$ et $(H, \circledast)$ deux groupes.
+Alors l'ensemble $G \times H$ est un groupe pour la loi
+$\odot$ telle que,
+pour tous les éléments $x$, $x'$ de $G$ et
+$y$, $y'$ de $H$ :
+\begin{enumerate}
+\item $(x, y) \odot (x', y') = (x \ast x', y \circledast y')$.
+\end{enumerate}
+Ce groupe est appelé
+\emph{produit direct} des groupes $(G, \ast)$ et $(H, \circledast)$.
+\end{defn}
+
+\begin{exo}(Produit direct)
+Soit $(G, \ast)$ et $(H, \circledast)$ deux groupes.
+Monter que leur produit direct est bien un groupe.
+\end{exo}
+
+\begin{defn}(Sous-groupe distingué)
+Soit $(G, \ast)$ un groupe et $H \subseteq G$ un sous-groupe de $G$ tel que,
+pour tout élément $x$ de $G$, $\varphi_x(H) \subseteq H$.
+On dit que $H$ est un sous-groupe \emph{distingué} de $G$.
+\end{defn}
+
+\begin{exo}(Noyau distingué)
+Soit $(G, \ast)$ et $(H, \circledast)$ deux groupes,
+et $\varphi : G \to H$ un morphisme de groupes.
+Montrer que $\mathrm{Ker}(\varphi)$ est un sous-groupe distingué de $G$.
+\end{exo}
+
+\begin{exo}(Sous-groupe distingué et produit)
+Soit $(G, \ast)$ et $(H, \circledast)$ deux groupes,
+$G' \subseteq G$ et $H' \subseteq H$ deux sous-groupes distingués de $G$ et $H$
+$(G \times H, \odot)$ le produit direct de $G$ et $H$.
+Montrer que $G' \times H'$ est un sous-groupe distingué de $G \times H$.
+\end{exo}
+
+\begin{defn}(Quotient de groupes)
+Soit $(G, \ast)$ un groupe, $H \subseteq G$ un sous-groupe de $G$ et
+$G / H$ l'ensemble $\{x \ast H \mid x \in G\}$ : c'est l'ensemble des parties de $G$
+de la forme $\{x \ast h \mid h \in H\}$, où $x$ est un élément de $G$.
+$G / H$ est appelé \emph{quotient droit} de $G$ par $H$ ---
+ou \emph{quotient} de $G$ par $H$ si $H$ est distingué.
+\end{defn}
+
+\begin{rem}
+Quand on travaille dans l'ensemble $G / H$, on note couramment $x$ l'ensemble $x \ast H$.
+Toutefois, si l'on travaille à la fois dans $G$, $H$ et $G / H$,
+il est conseillé de toujours réutiliser la notation $x \ast H$,
+qui prêtera moins à confusion.
+\end{rem}
+
+\begin{exo}(Égalité des quotients)
+Soit $(G, \ast)$ un groupe fini, $H \subseteq G$ un sous-groupe de $G$ et
+$x$, $y$ deux éléments de $G$.
+Montrer l'équivalence entre les propositions suivantes :
+\begin{enumerate}
+\item $x \ast H = y \ast H$ ;
+\item $(x \ast H) \cap (y \ast H) \neq \emptyset$ ;
+\item $x^{-1} \ast y \in H$.
+\end{enumerate}
+\end{exo}
+
+\begin{exo}(Quotient de groupes et cardinaux)
+Soit $(G, \ast)$ un groupe fini, $H \subseteq G$ un sous-groupe de $G$ et
+$G / H$ le quotient droit de $G$ par $H$.
+Montrer que $\vert G \vert = \vert H \vert ~ \vert G / H \vert$.
+\end{exo}
+
+\begin{exo}(Quotient par un sous-groupe distingué)
+Soit $(G, \ast)$ un groupe et $H \subseteq G$ un sous-groupe distingué de $G$.
+Montrer que le quotient $G / H$ est un groupe pour la loi $\ast$ telle que
+$X \ast Y = \{x \ast y \mid x \in X, y \in Y \}$.
+\end{exo}
+
+\begin{exo}(Isomorphisme entre image et quotient par le noyau)
+Soit $(G, \ast)$ et $(H, \circledast)$ deux groupes,
+et $\varphi : G \to H$ un morphisme de groupes.
+Montrer que les groupes
+$G / \mathrm{Ker}(\varphi)$ et $\mathrm{Im}(\varphi)$ sont isomorphes.
+\end{exo}
+
+\begin{exo}(Quotient et produit direct)
+Soit $G = \mathbb{Z}/4\mathbb{Z}$ et $H = 2\mathbb{Z}/4\mathbb{Z}$.
+Montrer que $H$ est un sous-groupe distingué de $G$ mais que
+$G$ n'est pas isomorphe à $H \times (G / H)$.
+\end{exo}
+
+\begin{exo}(Théorème chinois)
+Soit $a$, $b$, $x$ et $y$ quatre entiers tels que $a x + b y = 1$.
+Montrer que l'application $\varphi : \mathbb{Z}^2 \to \mathbb{Z}/ab \mathbb{Z}$
+telle que $\varphi(u, v) = u b y + v a x$ est un morphisme de groupes de noyau
+$\mathrm{Ker}(\varphi) = a \mathbb{Z} \times b \mathbb{Z}$.
+\end{exo}
+
+\begin{defn}(Ordre d'un élément)
+Soit $(G, \ast)$ un groupe et $g$ un élément de $G$ et
+$n$ le plus petit entier strictement positif tel que $g^n = e_G$
+(si un tel entier existe).
+On dit que $n$ est l'\emph{ordre} de $g$ ---
+et que $g$ est d'ordre \emph{infini} si un tel entier n'existe pas.
+\end{defn}
+
+\begin{exo}(Sous-groupe monogène)
+Soit $(G, \ast)$ un groupe et $g$ un élément de $G$.
+Montrer que l'application $\varphi^g : \mathbb{Z} \to \langle g \rangle$ est un morphisme de groupes,
+de noyau $\mathrm{Ker}(\varphi^g) = n \mathbb{Z}$ si $g$ est d'ordre $n$ fini, et
+$\mathrm{Ker}(\varphi^g) = \{0\}$ si $g$ est d'ordre infini.
+\end{exo}
+
+\begin{exo}(Groupe infini à ordres finis)
+Monter que le groupe $(\mathbb{Q}/\mathbb{Z}, +)$ est un groupe infini
+dont tout élément est d'ordre fini,
+et en déduire qu'il n'est engendré par nul ensemble fini.
+\end{exo}
+
+\begin{exo}(Théorème de Lagrange)
+Soit $(G, \ast)$ un groupe fini et $g$ un élément de $G$.
+Montrer que l'ordre de $g$ divise $\vert G \vert$.
+\end{exo}
+
+\begin{exo}(Petit théorème de Fermat)
+Soit $p$ un nombre premier $a$ un entier premier avec $p$.
+Montrer que $a^{p-1} \equiv 1$ (mod. $p$).
+\end{exo}
+
+\subsubsection{Solutions des exercices}
+
+\begin{sol}
+Sont des groupes :
+$(\mathbb{Z}, +)$,
+$(\mathbb{Q}, +)$,
+$(\mathbb{R}, +)$,
+$(\mathbb{C}, +)$,
+$(\mathbb{D}, +)$,
+$(\mathbb{Q}^\ast, \times)$,
+$(\mathbb{Q}_+^\ast, \times)$,
+$(\mathbb{R}^\ast, \times)$,
+$(\mathbb{C}^\ast, \times)$,
+$(\mathbb{Z}/n\mathbb{Z}, +)$ et
+$((\mathbb{Z}/n\mathbb{Z})^\ast, \times)$.
+Ne sont pas des groupes :
+\begin{itemize}
+\item $(\mathbb{N}, +)$ : $1$ n'est pas inversible.
+\item $(\mathbb{R}_+^\ast, +)$ : il n'y a pas d'élément neutre
+\item $(\mathbb{Z}, \times)$ : $0$ n'est pas inversible.
+\item $(\mathbb{N}^\ast, \times)$ : $2$ n'est pas inversible.
+\item $(\mathbb{Q}, \times)$ : $0$ n'est pas inversible.
+\item $(\mathbb{R}_-^\ast, \times)$ : $(-1) \times (-1) \notin \mathbb{R}_-^\ast$.
+\item $(\mathbb{Z}/n\mathbb{Z}, \times)$ : $0$ n'est pas inversible.
+\end{itemize}
+\end{sol}
+
+\begin{sol}
+Soit $e_G$ et $e'_G$ deux éléments neutres du groupe $(G, \ast)$.
+Alors $e_G = e_G \ast e'_G = e'_G$.
+\end{sol}
+
+\begin{sol}
+$\mathfrak{S}_E$ est bien stable par composition,
+la composition est associative,
+admet $\mathbf{Id}_E \in \mathfrak{S}_E$ pour élément neutre,
+et chaque permutation $\tau \in \mathfrak{S}_E$
+admet une permutation réciproque $\tau^{-1} \in \mathfrak{S}_E$,
+donc $(\mathfrak{S}_E, \circ)$ est bien un groupe.
+\end{sol}
+
+\begin{sol}
+Tout d'abord, la composée de deux isométries est une isométrie, et la composition est associative.
+D'autre part, $\mathbf{Iso}(E)$ admet $\mathbf{Id}_E$ pour élément neutre, et
+chaque isométrie $f \in \mathbf{Iso}(E)$ est nécessairement bijective,
+de sorte que sa bijection réciproque est elle aussi une isométrie.
+$(\mathbf{Iso}(E),\circ)$ est donc bien un groupe.
+\end{sol}
+
+\begin{exo}(Groupe des isométries)
+Soit $E$ une partie non vide de l'espace $\mathbb{R}^n$ et soit $\mathbf{Iso}(E)$ l'ensemble des isométries de $E$.
+Montrer que $(\mathbf{Iso}(E), \circ)$ est un groupe.
+\end{exo}
+
+\begin{sol}
+Il suffit de constater que $z = z \ast x \ast x^{-1} = x^{-1} = x^{-1} \ast x \ast y = y$.
+\end{sol}
+
+\begin{sol}
+$(x \ast y) \ast (y^{-1} \ast x^{-1}) = x \ast (y \ast y^{-1}) \ast x^{-1} = x \ast x^{-1} = e_G$
+donc $y^{-1} \ast x^{-1} = (x \ast y)^{-1}$.
+En outre, $x = x \ast x^{-1} \ast x = x \ast x^{-1} \ast (x^{-1})^{-1} = (x^{-1})^{-1}$.
+\end{sol}
+
+\begin{sol}
+Si $E$ est un singleton alors $\mathfrak{S}_E = \{\mathbf{Id}_E\}$ est bien abélien.
+Si $E$ est un ensemble contenant deux éléments $x$ et $y$, alors
+$\mathfrak{S}_E = \left\{\mathbf{Id}_E, \binom{x ~ y}{y ~ x} \right\}$ est abélien aussi.
+
+Enfin, si $\vert E \vert \geq 3$, considérons trois éléments distincts $x$, $y$, $z$ de $E$.
+Alors $\binom{x ~ y ~ z}{y ~ x ~ z}$ et $\binom{x ~ y ~ z}{x ~ z ~ y}$ appartiennent à $\mathfrak{S}_E$
+mais ne commutent pas, et $E$ n'est donc pas abélien.
+\end{sol}
+
+\begin{sol}
+$e_H$ est le neutre de $H$ donc $e_H \ast e_H = e_H$.
+Ainsi, en prenant les inverses dans le groupe $G$,
+on observe que $e_H = e_H \ast e_H \ast e_H^{-1} = e_H \ast e_H^{-1} = e_G$.
+\end{sol}
+
+\begin{sol}
+Tout sous-groupe $H \subseteq G$ de $G$ vérifie évidemment les propriétés 1 et 2.
+Réciproquement, si $H \subseteq G$ vérifie simultanément les propriétés 1 et 2,
+soit $x$ et $y$ deux éléments de $H$.
+Alors
+\begin{enumerate}
+\item $e_G = x \ast x^{-1} \in H$ donc $x^{-1} = e_G \ast x^{-1} \in H$ et $x \ast y = x \ast (y^{-1})^{-1} \in H$ :
+$\ast$ induit bien une application $\ast_H : H \times H \to H$ ;
+\item $\ast_H$ est nécessairement associative, et on vient de voir que $e_G \in H$ et que $x^{-1} \in H$, donc
+$(H, \ast_H)$ est bien un sous-groupe de $(G, \ast)$.
+\end{enumerate}
+\end{sol}
+
+\begin{sol}
+$e_\Gamma$ appartient nécessairement à chaque sous-groupe $G_i$, donc à $\bigcap_{i \in I}G_i$, qui est non vide.
+En outre, si $x$ et $y$ sont deux éléments de $\bigcap_{i \in I}G_i$, alors
+$x \ast y^{-1}$ appartient à chaque sous-groupe $G_i$, donc à $\bigcap_{i \in I}G_i$.
+Ainsi, $\bigcap_{i \in I}G_i$ est bien un sous-groupe de $\Gamma$.
+\end{sol}
+
+\begin{sol}
+Tout d'abord, tout ensemble $d \mathbb{Z}$ est clairement un sous-groupe de $\mathbb{Z}$.
+Réciproquement, si $G$ est un sous-groupe de $\mathbb{Z}$, alors
+\begin{itemize}
+\item si $G$ est un singleton, puisque $0 \in G$, on a $G = \{0\} = 0 \mathbb{Z}$ ;
+\item sinon, soit $d$ la plus petite différence (en valeur absolue) entre deux éléments de $G$
+et soit $x$, $y$ deux éléments de $G$ tels que $x - y = d$ ;
+alors $d \in G$, donc $d \mathbb{Z} \subseteq G$ et, par définition de $d$,
+$G$ ne contient aucun élément de $\mathbb{Z} \backslash d \mathbb{Z}$,
+ce qui signifie en fait que $d \mathbb{Z} = G$.
+\end{itemize}
+\end{sol}
+
+\begin{sol}
+Si $G \subseteq H$ ou $H \subseteq G$, il est clair que $G \cup H \in \{G, H\}$ est un sous-groupe de $\Gamma$.
+Réciproquement, si $G \not\subseteq H$ et si $G \cup H$ est un sous-groupe de $\Gamma$,
+soit $x$ un élément de $G \backslash H$ et $y$ un élément de $H \subseteq G \cup H$.
+Alors $x = (x \ast y) \ast y^{-1} \notin H$ donc $x \ast y \notin H$, et $x \ast y \in G$.
+Puis $y = x^{-1} \ast (x \ast y) \in G$, ce qui prouve bien que $H \subseteq G$.
+\end{sol}
+
+\begin{sol}
+Soit $\delta$ le plus grand commun diviseur des éléments de $S$.
+Tout d'abord, si $d \mathbb{Z} = \langle S \rangle$, alors
+$d$ divise tous les éléments de $S$, donc divise $\delta$.
+Réciproquement, puisque $S \subseteq \delta \mathbb{Z}$, alors
+$d \mathbb{Z} = \langle S \rangle \subseteq \delta \mathbb{Z}$, donc
+$\delta$ divise $d$.
+Ainsi, $\delta = d$.
+\end{sol}
+
+\begin{sol}
+Soit $H \subseteq G$ un sous-groupe de $G$ tel que
+$S \cup \{x\} \subseteq H$. Alors $x \ast s \subseteq H$ et $s \ast x \subseteq H$, donc
+$S \cup \{x \ast s\} \subseteq H$ et $S \cup \{s \ast x\} \subseteq H$.
+Ceci étant valable quel que soit $H$, on en déduit que
+$S \cup \{x \ast s\} \subseteq \langle S \cup \{x\} \rangle$ et que
+$S \cup \{s \ast x\} \subseteq \langle S \cup \{x\} \rangle$.
+Puis, de même,
+$S \cup \{x\}  = S \cup \{(x \ast s) \ast s^{-1}\}\subseteq \langle S \cup \{x \ast s\} \rangle$ et
+$S \cup \{x\}  = S \cup \{s^{-1} \ast (s \ast x)\}\subseteq \langle S \cup \{s \ast x\} \rangle$, de sorte que
+$\langle S \cup \{x\} \rangle = \langle S \cup \{x \ast s\} \rangle = \langle S \cup \{s \ast x\} \rangle$. 
+\end{sol}
+
+\begin{sol}
+Soit $M$ l'ensemble des éléments mous.
+Tout d'abord, $e_G$ est mou, donc $M$ est non vide.
+De plus, si $x$ et $y$ sont deux éléments mous, soit
+$S \subseteq G$ une partie de $G$ telle que $S \cup \{x \ast y^{-1}\}$
+engendre $G$.
+Alors $G = \left\langle S \cup \{x \ast y^{-1}, y\} \right\rangle =
+\left\langle S \cup \{x, y\} \right\rangle = \left\langle S \cup \{y\} \right\rangle = \left\langle S \right\rangle$.
+Cela prouve que $x \ast y^{-1}$ est mou également, donc que $M$
+est bien un sous-groupe de $G$.
+\end{sol}
+
+\begin{sol}
+Soit $S = \{a, b\}$ une partie de $\mathbb{Z}^2$
+que l'on suppose génératrice, et $x$, $y$, $z$, $t$ des entiers tels que $x a + y b = \binom{1}{0}$ et
+$z a + t b = \binom{0}{1}$.
+Alors $(z y - x t) a = \binom{-t}{y}$ et $(z y - x t) b = \binom{z}{-x}$.
+Puisque l'on ne peut pas avoir simultanément $x = y = z = t = 0$, il s'ensuit que $z y - x t \neq 0$.
+En outre, $(z y - x t)^2 (a_1 b_2 - a_2 b_1) = x t - z y$, donc
+$(x t - z y) (a_1 b_2 - a_2 b_1) = 1$.
+Puisque $x t - z y$ et $a_1 b_2 - a_2 b_1$ sont des entiers, il s'ensuit que $a_1 b_2 - a_2 b_1 = \pm 1$.
+
+Réciproquement, si $a_1 b_2 - a_2 b_1 = \varepsilon \in \{-1,1\}$ alors, pour tous les entiers $u$ et $v$,
+$\binom{u}{v} = \varepsilon (b_1 v - b_2 u) a + \varepsilon (a_2 u - a_1 v) b$.
+
+Enfin, si $a = b$, alors il est clair que $a_1 b_2 - a_2 b_1 = 0 \notin \{-1,1\}$.
+Il s'ensuit que les parties génératrices de $\mathbb{Z}^2$ de cardinal au plus $2$ sont les ensembles
+$\{a, b\} \subseteq \mathbb{Z}^2$ tels que $a_1 b_2 - a_2 b_1 = \pm 1$.
+\end{sol}
+
+\begin{sol}
+Toutes les applications $\varphi_d : x \to d x$, où $d$ est un entier relatif,
+sont bien des endomorphismes de $\mathbb{Z}$.
+Réciproquement, si $\varphi$ est un endomorphisme de $\mathbb{Z}$,
+alors on prouve par récurrence sur $\vert n \vert$ que,
+pour tout entier relatif $n$, $\varphi(n) = n \varphi(1)$ :
+cela signifie que $\varphi = \varphi_{\varphi(1)}$.
+Les endomorphismes de $\mathbb{Z}$ sont donc les fonctions linéaires
+de pente entière.
+\end{sol}
+
+\begin{sol}
+Toutes les applications $\varphi_{u,v} : \binom{x}{y} \to x u + y v$,
+où $u$ et $v$ sont deux éléments de $\mathbb{Z}^2$,
+sont bien des endomorphismes de $\mathbb{Z}^2$.
+Réciproquement, si $\varphi$ est un endomorphisme de $\mathbb{Z}^2$,
+alors on prouve par récurrence sur $\vert n \vert + \vert m \vert$ que,
+pour tout élément $\binom{n}{m}$ de $\mathbb{Z}^2$,
+$\varphi\binom{n}{m} = n \varphi\binom{1}{0} + m \varphi\binom{0}{1}$ :
+cela signifie que $\varphi = \varphi_{\varphi\binom{1}{0}, \varphi\binom{0}{1}}$.
+
+Les endomorphismes de $\mathbb{Z}^2$ sont donc les fonctions
+linéaires en chacune de leurs variables.
+\end{sol}
+
+\begin{sol}
+Soit $x$ et $y$ deux éléments de $G$.
+Alors $\psi \circ \varphi(x \ast y) = \psi(\varphi(x) \circledast \varphi(y)) =
+\psi\circ\varphi(x) \odot \psi\circ\varphi(y)$,
+donc $\psi\circ\varphi : G \to I$ est bien un morphisme de groupes.
+\end{sol}
+
+\begin{sol}
+$e_H = \varphi(e_G) \circledast \varphi(e_G)^{-1} = \varphi(e_G \ast e_G) \circledast \varphi(e_G)^{-1} =
+\varphi(e_G) \circledast \varphi(e_G) \circledast \varphi(e_G)^{-1} = \varphi(e_G)$ et
+$e_H = \varphi(e_G) = \varphi(x \ast x^{-1}) = \varphi(x) \circledast \varphi(x^{-1})$, donc
+$\varphi(x)^{-1} = \varphi(x^{-1})$.
+\end{sol}
+
+\begin{sol}
+Tout d'abord, $e_H = \varphi(e_G) \in \mathrm{Im}(\varphi)$, qui est donc non vide.
+Soit alors $x$ et $y$ deux éléments de $\mathrm{Im}(\varphi)$,
+et $z$, $t$ deux éléments de $G$ tels que $x = \varphi(z)$ et $y = \varphi(t)$.
+Alors $\varphi(z \ast t^{-1}) = \varphi(z) \circledast \varphi(t^{-1}) =
+\varphi(z) \circledast \varphi(t)^{-1} = x \circledast y^{-1} \in \mathrm{Im}(\varphi)$,
+ce qui prouve bien que $\mathrm{Im}(\varphi)$ est un sous-groupe de $H$.
+\end{sol}
+
+\begin{sol}
+Tout d'abord, $e_H = \varphi(e_G)$ donc $e_G \in \mathrm{Ker}(\varphi)$, qui ne peut être vide.
+Soit alors $x$ et $y$ deux éléments de $\mathrm{Ker}(\varphi)$ :
+$\varphi(x \ast y^{-1}) = \varphi(x) \circledast \varphi(y^{-1}) =
+\varphi(x) \circledast \varphi(y)^{-1} = e_H \circledast e_H^{-1} = e_H$ donc
+$x \ast y^{-1} \in \mathrm{Ker}(\varphi)$,
+ce qui prouve bien que $\mathrm{Ker}(\varphi)$ est un sous-groupe de $G$.
+\end{sol}
+
+\begin{sol}
+Tout d'abord, si $\varphi$ est injectif, soit $x$ un élément de $\mathrm{Ker}(\varphi)$ :
+$\varphi(x) = e_H = \varphi(e_G)$ donc $x = e_G$, ce qui montre que $\mathrm{Ker}(\varphi) = \{e_G\}$.
+
+Réciproquement, si $\mathrm{Ker}(\varphi) = \{e_G\}$, soit $x$ et $y$ deux éléments de $G$ tels que
+$\varphi(x) = \varphi(y)$. Alors
+$\varphi(x \ast y^{-1}) = \varphi(x) \circledast \varphi(y)^{-1} = e_H$, donc
+$x \ast y^{-1} \in \mathrm{Ker}(\varphi) = \{e_G\}$ et
+$y = e_G \ast y = x \ast y^{-1} \ast y = x$ : cela montre bien que $\varphi$ est injectif.
+\end{sol}
+
+\begin{sol}
+Tout d'abord, $\mathbf{Id}_G \in \mathrm{Aut}_G \subseteq \mathfrak{S}_G$ :
+$\mathrm{Aut}_G$ est donc une partie non vide du groupe $\mathfrak{S}_G$.
+En outre, si $\varphi$ et $\psi$ sont deux automorphismes de $G$, considérons deux éléments $x$ et $y$ de $G$ :
+$\psi^{-1}(x \ast y) = \psi^{-1}(\psi\circ\psi^{-1}(x) \ast \psi\circ\psi^{-1}(y)) =
+\psi^{-1}\circ\psi(\psi^{-1}(x) \ast \psi^{-1}(y)) = \psi^{-1}(x) \ast \psi^{-1}(y)$.
+Cela montre que $\psi^{-1}$ est bien un endomorphisme de $G$, donc $\varphi\circ\psi^{-1}$ aussi.
+Ainsi, $\varphi\circ\psi^{-1}$ est un automorphisme de $G$, ce qui montre que $\mathrm{Aut}_G$ est
+bien un sous-groupe de $\mathfrak{S}_G$.
+\end{sol}
+
+\begin{sol}
+Pour tout élément $x$ de $G$, soit $\pi_x : G \to G$ l'application telle que
+$\pi_x : y \to x \ast y$.
+Soit alors deux éléments $y$ et $z$ de $G$ tels que $\pi_x(y) = \pi_x(z)$ :
+$\pi_x (x^{-1} \ast y) = x \ast x^{-1} \ast y = y$ et
+$y = x^{-1} \ast x \ast y = x^{-1} \ast \pi_x(y) = x^{-1} \ast \pi_x(z) = x^{-1} \ast x \ast z = z$.
+Cela montre bien que $\pi_x$ est bijectif, donc que $\pi_x \in \mathfrak{S}_G$.
+
+D'autre part, si $a$, $b$ et $c$ sont trois éléments de $G$, alors
+$\pi_a\circ\pi_b(c) = a \ast b \ast c = \pi_{a \ast b}(c)$,
+ce qui montre que l'application $\pi : G \to \mathfrak{S}_G$ telle que
+$\pi(x) = \pi_x$ est en fait un morphisme de groupes.
+De surcroit, si $\pi_x = \mathbf{Id}_G$, alors
+$x = x\ast e_G = \pi_x(e_G) = \mathbf{Id}_G(e_g) = e_g$, de sorte que
+$\mathrm{Ker}(\pi) = \{e_G\}$, et donc que $\pi$ est injectif.
+Ainsi, $\pi$ induit un isomorphisme entre $G$ et $\mathrm{Im}(\pi)$,
+qui est un sous-groupe de $\mathfrak{S}_G$.
+\end{sol}
+
+\begin{sol}
+Soit $y$ et $z$ deux éléments de $G$. Alors
+$\varphi_x(y \ast z) = x^{-1} \ast y \ast z \ast x =
+x^{-1} \ast y \ast x \ast x^{-1} \ast z \ast x = \varphi_x(y) \ast \varphi_x(z)$.
+Cela montre que $\varphi_x$ est bien un endomorphisme de $G$.
+De surcroit, $\varphi_{x^{-1}}\circ\varphi_x(y) = (x^{-1})^{-1} \ast x^{-1} \ast y \ast x \ast x^{-1} =
+x \ast x^{-1} \ast y \ast x \ast x^{-1} = y$ et
+$\varphi_x\circ\varphi_{x^{-1}}(y) = x^{-1} \ast (x^{-1})^{-1} \ast y \ast x^{-1} \ast x =
+x^{-1} \ast x \ast y \ast x^{-1} \ast x = y$, donc
+$\varphi_x$ et $\varphi_{x^{-1}}$ sont deux bijections réciproques de $G$ sur $G$.
+Cela montre que $\varphi_x$ est bien un automorphisme de $G$.
+\end{sol}
+
+\begin{sol}
+On a vu plus haut que $\mathrm{Int}_G$ est une partie du groupe $\mathrm{Aut}_G$.
+En outre, $\varphi_{e_G} = \mathbf{Id}_G$ est bien un automorphisme intérieur,
+ce qui montre que $\mathrm{Int}_G$ est non vide.
+
+Soit alors $x$, $y$ et $z$ trois éléments de $G$ :
+$\varphi_x\circ\varphi_y^{-1}(z) = x^{-1} \ast (y^{-1})^{-1} \ast z \ast y^{-1} \ast x =
+\varphi_{y^{-1} \ast x}(z)$,
+ce qui prouve que $\varphi_x\circ\varphi_y^{-1} = \varphi_{y^{-1} \ast x}$ est bien
+un automorphisme intérieur de $G$, et donc que $\mathrm{Int}_G$ est en fait
+un sous-groupe de $\mathrm{Aut}_G$.
+\end{sol}
+
+\begin{sol}
+Soit $(a,x)$, $(b,y)$ et $(c,z)$ trois éléments de $G \times H$. Alors
+\begin{enumerate}
+\item $((a,x) \odot (b,y)) \odot (c,z) = (a \ast b, x \circledast y) \odot (c,z) =
+(a \ast b \ast c, x \circledast y \circledast z) = (a,x) \odot (b \ast c, y \circledast z) = (a,x) \odot ((b,y) \odot (c,z))$,
+\item $(e_G, e_H) \odot (a,x) = (e_G \ast a, e_H \circledast x) = (a,x) =
+(a \ast e_G, x \circledast e_H) = (a,x) \odot (e_G, e_H)$ et
+\item $(a^{-1}, x^{-1}) \odot (a,x) = (a^{-1} \ast a, x^{-1} \circledast x) = (e_G, e_H) =
+(a \ast a^{-1}, x \circledast x^{-1}) = (a,x) \odot (a^{-1}, x^{-1})$.
+\end{enumerate}
+Cela montre que $(G \times H, \odot)$ est bien un groupe.
+\end{sol}
+
+\begin{sol}
+Soit $x$ un élément de $G$ et $y$ un élément de $\mathrm{Ker}(\varphi)$.
+Alors $\varphi(\varphi_x(y)) = \varphi(x^{-1} \ast y \ast x) = \varphi(x)^{-1} \circledast \varphi(y) \circledast \varphi(x) =
+\varphi(x)^{-1} \circledast e_H \circledast \varphi(x) = \varphi(x)^{-1} \circledast \varphi(x) = e_H$, donc
+$\varphi_x(y) \in \mathrm{Ker}(\varphi)$.
+Cela signifie précisément que $\mathrm{Ker}(\varphi)$ est un sous-groupe distingué de $G$.
+\end{sol}
+
+\begin{sol}
+Soit $(x,y)$ un élément de $G \times H$ et $(a,b)$, $(c,d)$ deux éléments de $G' \times H'$.
+Tout d'abord, $(e_G, e_H) \in G' \times H'$, qui est donc une partie non vide du groupe $G \times H$.
+En outre, $(a,b) \odot (c,d) = (a \ast c, b \circledast d) \in G' \times H'$, et
+$G' \times H'$ est donc un sous-groupe de $G \times H$.
+Enfin, $\varphi_{(x,y)}(a,b) = (x,y)^{-1} \odot (a,b) \odot (x,y) =
+(x^{-1} \ast a \ast x, y^{-1} \circledast b \circledast y) \in
+G' \times H'$,
+ce qui montre bien que $G' \times H'$ est un sous-groupe distingué de $G \times H$.
+\end{sol}
+
+\begin{sol}
+On montre que chacune des propositions $1$ à $3$ implique
+la proposition qui la suit :
+\begin{enumerate}
+\item Si $x \ast H = y \ast H$, alors $x = x \ast e_G \in x \ast H = y \ast H$, donc
+$(x \ast H) \cap (y \ast H) \neq \emptyset$.
+\item Si $(x \ast H) \cap (y \ast H) \neq \emptyset$, soit $h$ et $j$ deux éléments de $H$ tels que
+$x \ast h = y \ast j \in (x \ast H) \cap (y \ast H)$. Alors
+$x^{-1} \ast y = (y \ast j \ast h^{-1})^{-1} \ast y = h \ast j^{-1} \ast y^{-1} \ast y = h \ast j^{-1} \in H$.
+\item si $x^{-1} \ast y \in H$ alors $y^{-1} \ast x = (x^{-1} \ast y)^{-1} \in H$ aussi.
+Soit alors $h$ un élément de $H$ :
+$y \ast h = x \ast (x^{-1} \ast y) \ast h \in x \ast H$, donc $y \ast H \subseteq x \ast H$ ;
+de même, $x \ast H \subseteq y \ast H$, ce qui montre que
+$x \ast H = y \ast H$.
+\end{enumerate}
+\end{sol}
+
+\begin{sol}
+Soit $X$ un élément de $G / H$, et $x \in G$ tel que $X = x \ast H$.
+L'application $\theta : H \to X$ telle que $\theta(h) = x \ast h$ est bijective.
+En effet, elle est trivialement surjective et,
+si $h$ et $j$ sont deux éléments de $H$ tels que $\theta(h) = \theta(j)$, alors
+$h = x^{-1} \ast x \ast h = x^{-1} \ast \theta(h) = x^{-1} \ast \theta(j) = x^{-1} \ast x \ast j = j$,
+ce qui montre bien que $\theta$ est injective.
+Il s'ensuit que $\vert X \vert = \vert H \vert$.
+
+De surcroit, tout élément $x$ de $G$ appartient à l'élément $x \ast H$ de $G / H$,
+tandis que l'on a vu à l'exercice précédent que
+deux éléments distincts $X$ et $Y$ de $G$ sont d'intersection vide.
+Ainsi, $G / H$ est une partition de $G$, donc
+$\vert G \vert = \sum_{X \in G / H} \vert X \vert =
+\sum_{X \in G / H} \vert H \vert = \vert G / H \vert ~ \vert H \vert$.
+\end{sol}
+
+\begin{sol}
+Soit $x$ et $y$ deux éléments de $G$ et $h$, $j$ deux éléments de $H$. Alors
+$(x \ast h) \ast (y \ast j) = x \ast y \ast y^{-1} \ast h \ast y \ast j =
+x \ast y \ast \varphi_y(h) \ast j \in (x \ast y) \ast H$, tandis que
+$(x \ast y) \ast h = (x \ast e_G) \ast (y \ast h) \in (x \ast H) \ast (y \ast H)$.
+Ainsi, $(x \ast H) \ast (y \ast H) = (x \ast y) \ast H$.
+Puisque $(G, \ast)$ est un groupe, on déduit immédiatement de cette identité que
+$(G / H, \ast)$ est un groupe aussi.
+\end{sol}
+
+\begin{sol}
+Soit $x$ et $y$ deux éléments de $G$ et $h$ un élément de $\mathrm{Ker}(\varphi)$.
+$\varphi(x \ast h) = \varphi(x) \ast \varphi(h) = \varphi(x) \ast e_H = \varphi(x)$ :
+cela montre que $\varphi$ est constante sur chaque ensemble $X$ appartenant à $G / \mathrm{Ker}(\varphi)$.
+
+Soit alors $\psi : (G / \mathrm{Ker}(\varphi)) \to \mathrm{Im}(\varphi)$ l'application telle que
+$\psi(x \ast \mathrm{Ker}(\varphi)) = \varphi(x)$.
+Notons que $\psi$ est bien définie.
+En outre, puisque $\mathrm{Ker}(\varphi)$ est un sous-groupe distingué de $G$, on sait que
+$\psi((x \ast \mathrm{Ker}(\varphi)) \ast (y \ast \mathrm{Ker}(\varphi)) =
+\psi((x \ast y) \ast \mathrm{Ker}(\varphi)) = \varphi(x \ast y) = \varphi(x) \circledast \varphi(y) =
+\psi(x \ast \mathrm{Ker}(\varphi)) \circledast \psi(y \ast \mathrm{Ker}(\varphi))$.
+Cela montre que $\psi$ est un morphisme de groupes.
+
+Enfin, $\psi$ est clairement surjectif, tandis que si
+$\psi(x \ast \mathrm{Ker}(\varphi)) = e_H$, alors
+$\varphi(x) = e_H$ donc $x \in \mathrm{Ker}(\varphi)$ et
+$x \ast \mathrm{Ker}(\varphi) = \mathrm{Ker}(\varphi)$.
+Ainsi, $\mathrm{Ker}(\psi) = \{\mathrm{Ker}(\varphi)\}$ et
+$\psi$ est surjectif, ce qui montre bien que
+$\psi$ est un isomorphisme de groupes.
+\end{sol}
+
+\begin{sol}
+$G$ et $H$ sont des groupes abéliens, en tant que quotients de groupes abéliens.
+De surcroît, tout élément de $H$ appartient à $G$, donc $H$ est un sous-groupe de $G$,
+et $H$ est même un sous-groupe distingué puisque $G$ est abélien.
+
+Toutefois, $H$ et $G/H$ sont de cardinal $2$, donc
+les éléments de $H \times (G / H)$ sont d'ordre au plus $2$, tandis que
+$1$ est un élément de $G$ d'ordre $4$.
+Ainsi, $1$ n'appartient à l'image
+d'aucun morphisme de groupes $\varphi : H \times (G / H) \to G$,
+ce qui montre bien que $G$ et $H \times (G / H)$ ne sont pas isomorphes.
+\end{sol}
+
+\begin{sol}
+Soit $\binom{u}{v}$ et $\binom{s}{t}$ deux éléments de $\mathbb{Z}^2$ :
+$\varphi\left(\binom{u}{v}+\binom{s}{t}\right) = \varphi\binom{u+s}{v+t} =
+(u + s) b y + (v + t) a x = (u b y + v a x) + (s b y + t a x) = \varphi\binom{u}{v} + \varphi\binom{z}{t}$ donc
+$\varphi$ est bien un morphisme de groupes.
+
+En outre, il est clair que
+$a \mathbb{Z} \times b \mathbb{Z} \subseteq \mathrm{Ker}(\varphi)$.
+Réciproquement, soit $\binom{u}{v}$ un élément de $\mathrm{Ker}(\varphi)$. Alors
+$0 \equiv u b y + v a x \equiv u (1 - a x) + v a x \equiv u$ (mod. $a$) et
+$0 \equiv u b y + v a x \equiv u b y + v (1 - b y) \equiv v$ (mod. $b$) :
+cela signifie que $\binom{u}{v} \in a \mathbb{Z} \times b \mathbb{Z}$, et prouve donc que
+$\mathrm{Ker}(\varphi) = a \mathbb{Z} \times b \mathbb{Z}$.
+\end{sol}
+
+\begin{sol}
+Soit $n$ et $m$ deux entiers. Alors
+$\varphi^g(n+m) = g^{n+m} = g^n \ast g^m = \varphi^g(n) \ast \varphi^g(m)$,
+donc $\varphi^g$ est bien un morphisme de groupes.
+
+Si $g$ est d'ordre infini, alors $\mathrm{Ker}(\varphi^g) \subseteq \{0\}$, donc
+$\mathrm{Ker}(\varphi^g) = \{0\}$.
+Si $g$ est d'ordre $n$ fini,
+alors $n$ est le plus petit élément strictement positif de $\mathrm{Ker}(\varphi^g)$.
+Or, $\mathrm{Ker}(\varphi^g)$ est de la forme $d \mathbb{Z}$, avec $d$ entier relatif.
+Il apparaît alors que $n = \vert d \vert$ et donc que $\mathrm{Ker}(\varphi^g) = n \mathbb{Z}$.
+\end{sol}
+
+\begin{sol}
+Les ensembles $\frac{1}{n} + \mathbb{Z}$, pour $n \in \mathbb{N}^\ast$, sont deux à deux disjoints, donc
+$\mathbb{Q}/\mathbb{Z}$ est infini.
+Toutefois, pour tout rationnel $\frac{p}{q}$, on sait que
+$q\left(\frac{p}{q} + \mathbb{Z}\right) = p + \mathbb{Z} = \mathbb{Z}$, donc que $\frac{p}{q} + \mathbb{Z}$ est d'ordre fini.
+
+En outre, soit $S = \left\{\frac{p_1}{q_1},\dots,\frac{p_n}{q_n}\right\}$ une partie finie de $\mathbb{Q}/\mathbb{Z}$.
+Si on pose $Q = \prod_{i=1}^n q_i$, alors tout élément de $\langle S \rangle$
+est de la forme $\frac{k}{Q}$, où $k$ est un entier relatif. Cela signifie en particulier que
+$\frac{1}{Q+1} \notin \langle S \rangle$, donc que $S$ n'engendre pas $\mathbb{Q}/\mathbb{Z}$.
+Ainsi, $\mathbb{Q}/\mathbb{Z}$ n'est engendré par aucun ensemble fini.
+\end{sol}
+
+\begin{sol}
+Soit $n$ l'ordre de $g$.
+$\langle g \rangle$ est de cardinal $n$, donc
+$\vert G \vert = \vert \langle g \rangle \vert ~ \vert G / \langle g \rangle \vert$
+est divisible par $n$.
+\end{sol}
+
+\begin{sol}
+Le groupe $(G,\times) = ((\mathbb{Z}/p\mathbb{Z})^\ast, \times)$ a pour cardinal $p-1$.
+Soit $n$ l'ordre de $a$ dans $G$.
+Alors $n$ divise $\vert G \vert = p-1$, donc
+$p-1 \in \mathrm{Ker}(\varphi_a) = n \mathbb{Z}$, ce qui signifie exactement que
+$a^{p-1} = 1$ dans $G$, ou encore que $a^{p-1} \equiv 1$ (mod. $p$).
+\end{sol}

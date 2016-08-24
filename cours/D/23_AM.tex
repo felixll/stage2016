@@ -1,0 +1,310 @@
+
+\subsubsection{Exercices}
+\begin{exo}
+Soit $ABC$ un triangle, $I$ le centre du cercle inscrit et $J$ le centre du cercle exinscrit dans l'angle $A$. Montrer que $AI.AJ=AB.AC$.
+\end{exo}
+
+\begin{exo}
+ Soit $ABC$ un triangle et $M$ un point quelconque. On note comme d'habitude $a=BC$, $b=CA$ et $c=AB$. Montrer que $\frac{1}{a^2}+\frac{1}{b^2}+\frac{1}{c^2}\geqslant \frac{3}{MA^2+MB^2+MC^2}$.
+\end{exo}
+
+\begin{exo}
+ On construit des triangles \'equilat\'eraux $PDA$, $QAB$, $RBC$ et $SCD$ en dehors du quadrilat\`ere convexe $ABCD$. Soient $X,Y,Z,W$ les
+milieux de $[PQ],[QR],[RS]$ et $[SP]$. D\'eterminer le maximum de $\frac{XZ+YW}{AC+BD}$. 
+\end{exo}
+
+\begin{exo} 
+ Soit $ABC$ un triangle. On note $\alpha,\beta$ et $\gamma$ ses angles.
+On note $E$ et $F$ les pieds des hauteurs issues de $B$ et $C$. Un cercle passant par $E$ et $F$ est tangent en $D$ \`a $(BC)$.
+Montrer que $\dfrac{DB}{DC}=\sqrt{\dfrac{\tan\gamma}{\tan\beta}}$.
+\end{exo}
+
+\begin{exo}
+(Non trait\'e en cours.)
+ Soit $ABC$ un triangle et $M$ un point quelconque du plan. Montrer que $\dfrac{MA}{BC}+\dfrac{MB}{CA}+\dfrac{MC}{AB}\geqslant\sqrt{3}$.
+\end{exo}
+
+\begin{exo}
+ Soit $ABC$ un triangle. On note $D$ le pied de la bissectrice issue de $A$. Montrer que $AB.AC=DB.DC+AD^2$.
+\end{exo}
+
+\begin{exo}
+ (Un faux exercice de calcul de longueurs)
+Soit $ABC$ un triangle acutangle tel que $AB<AC$ et $(O)$ son cercle circonscrit. Soit $I$ le milieu de l'arc $BC$ ne contenant pas $A$. Soit
+$K\in (AC)$ le point autre que $C$ tel que $IK=IC$. La droite $(BK)$ coupe $(O)$ en $D\ne B$ et coupe $(AI)$ en $E$. La droite $(DI)$ coupe $(AC)$ en $F$.
+
+(a) Montrer que $EF=\dfrac{BC}{2}$
+
+(b) (Non trait\'e en cours.) Sur $(DI)$, soit $M$ le point tel que $(CM)\parallel (AD)$. La droite $(KM)$ coupe $(BC)$ en $N$. Le cercle $(BKN)$ coupe $(O)$ en $P\ne B$. Montrer que $(PK)$ passe par le milieu de $[AD]$.
+\end{exo}
+
+% \begin{exo}
+%  Soit $ABCD$ un quadrilat\`ere, $E=(AD)\cap (CB)$, $F=(AB)\cap (CD)$. Montrer que $A,B,C,D$ sont cocycliques si et seulement si $EA.ED+FA.FB=EF^2$.
+% \end{exo}
+
+\subsubsection{Solutions abr\'eg\'ees}
+\begin{sol}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
+\clip(-4.19,-4.56) rectangle (11.48,6);
+\draw (-0.04,4.74)-- (-1.18,0.92);
+\draw (-1.18,0.92)-- (4.34,0.72);
+\draw (4.34,0.72)-- (-0.04,4.74);
+\draw(1.63,2.17) circle (2.46cm);
+\draw [domain=-4.19:11.48] plot(\x,{(--1.22-0.96*\x)/0.27});
+\draw(1.52,-0.9) circle (2.61cm);
+\draw [domain=-4.19:11.48] plot(\x,{(-5.56-3.82*\x)/-1.14});
+\begin{scriptsize}
+\fill [color=black] (-0.04,4.74) circle (1.5pt);
+\draw[color=black] (-0.49,4.98) node {$A$};
+\fill [color=black] (-1.18,0.92) circle (1.5pt);
+\draw[color=black] (-1.66,1.19) node {$B$};
+\fill [color=black] (4.34,0.72) circle (1.5pt);
+\draw[color=black] (4.76,0.87) node {$C$};
+\fill [color=black] (1.52,-0.9) circle (1.5pt);
+\draw[color=black] (1.76,-0.57) node {$M$};
+\fill [color=black] (0.65,2.23) circle (1.5pt);
+\draw[color=black] (0.78,2.59) node {$I$};
+\fill [color=black] (2.38,-4.04) circle (1.5pt);
+\draw[color=black] (2.51,-3.7) node {$J$};
+\fill [color=black] (-1.74,-0.96) circle (1.5pt);
+\draw[color=black] (-2.22,-0.73) node {$D$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+Soit $M$ le milieu de l'arc $BC$ ne contenant pas $A$. Il est connu que $M$ est le milieu de $[IJ]$ et que $MI=MB=MC$.
+
+ Soit $D\in [AB)$ tel que $AC=AD$. Alors $CAD$ est isoc\`ele, donc $MC=MD$. En consid\'erant la puissance de $A$ par rapport au cercle
+passant par $B,I,C,J,D$, on a $AI.AJ=AB.AD=AB.AC$.
+
+Autre solution : soit $s$ la sym\'etrie d'axe $(IJ)$. Elle fixe $I$ et $J$, donc aussi le cercle de diam\`etre $[IJ]$. De plus, il \'echange les droites $(AB)$ et $(AC)$. Par cons\'equent, $s(C)=D$ appartient au cercle de diam\`etre $[IJ]$, et on termine comme dans la solution pr\'ec\'edente.
+\end{sol}
+
+\begin{sol}
+ Comme $\sum MA^2\geqslant \sum GA^2$ (ce qui se d\'emontre en disant que $MA^2=||\overrightarrow{MG}+\overrightarrow{GA}||^2$ et en d\'eveloppant),
+on peut supposer que $M=G$.
+
+On a $GA^2+\frac{a^2}{9}=||\frac{\overrightarrow{AB}+\overrightarrow{AC}}{3}||^2+||\frac{\overrightarrow{AB}-\overrightarrow{AC}}{3}||^2=\frac{2(b^2+c^2)}{9}$,
+donc $\sum GA^2=\frac{a^2+b^2+c^2}{9}+\frac{4}{9}(a^2+b^2+c^2)$, donc $\sum GA^2=\frac{a^2+b^2+c^2}{3}$.
+
+L'in\'egalit\'e $\sum a^2 \sum\frac{1}{a^2}\geqslant 9$ (que l'on peut d\'emontrer \`a partir de l'IAG) permet de conclure.
+\end{sol}
+
+\begin{sol}
+
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
+\clip(-4.19,-5.56) rectangle (11.48,6.31);
+\draw (3.44,3.76)-- (0.67,0.18);
+\draw (0.67,0.18)-- (3.04,-1.95);
+\draw (3.04,-1.95)-- (6.76,0.23);
+\draw (6.76,0.23)-- (3.44,3.76);
+\draw (8.16,4.87)-- (-1.05,4.36);
+\draw (-1.05,4.36)-- (0.02,-2.93);
+\draw (0.02,-2.93)-- (6.78,-4.08);
+\draw (8.16,4.87)-- (6.78,-4.08);
+\draw (8.16,4.87)-- (-1.05,4.36);
+\draw (8.16,4.87)-- (6.76,0.23);
+\draw (6.78,-4.08)-- (6.76,0.23);
+\draw (6.78,-4.08)-- (3.04,-1.95);
+\draw (0.02,-2.93)-- (3.04,-1.95);
+\draw (0.02,-2.93)-- (0.67,0.18);
+\draw (-1.05,4.36)-- (0.67,0.18);
+\draw (-1.05,4.36)-- (3.44,3.76);
+\draw (8.16,4.87)-- (3.44,3.76);
+\begin{scriptsize}
+\fill [color=black] (3.44,3.76) circle (1.5pt);
+\draw[color=black] (3.65,4.11) node {$A$};
+\fill [color=black] (0.67,0.18) circle (1.5pt);
+\draw[color=black] (0.75,0.76) node {$B$};
+\fill [color=black] (3.04,-1.95) circle (1.5pt);
+\draw[color=black] (3.25,-1.6) node {$C$};
+\fill [color=black] (6.76,0.23) circle (1.5pt);
+\draw[color=black] (6.15,0.34) node {$D$};
+\fill [color=black] (8.16,4.87) circle (1.5pt);
+\draw[color=black] (8.38,5.22) node {$P$};
+\fill [color=black] (-1.05,4.36) circle (1.5pt);
+\draw[color=black] (-1.21,4.8) node {$Q$};
+\fill [color=black] (0.02,-2.93) circle (1.5pt);
+\draw[color=black] (-0.49,-2.98) node {$R$};
+\fill [color=black] (6.78,-4.08) circle (1.5pt);
+\draw[color=black] (7,-3.73) node {$S$};
+\fill [color=black] (3.55,4.62) circle (1.5pt);
+\draw[color=black] (3.73,4.96) node {$X$};
+\fill [color=black] (-0.52,0.71) circle (1.5pt);
+\draw[color=black] (-0.89,0.84) node {$Y$};
+\fill [color=black] (3.4,-3.51) circle (1.5pt);
+\draw[color=black] (3.62,-3.17) node {$Z$};
+\fill [color=black] (7.47,0.4) circle (1.5pt);
+\draw[color=black] (7.95,0.28) node {$W$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+On utilise les nombres complexes. On a $Q+jB+j^2A=0$ donc $Q=-jB-j^2A$ et de m\^eme $P=-jA-j^2D$. Comme $X=\frac{P+Q}{2}$ et $Z=\frac{R+S}{2}$, on a
+$\overrightarrow{XZ}=\frac{1}{2}a-i\frac{\sqrt{3}}{2}b$ o\`u $a=\overrightarrow{AC}$ et $b=\overrightarrow{BD}$.
+
+On calcule de m\^eme que $\overrightarrow{YW}=\frac{1}{2}b+i\frac{\sqrt{3}}{2}a$. L'expression \`a maximiser est donc
+$$\frac{ |\frac{1}{2}a-i\frac{\sqrt{3}}{2}b| + |\frac{1}{2}b+i\frac{\sqrt{3}}{2}a |}{|a|+|b|}.$$
+Elle est major\'ee par $\frac{1+\sqrt{3}}{2}$ d'apr\`es l'in\'egalit\'e triangulaire. L'\'egalit\'e est atteinte quand $b=tia$ o\`u $t>0$, par exemple
+dans le cas o\`u $ABCD$ est un carr\'e.
+\end{sol}
+
+\begin{sol}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-2.96,-2.97) rectangle (9.13,3.2);
+\draw (0.41,-1.71)-- (7.31,-1.63);
+\draw (7.31,-1.63)-- (1.12,2.83);
+\draw (1.12,2.83)-- (0.41,-1.71);
+\draw [domain=-2.96:9.13] plot(\x,{(--2.57-2.2*\x)/-2.22});
+\draw [domain=-2.96:9.13] plot(\x,{(-11.84--0.08*\x)/6.91});
+\draw(2.19,0.02) circle (1.71cm);
+\draw (0.79,1)-- (3.51,1.11);
+\begin{scriptsize}
+\fill [color=black] (1.12,2.83) circle (1.5pt);
+\draw[color=black] (1.27,3.07) node {$A$};
+\fill [color=black] (0.41,-1.71) circle (1.5pt);
+\draw[color=black] (0.12,-1.86) node {$B$};
+\fill [color=black] (7.31,-1.63) circle (1.5pt);
+\draw[color=black] (7.45,-1.4) node {$C$};
+\fill [color=black] (2.81,1.62) circle (1.5pt);
+\draw[color=black] (2.89,1.91) node {$E$};
+\fill [color=black] (0.59,-0.58) circle (1.5pt);
+\draw[color=black] (0.38,-0.27) node {$F$};
+\fill [color=black] (2.21,-1.69) circle (1.5pt);
+\draw[color=black] (2.36,-1.45) node {$D$};
+\fill [color=black] (0.79,1) circle (1.5pt);
+\draw[color=black] (0.55,1.21) node {$R$};
+\fill [color=black] (3.51,1.11) circle (1.5pt);
+\draw[color=black] (3.65,1.35) node {$S$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+ Le cercle recoupe $(AB)$ et $(AC)$ en $R$ et $S$ respectivement. D'apr\`es la puissance d'un point par rapport \`a un cercle, on a $AR.AF=AS.AE$ donc
+$\dfrac{AR}{AS}=\dfrac{AE}{AF}=\dfrac{AB}{AC}$. Par cons\'equent, $(RS)$ et $(BC)$ sont parall\`eles.
+
+Or, $\dfrac{BD^2}{CD^2}=\dfrac{BF.BR}{CE.CS}=\dfrac{BR}{CS}\cdot\dfrac{BF}{CE}=\dfrac{AB}{AC}\cdot\dfrac{BF/BC}{CE/BC}=\dfrac{c}{b}\cdot\dfrac{\cos\beta}{\cos\gamma}
+=\dfrac{\sin\gamma}{\sin\beta}\cdot\dfrac{\cos\gamma}{\cos\beta}$, d'o\`u la conclusion.
+\end{sol}
+
+\begin{sol}
+ Il n'est pas tr\`es difficile de montrer que si $x,y,z$ sont des r\'eels positifs tels que $xy+yz+zx\geqslant 1$ alors $x+y+z\geqslant \sqrt{3}$.
+Il suffit alors de montrer que $\sum\dfrac{MA.MB}{BC.CA}\geqslant 1$.
+
+On se place dans le plan complexe. On pose $a=\overrightarrow{MA}$, etc. Il faut montrer que $\left|\sum\frac{ab}{(b-c)(c-a)}\right|\geqslant 1$.
+Or, $\sum\dfrac{ab(a-b)}{(a-b)(b-c)(c-a)}=-1$. L'in\'egalit\'e triangulaire permet de conclure.
+\end{sol}
+
+\begin{sol}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-0.65,-2.32) rectangle (6.49,4.18);
+\draw(2.49,1.17) circle (2.03cm);
+\draw [domain=-0.65:6.49] plot(\x,{(--2.36-0.99*\x)/0.1});
+\draw (0.64,0.34)-- (4.31,0.28);
+\draw (2.04,3.15)-- (0.64,0.34);
+\draw (2.04,3.15)-- (4.31,0.28);
+\begin{scriptsize}
+\fill [color=black] (2.04,3.15) circle (1.5pt);
+\draw[color=black] (2.19,3.39) node {$A$};
+\fill [color=black] (0.64,0.34) circle (1.5pt);
+\draw[color=black] (0.4,0.36) node {$B$};
+\fill [color=black] (4.31,0.28) circle (1.5pt);
+\draw[color=black] (4.63,0.41) node {$C$};
+\fill [color=black] (2.34,0.31) circle (1.5pt);
+\draw[color=black] (2.49,0.56) node {$D$};
+\fill [color=black] (2.46,-0.86) circle (1.5pt);
+\draw[color=black] (2.63,-0.62) node {$M$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+ Notons $M$ le milieu de l'arc $BC$ ne contenant pas $A$. Il est facile de voir que $AMB$ et $ACD$ sont semblables. On a donc $\dfrac{AB}{AD}=\dfrac{AM}{AC}$, donc
+$AB.AC=AM.AD=AD^2+DM.AD=AD^2+DB.DC$.
+
+Autre solution : d'apr\`es l'identit\'e de Stewart, on a $a(DB.DC+AD^2)=DB.b^2+DC.c^2$. Comme $DB=\dfrac{c}{b+c}a$ et $DC=\dfrac{b}{b+c}a$, on calcule que le membre
+de droite est \'egal \`a $abc$, d'o\`u la conclusion.
+\end{sol}
+
+\begin{sol}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.5cm,y=1.5cm]
+\clip(-0.11,-0.99) rectangle (5.09,3.64);
+\draw(2.49,1.33) circle (3.15cm);
+\draw [domain=-0.11:5.09] plot(\x,{(--2.09-0.95*\x)/0.31});
+\draw (0.64,0.34)-- (4.31,0.28);
+\draw (1.21,3)-- (0.64,0.34);
+\draw (1.21,3)-- (4.31,0.28);
+\draw(2.46,-0.77) circle (3.2cm);
+\draw [domain=-0.11:5.09] plot(\x,{(--0.33--0.87*\x)/2.62});
+\draw (4.57,1.64)-- (2.46,-0.77);
+\draw (1.21,3)-- (4.57,1.64);
+\draw [domain=-0.11:5.09] plot(\x,{(--6.8-1.36*\x)/3.36});
+\draw [line width=1.2pt,dotted] (2.2,0) circle (2.4cm);
+\draw (3.77,-0.34)-- (2.52,3.43);
+\begin{scriptsize}
+\fill [color=black] (1.21,3) circle (1.5pt);
+\draw[color=black] (1.02,3.08) node {$A$};
+\fill [color=black] (0.64,0.34) circle (1.5pt);
+\draw[color=black] (0.46,0.4) node {$B$};
+\fill [color=black] (4.31,0.28) circle (1.5pt);
+\draw[color=black] (4.49,0.36) node {$C$};
+\fill [color=black] (2.46,-0.77) circle (1.5pt);
+\draw[color=black] (2.33,-0.91) node {$I$};
+\fill [color=black] (3.26,1.21) circle (1.5pt);
+\draw[color=black] (3.33,1.34) node {$K$};
+\fill [color=black] (4.57,1.64) circle (1.5pt);
+\draw[color=black] (4.66,1.78) node {$D$};
+\fill [color=black] (1.95,0.77) circle (1.5pt);
+\draw[color=black] (2.04,0.91) node {$E$};
+\fill [color=black] (3.79,0.75) circle (1.5pt);
+\draw[color=black] (3.84,0.94) node {$F$};
+\fill [color=black] (2.52,3.43) circle (1.5pt);
+\draw[color=black] (2.57,3.57) node {$J$};
+\fill [color=black] (3.63,0.56) circle (1.5pt);
+\draw[color=black] (3.42,0.58) node {$M$};
+\fill [color=black] (3.78,0.29) circle (1.5pt);
+\draw[color=black] (3.86,0.42) node {$N$};
+\fill [color=black] (3.77,-0.34) circle (1.5pt);
+\draw[color=black] (3.85,-0.2) node {$P$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+ (a) Une chasse aux angles (utilisant que $ICK$ est isoc\`ele) montre que $\widehat{BIA}=\widehat{AIK}=\gamma$, donc $E$ est le milieu de $[BK]$.
+
+Montrons que $DKC$ est isoc\`ele en $D$ :
+
+$\widehat{DKC}=\widehat{AKB}=\widehat{KBA}=\frac{\pi-\alpha}{2}$.
+On a aussi $\widehat{BDC}=\widehat{BAC}=\alpha$, donc $\widehat{DCK}=\pi-\alpha-\frac{\pi-\alpha}{2}=\frac{\pi-\alpha}{2}=\widehat{DKC}$.
+
+On en d\'eduit que $F$ est le milieu de $[KC]$.
+
+ (b) Soit $J$ le point diam\'etralement oppos\'e \`a $I$. On va montrer que $J,K,P$ sont align\'es : comme $\widehat{IPJ}=90^\circ$, il suffit de voir que $\widehat{IPK}=90^\circ$.
+
+Comme $(DK)\perp (AI)$ et $(AK)\perp (DI)$, $K$ est l'orthocentre de $ADI$ donc $(IK)\perp (AD)$.
+
+Comme $(CM)\parallel (AD)$, on a $(CM)\perp (IK)$.
+
+D'autre part, $(IM)\perp (KC)$ donc $M$ est l'orthocentre de $ICK$. Donc
+
+$\widehat{MKC}=90^\circ-\widehat{KCI}=90^\circ-(\frac{\alpha}{2}+\gamma)$
+
+$\widehat{KNB}=\widehat{NKC}+\widehat{NCK}=90^\circ-\frac{\alpha}{2}$
+
+$\widehat{KPI}=\widehat{KPB}+\widehat{BPI}=\widehat{KNB}+\widehat{IAB}=90-\frac{\alpha}{2}+\frac{\alpha}{2}=90\circ$.
+
+Ceci prouve que $J,P,K$ sont align\'es.
+
+Comme $(AJ)$ et $(KD)$ sont perpendiculaires \`a $(AI)$, on a $(AJ)\parallel (KD)$. Comme $(DJ)\perp (ID)$ et $(AK)\perp (ID)$, on a $(DJ)\parallel (AK)$.
+
+Finalement, $AJDK$ est un parall\'elogramme, et donc $(JK)$ et $(AD)$ ont les m\^emes milieux.
+\end{sol}
+
+% \begin{sol}
+%  Soit $M$ le second point d'intersection du cercle $(ABE)$ avec $(EF)$. Soit $N$ le second point d'intersection de $(ADF)$ avec $(EF)$. On a
+% $EA.ED=EN.EF$ et $FA.FB=FM.EF$ donc $EA.ED+FA.FB=(EN+FM)EF$. La solution \'equivaut donc \`a $M=N$.
+% 
+% Si $ABCD$ sont cocycliques, alors $\widehat{ABC}=\widehat{ADF}$ et $\widehat{ABC}=\widehat{AME}$ donc $\widehat{AME}=\widehat{ADF}$. Par cons\'equent $AMFD$ sont
+% cocycliques, d'o\`u $M=N$.
+% 
+% La r\'eciproque se d\'emontre de mani\`ere analogue.
+% \end{sol}

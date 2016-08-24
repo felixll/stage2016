@@ -1,9 +1,148 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat tortor ex, id lacinia dui posuere vitae. Sed ultrices pulvinar urna, eu posuere nunc suscipit non. Aenean lacus arcu, dignissim vitae sapien a, gravida hendrerit turpis. Ut et molestie ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum eros quis neque dictum sollicitudin. Aliquam hendrerit mi non nisi tempor condimentum. Vivamus nunc diam, vestibulum sed risus eu, molestie consectetur mi. Donec consectetur ut nulla a molestie. Nunc interdum augue eros, non pharetra justo dignissim eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer et nibh nibh. Sed pharetra lacus ut ex congue, vitae lacinia ipsum accumsan. Sed mollis neque quis elementum vulputate. Duis dolor nisi, malesuada vel lorem ac, accumsan sollicitudin nisi.
+\begin{sol}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.3cm,y=0.3cm]
+\clip(-5.74,-2.26) rectangle (15.28,26.88);
+\draw (5,-2.26) -- (5,26.88);
+\draw (0,0)-- (5,25);
+\draw (10,0)-- (5,25);
+\draw (10,10)-- (0,10);
+\draw (0,0)-- (10,0);
+\draw (10,0)-- (10,10);
+\draw (0,10)-- (0,0);
+\begin{scriptsize}
+\fill [color=black] (0,0) circle (1.5pt);
+\draw[color=black] (0.56,0.96) node {$A$};
+\fill [color=black] (10,0) circle (1.5pt);
+\draw[color=black] (10.59,0.96) node {$B$};
+\fill [color=black] (10,10) circle (1.5pt);
+\draw[color=black] (10.59,10.92) node {$C$};
+\fill [color=black] (0,10) circle (1.5pt);
+\draw[color=black] (0.56,10.92) node {$D$};
+\fill [color=black] (5,10) circle (1.5pt);
+\draw[color=black] (6,10.92) node {$G$};
+\fill [color=black] (5,0) circle (1.5pt);
+\draw[color=black] (5.54,0.96) node {$X$};
+\fill [color=black] (5,25) circle (1.5pt);
+\draw[color=black] (5.54,25.93) node {$Y$};
+\fill [color=black] (2,10) circle (1.5pt);
+\draw[color=black] (2.61,10.92) node {$E$};
+\fill [color=black] (8,10) circle (1.5pt);
+\draw[color=black] (8.54,10.92) node {$F$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
 
-Vivamus sit amet ante ac turpis cursus rhoncus id vel libero. Nulla facilisi. Donec maximus, massa ac dapibus lacinia, enim nibh maximus ligula, id varius erat turpis in libero. Sed eget neque scelerisque, lobortis erat eu, varius magna. Morbi sodales est a ipsum volutpat, at ultricies nisl dapibus. Pellentesque interdum nec lectus sed pulvinar. Vivamus finibus est in tortor imperdiet, sit amet consequat turpis aliquet. Duis cursus sollicitudin magna, eu condimentum nibh convallis in. Praesent rhoncus porta tempor. Quisque pellentesque ultricies nisi quis vehicula.
+ Notons $E$ et $F$ les points d'intersection de $(AY)$ et de $(BY)$ avec $(CD)$.
+Soit $G$ le milieu de $[CD]$.
 
-Suspendisse in lacus ac velit rutrum sagittis. Vivamus at volutpat quam. Quisque id erat dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent id augue felis. Proin convallis odio interdum purus malesuada tempus. Fusce eget libero non erat pulvinar molestie at ut augue. Sed suscipit turpis non malesuada cursus. Suspendisse imperdiet et neque vel rhoncus.
+Pour des raisons de sym\'etrie, l'aire de $ADE$ vaut $\frac{1}{2}(100-99)=1/2\,cm^2$.
+On en d\'eduit que $\frac{1}{2}\times AD\times DE=\frac{1}{2}$, ce qui donne $DE=\frac{1}{10}$,
+et donc $EG=\frac{49}{10}$. Or, d'apr\`es le th\'eor\`eme de Thal\`es on a $\frac{ED}{EG}=\frac{DA}{GY}$, donc
+$GY=DA\times \frac{EG}{ED}=10\times 49=490$, ce qui donne $XY=500 \, cm$.
+\end{sol}
 
-Sed accumsan sodales eros vel sagittis. In nec nisl vitae ligula aliquam pharetra. Fusce enim massa, vehicula dapibus ultricies sit amet, dignissim eget purus. Sed sodales ligula cursus vulputate venenatis. Praesent sed dignissim odio. Maecenas maximus at mi ut sagittis. Cras in sem vel ipsum dapibus gravida sit amet vitae turpis. Sed porta erat at nisl auctor commodo.
+\paragraph{Remarque}
+Si on ne conna\^it pas le th\'eor\`eme de Thal\`es, on peut raisonner comme suit : soit $x=XY$. L'aire du triangle $ABY$ vaut $\frac{1}{2} \times AB \times XY=5x$ et celle de $EFY$ vaut $\frac{1}{2} \times EF \times GY=\frac{49}{10} (x-10)$. L'aire du quadrilat\`ere $ABEF$ est la diff\'erence des deux, d'o\`u $99=5x-\frac{49}{10} (x-10)=\frac{1}{10} x + 49$, donc $\frac{1}{10}x=50$ et finalement $x=500 \, cm$.
 
-Donec urna nulla, fringilla ac iaculis ac, lobortis vel leo. Vivamus ac elit neque. Praesent varius leo quis ante condimentum, vel hendrerit diam auctor. Praesent elementum urna vel diam vulputate tincidunt. Vivamus at erat vel magna molestie ultrices. Suspendisse nec nisi a nibh pellentesque bibendum ac et purus. Praesent mollis ultricies dui eu cursus. Nam posuere consequat massa, nec semper lacus. Pellentesque rhoncus enim non nisi iaculis iaculis. Vivamus facilisis velit sed urna porttitor, nec commodo nulla aliquam. Aliquam dapibus faucibus pulvinar.
+\bigskip
+
+\begin{sol}
+ Soit $d$ la dur\'ee du trajet exprim\'ee en heures. On a $55d=(100c+10b+a)-(100a+10b+c)=99(c-a)$.
+Ceci se simplifie en $5d=9(c-a)$. Ceci implique que $c-a$ est un multiple de $5$.
+D'autre part, $c-a=5d/9>0$ et $c-a\leqslant c<10$, donc $c-a=5$.
+
+Si $a=1$ alors $c=6$, et comme $a+b+c\leqslant 7$ on en d\'eduit que $abc=106$.
+
+Si $a>1$ alors $c=5+a>6$ donc $a+b+c>7$, ce qui contredit l'hypoth\`ese.
+
+Donc l'unique valeur possible de $abc$ est $106$.
+\end{sol}
+
+\begin{sol}
+ Si la personne $A$ d\'esigne la personne $B$, et si elle dit ``$B$ est un chevalier'' alors
+$A$ et $B$ sont dans le m\^eme groupe. Inversement, si elle dit ``$B$ est un truand'',
+alors $A$ et $B$ sont dans des groupes diff\'erents.
+
+Num\'erotons les personnes $P_1,\ldots,P_{2016}$, la personne $P_1$ \'etant tout devant.
+
+$P_2$ est oblig\'ee de d\'esigner $P_1$, donc l'observateur sait
+si $P_2$ est dans le m\^eme groupe que $P_1$.
+
+$P_3$ est oblig\'ee de d\'esigner, soit $P_1$, soit $P_2$, donc l'observateur sait
+si $P_3$ est dans le m\^eme groupe que $P_1$.
+
+En continuant le raisonnement, l'observateur peut d\'eterminer exactement quelles sont
+les personnes qui sont dans le m\^eme groupe que $P_1$ et celles qui ne le sont pas.
+
+Comme le groupe le plus nombreux est constitu\'e de truands, l'observateur en d\'eduit
+si $P_1$ est un truand ou un chevalier, puis d\'etermine qui est un chevalier et qui est un truand.
+\end{sol}
+
+\begin{sol}
+ D'apr\`es l'in\'egalit\'e triangulaire, on a $MA\leqslant MC+CA=MC+BD\leqslant MC+BM+MD$.
+L'\'egalit\'e a lieu si et seulement si $C\in [MA]$ et $M\in [BD]$. Si ces deux conditions sont
+v\'erifi\'ees, n\'ecessairement $M$ se trouve \`a la fois sur $(AC)$ et $(BD)$, donc
+$M$ est l'intersection des diagonales. Mais dans ce cas, la condition $C\in [MA]$ ne
+peut pas \^etre satisfaite. On en d\'eduit que $MA<MB+MC+MD$.
+
+Par sym\'etrie des r\^oles de $A,B,C,D$, les autres in\'egalit\'es similaires sont \'egalement
+satisfaites.
+\end{sol}
+
+\begin{sol}
+Les deux plus petites sommes sont $a+b<a+c$ donc $a+b=32$ et $a+c=36$. De m\^eme, les deux plus grandes sont $c+e<d+e$ donc $c+e=48$ et $d+e=51$. La troisi\`eme plus petite somme peut \^etre soit $a+d$ soit $b+c$. Dans le premier cas, on a $a+d=37$ donc d'une part $a+c+d+e=(a+c)+(d+e)=36+51=87$ et d'autre part $a+c+d+e=(a+d)+(c+e)=37+48=85$, ce qui est absurde.
+
+On est donc dans le deuxi\`eme cas donc $b+c=37$. On en d\'eduit $2(a+b+c)=(a+b)+(a+c)+(b+c)=105$ donc $c=\frac{105}{2}-32=\frac{41}{2}$, puis $e=48-\frac{41}{2}=\frac{55}{2}$.
+\end{sol}
+
+\begin{sol}
+ Soit $a$ le nombre de triangles dont les trois c\^ot\'es sont des diagonales, $b$ le nombre de triangles
+dont deux c\^ot\'es sont des diagonales et $c$ le nombre de triangles dont un c\^ot\'e est une diagonale.
+Par hypoth\`ese, on a $a+b+c=2014$.
+
+Comme une ar\^ete du polygone est un c\^ot\'e d'un triangle et un seul, et comme le polygone a 2016 ar\^etes,
+on a $2016=b+2c$, donc $b+2c>a+b+c$. On en d\'eduit que $c>a$, donc $2a<a+c\leqslant a+b+c=2014$.
+Par cons\'equent, on ne peut pas avoir $a=2014/2$, autrement dit la r\'eponse \`a la question est non. 
+\end{sol}
+
+\begin{sol}
+Notons $s(n)$ la somme des chiffres de $n$.
+ Si un entier $n$ est inf\'erieur ou \'egal \`a 2016, alors $s(n)\leqslant 28$. En effet, si $n<2000$ alors $s(n)\leqslant 1+9+9+9=28$, et si $2000\leqslant n\leqslant 2016$ alors
+$s(n)\leqslant 2+0+1+9=12$.
+
+Or, parmi $18$ entiers cons\'ecutifs, il y a un entier $n$ divisible par $18$.
+Comme $n$ est divisible par $9$, la somme de ses chiffres est divisible par $9$, donc
+$s(n)=9$ ou $s(n)=18$ ou $s(n)=27$.
+
+Si $s(n)=9$ ou $s(n)=18$, alors $n$ est bien divisible par la somme de ses chiffres.
+
+Si $s(n)=27$, alors $n$ est l'un des nombres $999,1899,1989,1998$. Or, $n$ est
+pair donc $n=1998$, et $n$ est bien divisible par $27$.
+\end{sol}
+
+\begin{sol}
+ a) C'est possible avec une classe de trois \'el\`eves $A,B,C$ et un contr\^ole de trois questions, en supposant que $A$ a r\'eussi les questions $1$ et $2$, $B$ a r\'eussi les questions $1$ et $3$ et $C$ n'a r\'eussi aucune question.
+
+ b) et c) On montre que la r\'eponse est non. Plus pr\'ecis\'ement, pour tout $p>2/3$ on
+montre qu'il n'est pas possible que la proportion d'\'el\`eves ayant bien r\'eussi soit $\geqslant p$ et que la proportion de questions difficiles (r\'eussies par une proportion d'\'el\`eves
+$\leqslant 1-p$) soit $\geqslant p$.
+
+Supposons en effet le contraire. Soit $n$ le nombre d'\'el\`eves et $m$ le nombre de questions. Soit $A$ l'ensemble des \'el\`eves ayant bien r\'eussi,
+% $B$ l'ensemble des \'el\`eves n'ayant pas bien r\'eussi,
+$D$ l'ensemble des questions difficiles et $F$ l'ensemble des questions faciles.
+
+Pour tout ensemble $X$, on notera $|X|$ le nombre d'\'el\'ements de $X$. Soit $a$ tel que $|A|=an$. Supposons $a\geqslant p\geqslant 2/3$.
+
+%Quitte \`a remplacer les r\'eponses de tous les \'el\`eves de $B$ par des copies blanches (ce qui
+%ne peut qu'augmenter le nombre de questions difficiles),
+%on peut supposer que les \'el\`eves de $B$ n'ont r\'eussi aucune question.
+
+Consid\'erons l'ensemble $E$ des couples $(x,y)$ o\`u $x$ est un \'el\`eve de $A$ ayant r\'eussi la question $y$. 
+
+Pour tout $x\in A$, $x$ a r\'esolu au moins $pm$ questions, donc $|E|\geqslant pamn$.
+
+Pour tout $y\in D$, $y$ a \'et\'e r\'esolue par au plus $(1-p)n$ \'el\`eves, et pour tout $y\in F$, $y$ a \'et\'e r\'esolue par au plus $an$ \'el\`eves de $A$, donc $|E|\leqslant |D|\times (1-p)n+ |F|\times an =(m-|F|)\times (1-p)n+|F|\times an=(1-p)mn+|F|\times (a+p-1)n\leqslant (1-p)(a+p)mn$.
+
+On en d\'eduit que $pamn\leqslant (1-p)(a+p)mn$, donc $a(2p-1)\leqslant p(1-p)$. Par cons\'equent, $2p-1\leqslant 1-p$. En simplifiant,
+cela donne $p\leqslant 2/3$.
+\end{sol}

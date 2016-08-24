@@ -1,0 +1,203 @@
+\begin{document}
+
+Dans ce qui suit nous allons travailler sur des graphes simples, non-orientés. L'objet de ce cours a été des propriétés du nombre chromatique et les théorèmes de Mantel et Tur\`an. Leurs démonstrations peuvent se trouver dans le polycopié de théorie des graphes de Pierre Bornzstein. Certains des exercices suivants ont également été traités:
+
+\subsubsection{Exercices}
+
+\begin{defn}
+
+Un coloriage propre de $G=(S,A)$ est un coloriage $c$ tel que si $(a,b)\in A$, alors $c(a)\neq c(b)$. Autrement dit deux voisins sont de couleurs différentes.\\
+
+Soit $G$ un graphe. Le nombre chromatique de $G$ est le nombre minimal $k$ de couleurs nécessaires pour effectuer un coloriage propre de $G$ avec $k$ couleurs. 
+ Ce nombre s'écrit $\chi(G)$.
+\end{defn}
+\begin{exo}
+Soit $G$ un graphe de degré maximal $D$. Monter que :
+$$\chi(G)\leq D+1$$
+\end{exo}
+
+\begin{exo}
+Soit $G$ un graphe avec $m$ arrêtes. Montrer que :
+$$\chi(G)\leq \frac{1}{2}+\sqrt{2m+\frac{1}{4}}$$
+\end{exo}
+
+\begin{exo}
+Soit $G$ un graphe avec $n$ sommets, de degrés respectifs $d_1,\cdots,d_n$. Montrer qu'il existe un ensemble de sommets indépendants (i.e. tel que toute paire de sommets n'est pas reliée), de cardinal $I$ avec:
+ $$I\geq\sum_{i=1}^n \frac{1}{d_i+1}$$
+\end{exo}
+
+\begin{exo}(OIM, Problème 4).
+Soit $S=\{1,2,\cdots,1000000\}$, soit $A\subset S$ un ensemble de 101 éléments.
+Montrer qu'il existe des entiers $t_1,\cdots,t_n$ dans $S$ tels que les ensembles: 
+$$A_j=\{t_j+a|a\in A\}$$ 
+Soient disjoints deux à deux pour tout $1\leq t\leq 100$.
+\end{exo}
+
+\begin{exo}
+Soit $g$ un graphe à $n$ sommets et $m$ arrêtes qui ne contient aucun $4$-cycle. Montrer que:
+
+$$m\leq \frac{n}{4}(1+\sqrt{4n-3})$$
+\end{exo}
+
+\begin{exo}
+Soit $G$ un graphe à $n$ sommets et $m$ arrêtes sans $3$-cycles ni $4$-cycles. Montrer que $m\leq\frac{n\sqrt{n-1}}{2}$.
+\end{exo}
+
+\begin{exo}(APMO 1989) Soit $G$ un graphe à $n$ sommets et $m$ arrêtes. Soit $T$ le nombre de triangles de ce graphe, montrer que:
+
+$$T\geq \frac{m(4m-n^2)}{3n}$$
+
+\end{exo}
+
+\begin{exo}
+Soit $G$ un graphe à $n$ sommets et $m$ arrêtes qui ne contient aucun sous-graphe $K_{a,b}$. Montrer que :
+$$n\prod_{i=0}^{a-1} (\frac{2m}{n}-j)\leq (b-1)\prod_{i=0}^{a-1} (n-i)$$  
+\end{exo}
+
+\begin{exo}
+Un Physicien fou a découvert une particule appelée imon. Certaines paires de ses particules sont intriquées. Le Physicien parvient à faire les deux opérations suivantes, une seule à la fois:
+
+(i) Si un imon est intriqué avec un nombre impair d'autres imons, alors il peut le supprimer. 
+
+(ii) Il peut doubler l'ensemble des imons qu'il possède, en copiant chaque imon. Les copies de deux imons intriqués sont eux mêmes intriqués, et chaque imon est intriqué avec sa copie. Aucune autre intrication d'apparaît. 
+
+Montrer que quelque soit la configuration initiale, le physicien peut s'assurer de n'avoir après un certain nombre d'opérations, aucune paire d'imons intriqués. 
+\end{exo}
+
+\begin{exo}
+Soit $G$ un graphe à $2n$ sommets et $m$ arrêtes qui n'admet pas comme sous graphe deux triangles ayant une arrête en commun (ou un $K_4$ diminué d'une arrête). Montrer que $m\leq n^2+1$.
+\end{exo}
+
+\begin{exo}
+Dans un pays il y a $n\geq 5$ villes. Desservies par deux compagnies aériennes. Toute paire de ville est reliée éventuellement par une de ces compagnies. Cependant chaque compagnie a interdiction de proposer un cycle de longueur inférieur strictement à $6$. Montrer que les deux compagnies ont à elles deux moins de $\left[\frac{n^2}{3}\right]$ vols.
+\end{exo}
+
+\begin{exo}
+Soient $n$ et $p$ des entiers $> 1$ . Dans une assemblée de $n$ personnes, deux personnes quelconques ont au plus $p$ connaissances communes ; bien sûr, si $A$ connaît $B$ , alors $B$ connaît $A$. Montrer que le nombre de paires non ordonnées $(A , B)$ de personnes qui se connaissent est inférieur ou égal à $\sqrt{pn^3}$.
+\end{exo}
+
+\begin{exo}
+Soit $G$ un graphe sans $5$-clique et tel que toute paire de triangle partage un sommet commun. Montrer que l'on peut retire deux sommets afin d'enlever tous les triangles du graphe.
+\end{exo}
+
+\begin{exo}
+(Shortlist 2012) On se donne $2^{500}$ points sur un cercle, numérotés de $1$ à $2^{500}$ dans un certain ordre. Montrer qu'il existe $100$ cordes disjointes deux à deux reliant certains de ces points, telles que la somme des nombres aux extrémités de chaque corde sont égales.
+\end{exo}
+
+\subsubsection{Solutions de exercices}
+
+\begin{sol}
+On colorie les sommets un par un, en coloriant chaque sommet d'une couleur qui n'est pas encore présente parmi ses voisins. On le peut toujours car il y a plus de $D+1$ couleurs disponibles, donc plus que le degré de chaque sommet plus un.
+\end{sol}
+
+\begin{sol}
+On considère un coloriage propre de $G$ à $\chi(G)$ couleurs les sommets de $G$ sont ainsi partitionnés selon leur couler en des ensembles $A_1,\cdots,A_{\chi(G)}$. Soient $A_i$ et $A_j$ deux de ces ensembles, alors il existe une arrête entre  un sommet de $A_i$ et un sommet de $A_j$ puisque sinon on pourrait colorier $A_i$ et $A_j$ de la même couleur, et avoir un coloriage propre de $G$ en moins de $\chi(G)$ couleurs. Ainsi $m\geq {\chi(G) \choose 2}$ d'où le résultat (il suffit de résoudre le trinôme du second degré).
+\end{sol}
+
+\begin{sol} Notons $f(G) = \sum_{v\in G}\frac{1}{1+d(v)}$. On raisonne par récurrence sur le nombre $n$ de sommets de $G$. Quand $n=1$, c'est clair.
+Supposons que c'est vrai pour tous les graphes à $n-1$ sommets, et considérons $G$ à $n$ sommets. Soit $v_0$ un sommet de degré minimal $d$ dans $G$, et $v_1,\ldots, v_d$ ses voisins. On considère le graphe $G'$ obtenu à partir de $G$ en supprimant les sommets $v_0,\ldots,v_d$. Si $G'$ est vide, alors $d = n-1$ et par minimalité de $d$, $G$ est le graphe complet à $n$ sommets et $f(G) = n\times \frac{1}{n} = 1$, donc la conclusion est clairement vraie. 
+
+Supposons maintenant que $G'$ est non vide. Alors par hypothèse de récurrence, $G'$ contient un ensemble $I'$ de sommets indépendants de cardinal supérieur ou égal à $f(G')$, et $I:= I'\cup \{v_0\}$ est un ensemble de sommets indépendants dans $G$. 
+
+Si on note $d'(v)$ le degré d'un sommet $v$ de $G'$, nous avons clairement $d'(v)\leq d(v)$. De plus, pour tout $i$, $d(v_i)\geq d = d(v_0)$ Nous avons donc 
+$$f(G') = \sum_{v\in G'}\frac{1}{1 + d'(v)} = f(G) - \sum_{i=0}^d\frac{1}{1 + d(v_i)}\geq f(G) - \frac{1+d}{1+d} = f(G) - 1,$$
+d'où
+$$|I|\geq |I'| + 1\geq f(G')  + 1\geq f(G),$$
+ce qui conclut.
+\end{sol}
+
+\begin{sol} L'énoncé nous invite à considérer le graphe dont les sommets sont les éléments de $S$ et tel que deux sommets $a$ et $b$ sont reliés si les ensembles $\{x + a| x\in A\}$ et $\{x + b|x\in A\}$ sont disjoints. On veut montrer que ce graphe n'est pas 100-libre. Pour utiliser le théorème de Tur\'an, on va chercher à minorer le nombre d'arêtes du graphe. Deux éléments distincts  $a$ et $b$ de $S$ sont reliés si et seulement si pour tous $x,y\in A$, on a $x-y\neq a-b$. Comme l'ensemble $A$ a $101$ éléments, cela fait au plus $101\times 100$ différences possibles. Ainsi, pour un élément $a$ de $S$ fixé, il y a au plus $101\times 100$ sommets non reliés à $a$ dans $G$, c'est-à-dire que le degré de tout sommet de $G$ est supérieur ou égal à 
+$10^6 - 10100 -1$. $G$ a donc au moins 
+$$\frac{1}{2}\sum_{a\in V}d(v)\geq \frac{10^6(10^6 - 10100 - 1)}{2}$$
+arêtes. Il reste à vérifier que cette dernière valeur est supérieure à $\frac{98}{2\times 99}(10^6)^2$, c'est à dire que
+$99(10^6 - 10101) > 98\times 10^6$ , donc $10^6\geq 99\times 10101 = 999999$, ce qui est vrai.
+\end{sol}
+
+\begin{sol}
+Si $G$ ne contient pas de $4$-cycles, on peut compter le nombre $C$ de "coudes" du graphe (i.e. paire $(\{a,c\},b)$ avec $a$ et $b$ reliés et $b$ et $c$ reliés).
+
+$$C=\sum_{a\in S}{d(a) \choose 2}\leq {n \choose 2}$$ 
+
+On applique Jensen au membre de gauche et on obtient:
+$$\frac{4m^2}{n}-2m\leq n(n-1) $$
+On résous le trinôme en $m$, et on obtient la solution.
+\end{sol}
+
+\begin{sol}
+Si $G$ ne contient pas de $4$-cycles, on peut compter le nombre $C$ de "coudes" du graphe (i.e. paire $(\{a,c\},b)$ avec $a$ et $b$ reliés et $b$ et $c$ reliés).
+
+$$C=\sum_{a\in S}{d(a) \choose 2}\leq {n \choose 2}-m$$ 
+
+On applique Jensen au membre de gauche et on obtient:
+$$\frac{4m^2}{n}\leq n(n-1) $$
+
+\end{sol}
+
+\begin{sol} Le nombre de triangles est supérieur ou égal à 
+$$\frac{1}{3}\sum_{uv\in E}(d(u) + d(v) - n) \geq \frac{1}{3}\left(\sum_{u\in V} d(u)^2 - nm\right) \geq \frac{1}{3}\left(\frac{4m^2}{n} - nm\right) = \frac{m}{3n}\left(4m - n^2\right).$$
+\end{sol}
+
+\begin{sol}
+
+ Soit $G=(S,A)$ En comptant le nombre $N$ de sous graphes $K_{1,a}$, on trouve que:
+
+$$N=\sum_{X\in S}{d(X) \choose a}\leq (b-1){n \choose a}$$
+
+Donc en appliquant Jensen à gauche on obtient:
+
+$$n\prod_{i=0}^{a-1} (\frac{2m}{n}-j)\leq (b-1)\prod_{i=0}^{a-1} (n-i)$$  
+\end{sol}
+
+\begin{sol}
+On identifie les imons du physicien à un graphe $G$, dont les arrêtes représentent les paires intriquées.
+L'idée ici est de montrer que le physicien peut faire décroitre le nombre chromatique du graphe jusqu'à valoir $1$. En effet considérons un coloriage propre du graphe en $\chi(G)=k>1$ couleurs. On peut enlever des sommets du graphe jusqu'à ce que tous les sommets soient de degré pair (notre coloriage reste alors propre).
+
+ Ensuite on applique la seconde opération, et on décide que si les couleurs son $c_1,\cdots,c_k$, alors on colorie la copie d'un sommet de couleur $c_i$ de la couleur $c_{i+1}$ (en supposant $c_{k+1}=c_1$). Ainsi on a toujours un coloriage propre à $k$ couleurs.
+
+ Enfin tous les sommets sont de degré impair, et on peut donc enlever tous les sommets de la couleur $c_k$. En effet enlever un sommet de couleur $c_k$ n'influe pas sur la parité du degré des autres sommets de couleur $c_k$. Ainsi On a un graphe qui admet un coloriage propre en $k-1$ couleurs.
+ 
+ Lorsque $\chi(G)=1$, on a atteint un graphe sans aucune arête, ce qui était l'objectif désiré. 
+\end{sol}
+
+\begin{sol} On raisonne par récurrence sur $n$. Pour $n=2$, c'est clair. Supposons que c'est vrai pour $n$, et considérons un graphe $G$ avec $2(n+1) = 2n+2$ sommets et $(n+1)^2 + 1 = n^2 + 2n + 2$ arêtes. D'après le théorème de Mantel, il contient un triangle formé de trois sommets $u,v,w$. Parmi les sommets du triangle, il y en a deux, disons $u$ et $v$, dont les degrés ont la même parité. Considérons le sous-graphe de $G$ obtenu en supprimant $u$ et $v$ ainsi que les arêtes qui en partent. Si le sous-graphe en question a au moins $n^2 + 1$ arêtes, on a fini par hypothèse de récurrence. Sinon, cela veut dire qu'au moins $2n+2$ arêtes de $G$ ont au moins une extrémité appartenant à l'ensemble $\{u,v\}$. Puisque $u$ et $v$ sont reliés par une arête, le nombre de telles arêtes est également donné par la quantité $d(u) + d(v) - 1$, qui est impaire car $d(u)$ et $d(v)$ sont de même parité. Ainsi, 
+$$d(u) + d(v) -1 \geq 2n+2.$$
+Le nombre d'arêtes partant de $u$  ou de $v$ et différentes de $uv$, $uw$, $vw$ est donc supérieur ou égal à $2n$. Puisqu'il n'y a que $2n-1$ sommets différents de $u,v,w$, par le principe des tiroirs il y en a au moins relié relié aussi bien à $u$ qu'à $v$, ce qui conclut. 
+
+\end{sol}
+
+\begin{sol} On considère le graphe $G$ dont les sommets sont les $n$ villes, deux villes étant reliées par une arête rouge ou bleue si l'une ou l'autre des deux compagnies propose un vol direct entre ces villes. L'hypothèse de l'énoncé signifie qu'il n'y a pas de 3-, 4- ou 5- cycles monochromes. Raisonnons par l'absurde et supposons que le nombre d'arêtes est strictement plus grand que $\lfloor \frac{n^2}{3}\rfloor$. Alors d'après le théorème de Tur\'an, $G$ contient $K_4$. Avec la condition sur les 3- et 4-cycles, on vérifie facilement que si on appelle $A_1,A_2,A_3,A_4$ les sommets  de cette copie $H$ de $K_4$ à l'intérieur de $G$, quitte à les renommer, les arêtes $A_1A_2$, $A_2A_3$ et $A_3A_4$ sont rouges et les autres sont bleues. 
+
+Regardons alors les $n-4$ autres sommets. Chacun de ces sommets ne peut être relié par plus de deux arêtes à des sommets de $H$. En effet, s'il y en a 3, il y en a deux de la même couleur, qui avec celles de $H$ forment soit un 3-cycle, soit un 4-cycle, ce qui contredit l'énoncé. 
+
+Cette remarque nous permet d'éliminer les cas $5\leq n\leq 8$. En effet, le nombre d'arêtes de notre graphe est au plus
+$$ \underbrace{6}_{\text{arêtes de}\ H} + \underbrace{2(n-4)}_{\text{arêtes entre}\ H\ \text{et}\ G\backslash H} + \underbrace{{n-4\choose 2}}_{\text{arêtes de}\ G\backslash H}.$$
+On vérifie que c'est inférieur à $\lfloor\frac{n^2}{3}\rfloor$ pour $5\leq n \leq 8$. La conclusion de l'énoncé est donc vraie pour ces valeurs de $n$.
+
+Supposons donc maintenant que $n\geq 9$, et faisons une récurrence, initialisée par ce que nous venons de montrer: par hypothèse de récurrence, le résultat est vrai pour $G\backslash H$, graphe à $n-4\geq 5$ sommets. Le nombre d'arêtes de $G\backslash K$ est donc inférieur ou égal à $\frac{(n-4)^2}{3}$. Alors le nombre d'arêtes de $G$ est inférieur ou égal à 
+$$ 6 + 2(n-4) + \frac{(n-4)^2}{3}.$$
+Nous avons donc $6 + 2(n-4) + \frac{(n-4)^2}{3}\geq \frac{n^2}{3}$, ce qui donne $n\leq 5$, contradiction.
+\end{sol}
+
+\begin{sol}
+\end{sol}
+
+\begin{sol} Nous allons distinguer plusieurs cas.\begin{enumerate} \item Le graphe contient une copie de $K_4$, dont nous appellerons les sommets $A,B,C,D$. Tout triangle contient alors au moins deux sommets parmi $A,B,C,D$. Supposons qu'il existe deux triangles contenant deux paires de sommets disjointes parmi $A,B,C,D$: sans perte de généralité, nous pouvons les appeler $EAB$ et $FCD$. Ces deux triangles ont un sommet en commun, donc $E=F$. Nous aboutissons alors à une contradiction car $EABCD$ est dans ce cas un graphe complet à 5 sommets. Soit maintenant un triangle, que nous pouvons sans perte de généralité noter $EAB$. Alors d'après ce qui précède tout autre triangle doit nécessairement contenir $A$ ou $B$. Ainsi, il suffit de supprimer les points $A$ et $B$ pour ne plus avoir de triangle. 
+\item Le graphe ne contient pas $K_4$, mais contient $K_4$ privé d'une arête, c'est-à-dire deux triangles partageant un côté. Notons $A,B,C,D$ ces sommets, avec $A$ et $D$ non reliés. Un triangle qui ne contient ni $B$, ni $C$, doit, pour avoir un sommet en commun avec $ABC$ et $BCD$, contenir $A$ et $D$, ce qui est impossible car $A$ et $D$ ne sont pas reliés. Donc tout triangle contient $B$ ou $C$. Il suffit donc de supprimer $B$ et $C$.
+\item Deux triangles quelconques ont exactement un sommet en commun. Soient $ABC$ et $ADE$ des triangles, avec $B,C,D,E$ nécessairement tous distincts. Soit un autre triangle, et supposons qu'il ne contient pas $A$. Alors sans perte de généralité, nous pouvons supposer qu'il contient $B$ et $D$. Cela veut dire que $B$ et $D$ sont reliés, ce qui fait apparaître un triangle $ABD$ ayant deux sommets en commun avec $ABC$, contradiction. Ainsi, tout triangle contient $A$ et il suffit de supprimer $A$. 
+\end{enumerate}
+\end{sol}
+
+\begin{sol} Dans toute la suite pour simplifier nous noterons $n = 2^{499}$, de sorte qu'il y a $2n$ points numérotés $1,\ldots,2n$ et que les sommes différentes possibles aux extrémités d'une corde sont $3,4,\ldots,4n-1$. On considère des couleurs que l'on appelle $c_3,c_4,\ldots,c_{4n-1}$ et on colorie une corde avec la couleur $c_i$ si la somme des nombres à ses extrémités est $i$. Ainsi, deux cordes ayant exactement une extrémité en commun auront des couleurs différentes.
+
+Pour chaque couleur $c$, on considère le graphe $G_c$ dont les sommets sont les cordes de couleur $c$, et dont deux sommets sont reliés par une arête s'ils correspondent à des cordes qui ne sont pas disjointes. Le but est de montrer qu'il existe une couleur $c$ telle que $G_c$ contienne un ensemble de 100 sommets indépendants. Pour cela, nous allons utiliser le résultat de l'exercice 12, en montrant que la moyenne des quantités $f(G_c) = \sum_{v\in G_c}\frac{1}{1+d(v)}$ sur tous les graphes $G_c$ est strictement supérieure à 100.  
+
+Chaque corde $\ell$ divise le cercle en deux arcs, et par le principe des tiroirs l'un des deux arcs contient un nombre $m(\ell)$ de points inférieur ou égal à $n-1$ en son intérieur. Pour tout $i = 0,1\ldots,n-2$, il y $2n$ cordes $\ell$ avec $m(\ell) = i$. Une telle corde a un degré inférieur ou égal à $i$ dans le graphe $G_c$ correspondant à sa couleur $c$: en effet, les cordes de couleur $c$ qu'elle intersecte doivent nécessairement avoir une extrémité parmi les $i$ points du \og petit\fg arc qu'elle intercepte, et deux cordes de même couleur ont des extrémités distinctes.
+
+D'après ce que nous venons de voir, pour tout $i\in\{0,\ldots,n-2\}$, les $2n$ cordes $\ell$ telles que $m(\ell) = i$ contribuent au moins avec un terme $\frac{2n}{1+i}$ à la somme $\sum_{c}f(G_c)$. Il y a $4n-3$ couleurs en tout, donc en prenant la moyenne sur toutes les couleurs, cela donne qu'il existe une couleur $c$ telle que
+$$f(G_c) \geq \frac{2n}{4n-3}\sum_{i=1}^{n-1} \frac{1}{i}>\frac12 \sum_{i=1}^{n-1} \frac{1}{i}.$$
+Il reste donc à montrer que $\sum_{i=1}^{n-1} \frac{1}{i}>200$ pour $n=499$. Or
+\begin{eqnarray*}\sum_{i=1}^{n-1} \frac{1}{i} &=& 1+ \sum_{k=1}^{499}\ \ \sum_{i={2^{k-1}+1}}^{2^k}\frac{1}{i}\\
+                                              &>& 1+\sum_{k=1}^{499}\frac{2^{k-1}}{2^k}\\
+                                              &=& 1 + \frac{499}{2} > 200,
+\end{eqnarray*}
+ce qui conclut. \end{sol}

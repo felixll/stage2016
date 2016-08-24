@@ -1,0 +1,90 @@
+\ifcourt
+%% Cours de géométrie groupe C
+
+\paragraph{Principe d'étude} Dans ce cours, on s'intéresse à différentes transformations géométriques qui envoient
+les points sur des points, les droites sur des droites, les cercles sur des cercles. Le plan
+d'étude est le suivant :
+\begin{enumerate}
+\item On considère une grandeur qu'on aimerait voir conservée par notre transformation 
+(les longueurs, les rapports de longueur, les angles géométriques, les angles orientés) ;
+\item On définit les transformations conservant cette grandeur, on étudie leur structure :
+\begin{itemize}
+\item[$\bullet$] centre d'une transformation : une telle transformation a-t-elle un point fixe ? si oui, comment le construire ? 
+\item[$\bullet$] \og degrés de liberté\fg : peut-on remonter de la donnée
+d'un certain nombre de points et de leurs images à la définition d'une transformation ?
+inversement, pour quels $n$ peut-on fixer $A_1,\ldots,A_n$ et $B_1,\ldots,B_n$ tels qu'il
+existe une transformation adéquate qui envoie $A_1$ sur $B_1$,\ldots,$A_n$ sur $B_n$ ?
+(et quelles contraintes supplémentaires faut-il éventuellement imposer sur ces points pour
+pouvoir augmenter le degré de liberté $n$ ?)
+\item[$\bullet$] Composition de deux transformations d'un même type ;
+\item[$\bullet$] Décomposition d'une transformation comme produit de facteurs \og élémentaires\fg.
+\end{itemize}
+\item Si on a deux types de transformations (celles qui conservent les schtroumpfs et celles
+qui conservent les bagadas, par exemple), on étudie la position relative de l'ensemble
+des transformations qui conservent les schtroumpfs et de l'ensemble des transformations qui 
+conservent les bagadas, et la façon dont notre loi de composition se comporte par rapport 
+à eux (voir le schéma infra).
+\end{enumerate}
+
+\paragraph{Points annexes traités/non traités} On a insisté sur la différence entre une 
+transformation directe et une transformation indirecte (constat de
+départ : la symétrie axiale est une isométrie, elle conserve les angles mais 
+multiplie par $-1$ toutes les valeurs d'angles orientés), cette question jouant un
+rôle important dans l'étude du nombre de degrés de liberté d'une transformation. 
+On a étudié la notion de similitude intérieure. On a donné la construction du 
+point de Miquel, dont on a ainsi pu déduire le théorème de concours des quatre 
+cercles en le point de Miquel.
+
+L'étude générale des symétries axiales (notamment leur composition)
+n'a pas été menée. L'existence d'un centre pour toute similitude a été admise.
+
+\paragraph{Schéma récapitulatif}
+
+
+\paragraph{Exercices traités}
+Outre l'étude des différentes transformations qu'on s'est efforcé de mener comme plusieurs
+petits exercices, les exercices suivants on été posés :
+
+\begin{exo}
+Soit $ABCD$ un carré, $P$ à l'intérieur de $ABCD$ tel que $PA=1,PB=2,PC=3$.
+Calculer $\widehat{APB}$.
+\end{exo}
+
+\begin{exo}
+Un randonneur est dans une région rectangulaire $ABCD$ dont il possède une petite
+carte $A'B'C'D'$. Quand il pose sa carte par terre, montrer qu'il existe un unique
+point $X$ dont la position réelle et l'image sur la carte coïncident, et le déterminer
+sa position à la règle.  
+\end{exo}
+
+\begin{sol}
+Soit $\rho$ la rotation de centre $B$ et d'angle $90\degres$. Elle envoie $C$ sur $A$,
+elle fixe $B$ et elle envoie $P$ sur un point $P'$ tel que $\widehat{PBP'}=90\degres$
+et $P'B=PB=2$. On a de plus $P'A=PC=3$ (isométrie). D'après le théorème de Pythagore
+dans $PBP'$, $PP'=2\sqrt{2}$, donc d'après la réciproque du théorème de Pytagore, 
+le triangle $PAP'$ est rectangle en $P$. Comme $PBP'$ est rectangle isocèle en $B$,
+on a finalement $\widehat{APB}=\widehat{APP'}+\widehat{PP'B}=90\degres+45\degres=135\degres$. 
+\end{sol}
+
+\begin{sol}
+Comme $ABCD$ et $A'B'C'D'$ sont deux figures semblables, il existe une similitude qui envoie
+l'une sur l'autre, et le point $X$ recherché est le centre (unique) de cette similitude.
+On applique le leitmotiv :
+$$\mbox{\og Quand je vois deux figures semblables, je pense à la similitude qui envoie l'une sur l'autre, et surtout je pense aux similitudes intétieures de mes figures.\fg}$$
+
+On considère la similitude $s$ qui envoie $(AB)$ sur $(CD)$ et $(A'B')$ sur $(C'D')$. 
+Elle est de centre $X$. Elle envoie $(AB)$ sur une parallèle à $(AB)$, c'est donc 
+une similitude d'argument $0\degres$ ou $180\degres$, c'est-à-dire une 
+homothétie. $s((AB)\cap (A'B'))=s((AB))\cap s((A'B'))= (CD)\cap (C'D')$ donc 
+le centre de $s$ est sur la droite qui relie $(AB)\cap (A'B')$ et
+$(CD)\cap (C'D')$. De même, $X$ est le centre de la similitude qui envoie $(AD)$ 
+sur $(CB)$ et $(A'D')$ sur $(C'B')$, et il est sur la droite qui relie $(AD)\cap (A'D')$ et
+$(CB)\cap (C'B')$. Donc $X$ est l'intersection de la droite qui relie $(AB)\cap (A'B')$ et
+$(CD)\cap (C'D')$ et de la droite qui relie $(AD)\cap (A'D')$ et
+$(CB)\cap (C'B')$. 
+\end{sol}
+
+\paragraph{Et ensuite ?}
+Pour plus de précisions, la plupart des énoncés montrés se retrouvent dans l'excellent polycopié de
+Thomas Budzinski sur les transformations (cf. cours de l'OFM), auquel on renvoie
+également le lecteur désireux de plus d'exercices.

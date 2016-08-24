@@ -1,9 +1,62 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat tortor ex, id lacinia dui posuere vitae. Sed ultrices pulvinar urna, eu posuere nunc suscipit non. Aenean lacus arcu, dignissim vitae sapien a, gravida hendrerit turpis. Ut et molestie ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum eros quis neque dictum sollicitudin. Aliquam hendrerit mi non nisi tempor condimentum. Vivamus nunc diam, vestibulum sed risus eu, molestie consectetur mi. Donec consectetur ut nulla a molestie. Nunc interdum augue eros, non pharetra justo dignissim eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer et nibh nibh. Sed pharetra lacus ut ex congue, vitae lacinia ipsum accumsan. Sed mollis neque quis elementum vulputate. Duis dolor nisi, malesuada vel lorem ac, accumsan sollicitudin nisi.
+\begin{sol}
+%Logique
+Pour montrer $A \text{ ou } (B \text{ et } C) \iff (A \text{ ou } B) \text{ et } (A \text{ ou } C)$,
+on remarque qu'il s'agit de la distributivité du \og ou\fg sur le \og et\fg. Les sceptiques
+se feront un plaisir de redémontrer cette propriété usuelle à l'aide de tables de vérités.
 
-Vivamus sit amet ante ac turpis cursus rhoncus id vel libero. Nulla facilisi. Donec maximus, massa ac dapibus lacinia, enim nibh maximus ligula, id varius erat turpis in libero. Sed eget neque scelerisque, lobortis erat eu, varius magna. Morbi sodales est a ipsum volutpat, at ultricies nisl dapibus. Pellentesque interdum nec lectus sed pulvinar. Vivamus finibus est in tortor imperdiet, sit amet consequat turpis aliquet. Duis cursus sollicitudin magna, eu condimentum nibh convallis in. Praesent rhoncus porta tempor. Quisque pellentesque ultricies nisi quis vehicula.
+Pour montrer $\text{non} \big [ \big ( A \text{\ ou\ } (\text{non\ } B) \big ) \text{\ ou\ } \big ( C \text{\ et\ } \big ( A \text{\ ou\ } (\text{non\ } B)
+\big ) \big ) \big ]
+\iff (\text{non\ } A) \text{\ et\ } B$, on distribue à l'aide des lois de 
+de Morgan le \og non\fg du membre de gauche, et on obtient : 
+non $A$ et $B$ et [non $C$ ou (non $A$ et $B$)]. Si non $C$, la seconde
+moitié de l'expression est vraie, donc l'expression vaut non $A$ et $B$.
+Si $C$, la seconde moitié devient non $A$ et $B$ (comme la première moitié),
+d'où le résultat.
+\end{sol}
 
-Suspendisse in lacus ac velit rutrum sagittis. Vivamus at volutpat quam. Quisque id erat dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent id augue felis. Proin convallis odio interdum purus malesuada tempus. Fusce eget libero non erat pulvinar molestie at ut augue. Sed suscipit turpis non malesuada cursus. Suspendisse imperdiet et neque vel rhoncus.
 
-Sed accumsan sodales eros vel sagittis. In nec nisl vitae ligula aliquam pharetra. Fusce enim massa, vehicula dapibus ultricies sit amet, dignissim eget purus. Sed sodales ligula cursus vulputate venenatis. Praesent sed dignissim odio. Maecenas maximus at mi ut sagittis. Cras in sem vel ipsum dapibus gravida sit amet vitae turpis. Sed porta erat at nisl auctor commodo.
+\begin{sol}
+En faisant le tour de la clairière, on décide d'appeler un arbre sur deux un chêne,
+et l'autre arbre sur deux un bouleau. \`A chaque tour, les oiseaux magiques nichant
+dans un bouleau partent s'installer dans un chêne, et inversement. Comme au début,
+autant d'oiseaux nichent dans des bouleaux que dans des chênes, cette propriété est
+un invariant. Si tous les oiseaux nichaient dans un même arbre, l'invariant ne serait pas
+respecté. Donc Panoramix ne verra jamais tous les oiseaux magiques nicher dans un même arbre. 
+\end{sol}
 
-Donec urna nulla, fringilla ac iaculis ac, lobortis vel leo. Vivamus ac elit neque. Praesent varius leo quis ante condimentum, vel hendrerit diam auctor. Praesent elementum urna vel diam vulputate tincidunt. Vivamus at erat vel magna molestie ultrices. Suspendisse nec nisi a nibh pellentesque bibendum ac et purus. Praesent mollis ultricies dui eu cursus. Nam posuere consequat massa, nec semper lacus. Pellentesque rhoncus enim non nisi iaculis iaculis. Vivamus facilisis velit sed urna porttitor, nec commodo nulla aliquam. Aliquam dapibus faucibus pulvinar.
+\begin{sol}
+Pour $1\le k\le 77$, on note $a_k\in\N^*$ le nombre de parties jouées le 
+$k$-ième jour. Pour $0\le k\le 77$, soit $s_k=a_1+a_2+\ldots+a_k$. Par
+l'absurde, supposons qu'on ne peut pas trouver de période de jours consécutifs 
+pendant laquelle exactement 21 parties sont jouées. Cela revient à dire 
+que pour tous $i<j$, on a $s_j-s_i\ne 21$.
+
+Sur une droite, on dessine une case vide à la place de chaque entier de 0 à
+132 inclus. La $n$-ième case est marquée d'une croix s'il existe $k$ tel
+que $s_k=n$. On place ainsi 78 croix. De plus, pour tout $0\le k\le 77$, 
+on a soit $s_k + 21>132$, soit la $s_k+21$-ième case est libre. Soit $a$
+le nombre de cases numérotées entre 112 et 132 inclus et marquées d'une croix.
+Les cases numérotées entre 0 et 111 comprennent exactement $78-a$ cases marquées
+d'une croix, et au moins autant de cases libres. On a donc l'inégalité :
+$2(78-a)+a\le 133$, ie $a\ge 23$. Or $a\le 132 - 112 +1 = 21$, absurde !
+
+Donc il existe bien une période de jours consécutifs lors de laquelle exactement
+21 parties ont été jouées.
+
+
+\end{sol}
+
+
+\begin{sol}
+%récurrence
+Pour $n\in\N^*$, on note ${\cal P}_n :$ \og $2^n\ge n+1\fg$. Montrons par récurrence
+que ${\cal P}_n$ est vraie pour tout $n\in\N^*$.
+
+Initialisation : pour $n=1$, on a $2\ge 2$.
+
+Hérédité : soit $n\in\N^*$. Supposons que ${\cal P}_n$ est vraie et 
+montrons ${\cal P}_{n+1}$. On a $2^{n+1}\ge 2(n+1)$ par hypothèse de récurrence,
+et $2n+2\ge n+2$. D'où ${\cal P}_{n+1}$.
+
+Conclusion : on a bien montré que ${\cal P}_n$ est vraie pour tout $n\in\N^*$.
+\end{sol}

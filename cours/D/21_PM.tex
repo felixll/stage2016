@@ -1,0 +1,186 @@
+\subsubsection*{Géométrie combinatoire}
+
+\textbf{Idées utiles :}
+\begin{itemize}
+\item
+Tester des petits cas (comme dans tous les problèmes de combinatoire)
+\item
+Toujours essayer la méthode la plus brutale possible (exercice 7)
+\item
+Penser à la récurrence (exercices 4,5)
+\item
+Ordonner les points par abscisse croissante (exercices 1,2,3)
+\item
+Considérer l'enveloppe convexe (exercices 4,5,8)
+\item
+Trianguler les polygones : pour diviser un polygone en triangles, il faut tracer $n-3$ diagonales, on obtient $n-2$ triangles (exercice 6)
+\end{itemize}
+
+\bigskip
+
+\textbf{Exercices}
+
+\bigskip
+
+\begin{exo}
+On donne $2016$ points dans le plan, trois quelconques jamais align\'{e}s.
+D\'{e}montrer que l'on peut construire $504$ quadrilat\`{e}res deux \`{a}
+deux disjoints, non n\'{e}cessairement convexes, et dont les sommets sont
+les points donn\'{e}es.
+\end{exo}
+
+\begin{sol}
+Quitte à faire tourner la figure, on peut supposer que les points ont des abscisses deux à deux distinctes. On note $P_i$ avec $1 \leq i \leq 2016$ les points ordonnés par abscisse croissante et, pour tout $k$ entre $0$ et $503$, on considère un quadrilatère dont les sommets sont $P_{4i+1}$, $P_{4i+2}$, $P_{4i+3}$ et $P_{4i+4}$.
+\end{sol}
+
+\begin{exo}
+On consid\`{e}re $2015$ droites du plan, deux à deux non parallèles et trois à trois non concourantes. On appelle $E$ l'ensemble de leurs points d'intersection.
+
+On veut attribuer une couleur \`{a} chacun des points de $E$ de sorte que
+deux quelconques de ces points qui appartiennent \`{a} une m\^{e}me droite
+et dont le segment qui les relient ne contient aucun autre point de $E,$
+soient de couleurs diff\'{e}rentes.
+
+Combien faut-il au minimum de couleurs pour pouvoir r\'{e}aliser une telle coloration?
+\end{exo}
+
+\begin{sol}
+La configuration contient au moins un triangle. Cela peut par exemple se prouver par récurrence sur le nombre de droites  : trois droites forment un triangle et si on ajoute une droite, soit elle laisse le triangle intact, soit elle le sépare en un triangle et une quadrilatère. Par conséquent, il est impossible d'effectuer un coloriage avec deux couleurs.
+
+On va maintenant montrer qu'un coloriage à trois couleurs est possible : on ordonne les points par abscisse croissante comme tout à l'heure, et on les colorie dans cet ordre. Au moment où on doit colorier un point $P=(d_i) \cap (d_j)$, on a déjà colorié au plus un de ses voisins sur $(d_i)$ (celui qui est à gauche) et un sur $(d_j)$ (aussi celui de gauche). On a donc au plus deux couleurs interdites et on peut toujours choisir la troisième. La réponse est donc $3$ couleurs.
+\end{sol}
+
+\begin{exo}
+Soit $\mathcal{P}$ un polygone convexe à $n$ côtés. Montrer qu'il existe un ensemble $S$ de $n-2$ points tels que tout triangle dont les sommets sont des sommets de $\mathcal{P}$ contient exactement un point de $S$.
+\end{exo}
+
+\begin{sol}
+On choisit $S$ comme suit : notons $A$ le point le plus à gauche de $\mathcal{P}$ (qui est unique quitte à "tourner" la figure) et $Z$ le plus à droite.
+\begin{itemize}
+\item
+Pour tout sommet $X$ de $\mathcal{P}$ sur l'arc de $\mathcal{P}$ au-dessus de $A$ et $Z$, on prend dans $S$ un point "juste en-dessous" de $X$.
+\item
+Pour tout sommet $X$ de $\mathcal{P}$ sur l'arc de $\mathcal{P}$ au-dessus de $A$ et $Z$, on prend dans $S$ un point "juste au-dessus" de $X$.
+\end{itemize}
+
+On a donc pris $1$ point par sommet de $\mathcal{P}$ différent de $A$ et $Z$, soit $|S|=n-2$.
+
+Enfin, soient $I$, $J$ et $K$ des sommets de $\mathcal{P}$. On peut supposer qu'ils sont ordonnés par abscisse croissante, donc $J$ est différent de $A$ et $Z$. Il y a alors à l'intérieur du triangle $IJK$ un petit segment issu de $J$ partant vers le haut (si $J$ est sur l'arc bas) ou vers le bas (si $J$ est sur l'arc haut).
+\end{sol}
+
+%\begin{exo}
+%Soient $n \geq 3$ et $2 \leq k \leq \frac{n}{2}$. Soit $\mathcal{P}$ un polygone convexe à $n$ côtés et $A$ un ensemble de $k$ points à l'intérieur de $\mathcal{P}$. Montrer qu'il existe un $2k$-gone dont les sommets sont des sommets de $\mathcal{P}$ et qui contient tous les sommets de $A$.
+%\end{exo}
+%
+%\begin{sol}
+%On raisonne par récurrence sur $k$ : pour $k=2$, on trace la droite passant par les deux points de $A$. Elle coupe deux côtés de $\mathcal{P}$, qu'on note $[P_{i} P_{i+1}]$ et $[P_j P_{j+1}]$. On prend alors le quadrilatère (c'est peut-être un triangle) de sommets $P_i$, $P_{i+1}$, $P_j$ et $P_{j+1}$.
+%
+%Si le résultat est vrai pour $k$, soit $A$ un ensemble de $k+1$ points à l'intérieur de $\mathcal{P}$ et soit $x$ un point de $A$. L'hypothèse de récurrence appliquée à $A \backslash \{ x\}$ donne un $2k$-gone. Si $x$ est à l'intérieur de $2k$-gone, on a gagné. Sinon, soit $y \ne x \in A$ : on trace la droite reliant $x$ à $y$. Elle coupe $\mathcal{P}$ en deux points. On s'intéresse à celui qui est "du côté de $x$" (par rapport à $y$). Il est sur le côté $P_{\ell} P_{\ell +1}$. On ajoute alors $P_{\ell}$ et $P_{\ell +1}$ à notre $2k$-gone.
+%\end{sol}
+
+\begin{exo}
+Soit $n \geq 1$ : on place dans le plan $2n$ points, trois quelconques non alignés. On en colorie $n$ en bleu et $n$ en rouge. Montrer qu'il est possible de tracer $n$ segments qui ne se croisent pas, chaque segment reliant un point bleu à un point rouge, de telle manière que chaque point soit utilisé une seule fois.
+\end{exo}
+
+\begin{sol}
+On raisonne par récurrence forte sur $n$ : le résultat est trivial pour $n=1$. Il suffit donc de séparer les $2n$ points par une droite de manière à avoir de chaque côté de la droite autant de points bleus que rouges, et de traiter séparément chaque côté de la droite.
+
+On considère le bord de l'enveloppe convexe des $2n$ points : si elle contient deux points de couleurs différentes, alors elle contient deux points consécutifs de couleur différente. On peut isoler ces deux points par une droite et on a gagné. 
+
+Sinon, on suppose que le bord de l'enveloppe convexe est bleu. Quitte à faire une rotation, les ordonnées des points sont deux à deux distinctes. On fait descendre une droite horizontale : le point le plus haut $A_1$ et le plus bas $A_{2n}$ sont sur le bord donc sont bleus. On a donc un point bleu "en trop" au-dessus de la droite juste après avoir passé $A_0$ et un point rouge en trop juste avant $A_{2n}$. Comme on passe les points un par un on aura à un moment autant de points bleus que de rouges au-dessus de la droite, donc on a gagné !
+\end{sol}
+
+\begin{exo} (IMO 2013-2)
+On considère un ensemble $S$ de $4031$ points dans le plan, trois quelconques non alignés, dont $2015$ coloriés en bleu et $2016$ en rouge. Montrer qu'il est possible de tracer $2015$ droites dans le plan de telle manière que :
+\begin{itemize}
+\item[(i)]
+Aucune droite ne passe par un point de $S$.
+\item[(ii)]
+Aucune des régions délimitées par les $2015$ droites ne contient deux points de $S$ de couleurs différentes.
+\end{itemize}
+\end{exo}
+
+\begin{sol}
+On raisonne par récurrence sur $4031$. Plus précisément, on montre par récurrence sur $n$ qu'avec $2n+1$ points on peut tracer $n$ droites vérifiant la condition voulue, le nombre de points rouges et de points bleus n'ayant en fait aucune importance : avec $3$ points, si il y en a $2$ bleus et $1$ rouge, il est facile de tracer une droite qui isole le point rouge. Si le problème est résolu pour $n$, considérons $2n+3$ points. Soient $A$ et $B$ deux sommets consécutifs de l'enveloppe convexe. Par hypothèse de récurrence, il existe $n$ droites qui marchent pour $S \backslash \{A,B\}$.
+
+Si $A$ et $B$ sont de la même couleur, on ajoute une droite qui isole $A$ et $B$ du reste et on a gagné. Sinon, on suppose $A$ bleu et $B$ rouge : si $A$ et $B$ sont dans la même région, tous les points de $S$ dans cette région autres que $A$ et $B$ sont de la même couleur, par exemple rouge. On ajoute un droite qui isole $A$ et on a gagné. Si $A$ et $B$ sont dans des régions différentes :
+\begin{itemize}
+\item
+Si la région de $A$ ne contient que des bleus et celle de $B$ que des rouges, on a gagné.
+\item
+Si la région de $A$ ne contient que des rouges et celle de $B$ que des rouges, on ajoute une droite qui isole $A$.
+\item
+Si la région de $A$ ne contient que des bleus et celle de $B$ que des bleus, on ajoute une droite qui isole $B$.
+\item
+Si la région de $A$ ne contient que des rouges et celle de $B$ que des bleus, on ajoute une droite qui isole $A$ et $B$.
+\end{itemize}
+\end{sol}
+
+\begin{exo}(Problème de la galerie d'art)
+Soit $\mathcal{P}$ un polygone non croisé (pas forcément convexe). Montrer qu'il existe un ensemble $\mathcal{A}$ de $\lfloor \frac{n}{3} \rfloor$ sommets de $\mathcal{P}$ tel que pour tout $X$ à l'intérieur de $\mathcal{A}$ il existe un point $C \in \mathcal{A}$ tel que le segment $[CX]$ soit entièrement à l'intérieur de $\mathcal{P}$.
+\end{exo}
+
+\begin{sol}
+On trace $n-3$ diagonales de $\mathcal{P}$ de manière à le diviser en $n-2$ triangles. Il suffit de sélectionner $\lfloor \frac{n}{3} \rfloor$ sommets de manière à avoir au moins sommet de chaque triangle. On va montrer qu'il est possible de colorier en bleu, rouge et jaune les sommets de $\mathcal{P}$ de manière à ce que chaque triangle contienne exactement un sommet bleu, un rouge et jaune. Une fois ce lemme montré, il suffit de prendre tous les sommets de la couleur la moins utilisée. Il y en a au plus $\frac{n}{3}$, et il y en a exactement un par triangle.
+
+On montre ce lemme par récurrence sur le nombre de sommets. Il est trivial pour $n=3$. De plus, il y a $n-2$ triangles et $n$ côtés de $\mathcal{P}$ donc il existe au moins un triangle dont $2$ côtés sont des côtés de $\mathcal{P}$. Ces côtés sont forcément consécutifs et ont un sommet $X$ en commun. On peut appliquer l'hypothèse de récurrence au polygone obtenu en supprimant $X$ puis, comme $X$ est dans un seul triangle, on n'a qu deux couleurs interdites pour $X$ et on peut colorier $X$.
+\end{sol}
+
+\begin{exo} (IMO 2014-6, version facile)
+On considère un ensemble de $n$ droites tracées dans le plan, deux quelconques non parallèles, trois quelconques non concourrantes. Elles divisent le plan en un certain nombre de régions, certaines finies et certaines infinies. Montrer qu'il est possible de colorier au moins $\sqrt{\frac{n}{2}}$ de ces droites en bleu de manière à ce qu'il n'y ait aucune région finie dont le périmètre soit entièrement bleu.
+\end{exo}
+
+\begin{sol}
+On utilise un algorithme glouton : supposons qu'on ait déjà colorié $k$ droites et cherchons s'il est possible d'en colorier une $k+1$-ème. On appelle une région finie \textit{dangereuse} si tout son bord sauf un côté est déjà colorié en bleu. Une telle région a au moins deux côtés bleus donc un de ses sommets est une intersection de deux droites bleues. Il y a $\binom{k}{2}$ telles intersections. De plus, une intersection touche au plus $4$ régions finies, donc il y a au plus $4 \binom{k}{2}=2k(k-1)$ régions dangereuses. Chaque région dangereuse interdit d'ajouter une droite donc il y a au plus $2k(k-1)$ droites interdites. On peut donc ajouter de nouvelles droites tant que $2k(k-1)<n$, donc tant que $2k^2<n$ donc il est possible de colorier $\sqrt{\frac{n}{2}}$.
+\end{sol}
+
+\begin{exo}(IMO 1995-3)
+Trouver tous les entiers $n>3$ pour lesquels il existe $n$ points $%
+A_{1},...,A_{n}$ du plan et des r\'{e}els $r_{1},...,r_{n}$ tels que :
+
+(i) trois quelconques des points ne sont jamais align\'{e}s
+
+(ii) pour tout $\{i,j,k\},$ l'aire du triangle $A_{i}A_{j}A_{k}$ est \'{e}%
+gale \`{a} $r_{i}+r_{j}+r_{k}.$
+\end{exo}
+
+\begin{sol}
+Supposons que l'enveloppe convexe contienne quatre points $A_i$, $A_j$, $A_k$, $A_{\ell}$ dans cet ordre. En écrivant de deux manières différentes l'aire du quadrilatère on obtient $r_i+r_k=r_j+r_{\ell}$. Si on elle contient $5$ points, en appliquant ce résultat à plusieurs quadrilatère on obtient que tous les $r_i$ pour $A_i$ sur le pentagone sont égaux, et on obtient une contradiction. Le bord de l'enveloppe convexe contient donc au plus $4$ points.
+
+Notons maintenant $A_1 \dots A_{\ell}$ l'enveloppe convexe, et soit $A_k$ à l'intérieur. Alors on peut décomposer l'enveloppe convexe en triangles en traçant les segments $[A_i A_k]$ avec $1 \leq i \leq \ell$. L'aire de l'enveloppe convexe s'écrit alors
+\[2 (r_1+r_2+\dots r_{\ell})+ \ell r_k.\]
+On en déduit que $r_k$ est le même pour tous les points à l'intérieur de l'enveloppe convexe, donc si $A_k$ et $A_{k'}$ sont à l'intérieur de l'enveloppe convexe alors pour tout $1 \leq i \ell$, les triangles $A_i A_{i+1} A_k$ et $A_i A_{i+1} A_{k'}$ ont la même aire donc $(A_k A_{k'})$ est parallèle à tous les $(A_i A_{i+1})$ ce qui est impossible, donc $A_k=A_{k'}$, donc il y a au plus un point à l'intérieur, soit $5$ points au maximum.
+
+On peut construire des exemples avec $4$ points (parallélogramme par exemple). Si il y a un exemple à $5$ points, on a $4$ points sur le bord et $1$ à l'intérieur. Supposons que c'est $A_5$. Il est à l'intérieur de deux triangles, supposons $A_1 A_2 A_3$ et $A_1 A_2 A_4$. On en déduit $r_3=r_4$ donc $(A_3 A_4)$ est parallèle aux droites $(A_1 A_2)$, $(A_1 A_5)$ et $(A_2 A_5)$.
+\end{sol}
+
+\textbf{Bonus : le théorème de Fary}
+
+\begin{thm}
+Soit $G$ un graphe simple planaire fini. Alors il est possible de le dessiner dans le plan de telle manière que toutes les arêtes soient des lignes droites.
+\end{thm}
+
+On commence par énoncer un résultat classique sur les graphes planaires.
+
+\begin{thm} (Formule d'Euler)
+Soit $G$ un graphe planaire connexe avec $v$ sommets, $e$ arêtes et $f$ faces (on compte la face externe). Alors
+\[f+v-e=2.\]
+\end{thm}
+
+\begin{proof}
+On fait une récurrence sur $f$ : si $f=1$ alors le graphe est un arbre donc $ev-1$ et $f+v-e=2$. On peut ensuite ajouter des arêtes une par une en laissant le nombre de sommets fixé. Chaque fois qu'on ajoute une arête on divise une face en $2$ donc quand $e$ augmente de $1$, le nombre $f$ augmente aussi de $1$.
+\end{proof}
+
+\begin{lem}
+Tout graphe planaire fini admet un sommet de degré $\leq 5$.
+\end{lem}
+
+\begin{proof}
+Chaque arête touche deux faces et chaque face touche au moins $3$ arêtes (sauf dans le graphe trivial comportant $2$ sommets et $1$ arête. On obtient donc l'inégalité $2e \geq 3f$. En remplaçant $f$ par $e-v+2$ grâce à la formule d'Euler on trouve $e \leq 3v-6<3v$. Il y a donc strictement moins de $6v$ "demi-arêtes", donc il y a au moins un sommet de degré $<6$, d'où le lemme. 
+\end{proof}
+
+\begin{proof}[Preuve du théorème de Fary]
+On raisonne par récurrence sur le nombre de sommets. L'initialisation à $v=3$ est triviale. Soit $n \geq 4$ et supposons le théorème vrai pour tous les graphes à $n-1$ sommets. Soit $G$ un graphe planaire fini à $n$ sommets.
+
+Quitte à ajouter des arêtes (ce qui ne fait que rendre le coloriage plus difficile), on peut supposer que toutes les faces de $G$ sont des triangles. Soit $x$ un sommet de $G$. Quitte à faire une inversion, on peut supposer que $x$ ne touche pas la face externe (toutes les faces sont des triangles donc au plus $3$ sommets touchent la face externe). Par hypothèse de récurrence, on peut dessiner $G \backslash \{ x \}$ avec des arêtes en ligne droite. On veut maintenant replacer $x$. Mais on sait que $x$ est de degré au plus $5$ dans $G$. On sait aussi que toutes les faces de $G$ sont des triangles, donc $x$ est relié à tous les sommets touchant la face de $G \backslash \{x \}$ dans laquelle il se trouve. La face de $G \backslash \{ x \}$ dans laquelle se trouve $x$ a donc un périmètre égal au degré de $x$ dans $G$, donc $\leq 5$. Or, l'exercice $8$ dans le cas $n=5$ montre qu'il est toujours possible de "surveiller un pentagone de l'intérieur" avec une seule caméra (dans l'exercice $8$ on place la caméra sur un sommet du pentagone, donc il faut la bouger un peu dans la bonne direction pour ne pas avoir deux sommets au même endroit). On place donc $x$ sur un point du pentagone qui "voit" tous les sommets, et on a dessiné $G$ avec des lignes droites.
+\end{proof}
