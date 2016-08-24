@@ -7,6 +7,98 @@ donc $3^{2n}-2^n \equiv 0 [7]$.
 
 \end{sol}
 
+\begin{sol}[5](R\'esolu par Lo\"ic Chevalier)
+Il y a 32 grains au maximum car il y a au plus 4 grains par ligne sur 8 lignes. Voici un exemple de distribution \`a 32 grains :
+
+\[\begin{tikzpicture}[scale=0.3]
+\draw (0, 0)--(0,16);
+\draw (2, 0)--(2,16);
+\draw (4, 0)--(4,16);
+\draw (6, 0)--(6,16);
+\draw (8, 0)--(8,16);
+\draw (10, 0)--(10,16);
+\draw (12, 0)--(12,16);
+\draw (14, 0)--(14,16);
+\draw (16, 0)--(16,16);
+
+\draw (0,0)--(16,0);
+\draw (0,2)--(16,2);
+\draw (0,4)--(16,4);
+\draw (0,6)--(16,6);
+\draw (0,8)--(16,8);
+\draw (0,10)--(16,10);
+\draw (0,12)--(16,12);
+\draw (0,14)--(16,14);
+\draw (0,16)--(16,16);
+
+\draw (1,15) circle (0.4);
+\draw (1,11) circle (0.4);
+\draw (1,7) circle (0.4);
+\draw (1,3) circle (0.4);
+\draw (3,13) circle (0.4);
+\draw (3,9) circle (0.4);
+\draw (3,5) circle (0.4);
+\draw (3,1) circle (0.4);
+
+\draw (5,15) circle (0.4);
+\draw (5,11) circle (0.4);
+\draw (5,7) circle (0.4);
+\draw (5,3) circle (0.4);
+\draw (7,13) circle (0.4);
+\draw (7,9) circle (0.4);
+\draw (7,5) circle (0.4);
+\draw (7,1) circle (0.4);
+
+
+\draw (11,15) circle (0.4);
+\draw (11,11) circle (0.4);
+\draw (11,7) circle (0.4);
+\draw (11,3) circle (0.4);
+\draw (9,13) circle (0.4);
+\draw (9,9) circle (0.4);
+\draw (9,5) circle (0.4);
+\draw (9,1) circle (0.4);
+
+\draw (15,15) circle (0.4);
+\draw (15,11) circle (0.4);
+\draw (15,7) circle (0.4);
+\draw (15,3) circle (0.4);
+\draw (13,13) circle (0.4);
+\draw (13,9) circle (0.4);
+\draw (13,5) circle (0.4);
+\draw (13,1) circle (0.4);
+
+
+\end{tikzpicture}\]
+\end{sol}
+
+\begin{sol}[22](R\'esolu par Matthias Schuller)
+Le nombre $\frac{a^{2b+1}b-1}{a+1}$ doit \^etre un entier, donc $a+1$ divise $a^{2b+1}b-1$. On a donc que $a+1$ divise
+\[(a^{2b+1}b-1)+(a+1)=a(a^{2b}b+1).\]
+Or $a+1$ n'a aucun diviseur en commun avec $a$ car leur diff\'erence est 1, donc $a+1$ divise $a^{2b}b+1$ et donc aussi
+\[(a^{2b}b+1)-(a+1)=a(a^{2b-1}b-1).\]
+Par le m\^eme argument, on trouve que $a+1$ divise $a^{2b-1}b-1$. On se retrouve alors avec la formule du d\'ebut, mais avec l'exposant de $a$ diminu\'e de 2. En particulier on retrouve toujours un exposant impair. On peut alors refaire le m\^eme argument jusqu'\`a ce que l'exposant de $a$ soit \'egal \`a 1. On trouve alors que $a+1$ divise $ab-1$ et donc aussi
+\[(ab-1)+(a+1)=a(b+1),\]
+et donc $a+1$ doit diviser $b+1$.\\
+
+Avec l'autre entier $\frac{b^aa+1}{b-1}$ on trouve que $b-1$ divise $b^aa+1$. On a donc que $b-1$ divise
+\[(b^aa+1)+(b-1)=b(b^{a-1}a+1).\]
+Toujours par le m\^eme argument, on obtient que $b-1$ divise $b^{a-1}a+1$ (noter que $b-1$ peut diviser $b$ si $b=2$, mais alors $b-1$ divise tout nombre). On se retrouve alors avec la formule du d\'ebut, mais avec l'exposant de $b$ diminu\'e de 1. Tout comme dans le cas pr\'ec\'edent, on refait l'argument jusqu'\`a ce que l'exposant de $b$ soit 0, d'o\`u on obtient finalement que $b-1$ doit diviser $a+1$.\\
+
+On sait maintenant que $(a+1)|(b+1)$ et que $(b-1)|(a+1)$, donc $(b-1)|(b+1)$. Alors $b-1$ divise aussi
+\[(b+1)-(b-1)=2,\]
+ce qui nous dit que $b=2$ ou $b=3$.
+\begin{itemize}
+\item Si $b=2$, alors nos deux conditions d\'eviennent $(a+1)|3$ et $1|(a+1)$. Cela nous dit que $a=2$ et donc on trouve la solution $(a,b)=(2,2)$. On v\'erifie que dans ce cas on a bien des entiers :
+\[\frac{2^{2\cdot 2+1}\cdot 2-1}{2+1}=21\quad\text{et}\quad\frac{2^2\cdot 2+1}{2-1}=9.\]
+\item Si $b=3$, alors les deux conditions d\'eviennent $(a+1)|4$ et $2|(a+1)$. Cela nous dit que $a=1$ ou $a=3$ et donc on trouve les solutions $(a,b)=(1,3),(3,3)$. On v\'erifie aussi que dans ces cas on a bien des entiers :
+\begin{align*}
+\frac{1^{2\cdot 3+1}\cdot 3-1}{1+1}=1\quad&\text{et}\quad\frac{3^1\cdot 1+1}{3-1}=2.\\
+\frac{3^{2\cdot 3+1}\cdot 3-1}{3+1}=1640\quad&\text{et}\quad\frac{3^3\cdot 3+1}{3-1}=41.
+\end{align*}
+\end{itemize}
+\end{sol}
+
 \begin{sol}[29](Résolu par Sébastien Labbé)
 
 Soit $s=min(x,\frac{1}{x}+y, \frac{1}{y})$.
@@ -153,6 +245,112 @@ Ainsi, si $b$ est rationnel, alors le produit $\frac{\sqrt[4]{3}}{2}b$ sera auss
 Par conséquent, $a$ et $b$ ne peuvent pas être tous les deux rationnels.
 
 \end{sol}
+
+\begin{sol}[22](R\'esolu par Matthias Schuller)
+Le nombre $\frac{a^{2b+1}b-1}{a+1}$ doit \^etre un entier, donc $a+1$ divise $a^{2b+1}b-1$. On a donc que $a+1$ divise
+\[(a^{2b+1}b-1)+(a+1)=a(a^{2b}b+1).\]
+Or $a+1$ n'a aucun diviseur en commun avec $a$ car leur diff\'erence est 1, donc $a+1$ divise $a^{2b}b+1$ et donc aussi
+\[(a^{2b}b+1)-(a+1)=a(a^{2b-1}b-1).\]
+Par le m\^eme argument, on trouve que $a+1$ divise $a^{2b-1}b-1$. On se retrouve alors avec la formule du d\'ebut, mais avec l'exposant de $a$ diminu\'e de 2. En particulier on retrouve toujours un exposant impair. On peut alors refaire le m\^eme argument jusqu'\`a ce que l'exposant de $a$ soit \'egal \`a 1. On trouve alors que $a+1$ divise $ab-1$ et donc aussi
+\[(ab-1)+(a+1)=a(b+1),\]
+et donc $a+1$ doit diviser $b+1$.\\
+
+Avec l'autre entier $\frac{b^aa+1}{b-1}$ on trouve que $b-1$ divise $b^aa+1$. On a donc que $b-1$ divise
+\[(b^aa+1)+(b-1)=b(b^{a-1}a+1).\]
+Toujours par le m\^eme argument, on obtient que $b-1$ divise $b^{a-1}a+1$ (noter que $b-1$ peut diviser $b$ si $b=2$, mais alors $b-1$ divise tout nombre). On se retrouve alors avec la formule du d\'ebut, mais avec l'exposant de $b$ diminu\'e de 1. Tout comme dans le cas pr\'ec\'edent, on refait l'argument jusqu'\`a ce que l'exposant de $b$ soit 0, d'o\`u on obtient finalement que $b-1$ doit diviser $a+1$.\\
+
+On sait maintenant que $(a+1)|(b+1)$ et que $(b-1)|(a+1)$, donc $(b-1)|(b+1)$. Alors $b-1$ divise aussi
+\[(b+1)-(b-1)=2,\]
+ce qui nous dit que $b=2$ ou $b=3$.
+\begin{itemize}
+\item Si $b=2$, alors nos deux conditions d\'eviennent $(a+1)|3$ et $1|(a+1)$. Cela nous dit que $a=2$ et donc on trouve la solution $(a,b)=(2,2)$. On v\'erifie que dans ce cas on a bien des entiers :
+\[\frac{2^{2\cdot 2+1}\cdot 2-1}{2+1}=21\quad\text{et}\quad\frac{2^2\cdot 2+1}{2-1}=9.\]
+\item Si $b=3$, alors les deux conditions d\'eviennent $(a+1)|4$ et $2|(a+1)$. Cela nous dit que $a=1$ ou $a=3$ et donc on trouve les solutions $(a,b)=(1,3),(3,3)$. On v\'erifie aussi que dans ces cas on a bien des entiers :
+\begin{align*}
+\frac{1^{2\cdot 3+1}\cdot 3-1}{1+1}=1\quad&\text{et}\quad\frac{3^1\cdot 1+1}{3-1}=2.\\
+\frac{3^{2\cdot 3+1}\cdot 3-1}{3+1}=1640\quad&\text{et}\quad\frac{3^3\cdot 3+1}{3-1}=41.
+\end{align*}
+\end{itemize}
+\end{sol}
+
+\begin{sol}[28](Résolu par Andrei Barbu)
+
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,scale=0.7]
+\clip(-1.0,-5.0) rectangle (7.0,3.0);
+\draw(3.0,-1.25) circle (3.25cm);
+\draw (0.0,-0.0)-- (3.0,2.0);
+\draw (3.0,2.0)-- (6.0,0.0);
+\draw (0.0,-0.0)-- (6.0,0.0);
+\draw (0.0,-0.0)-- (0.9942952106614191,-3.8072736064066905);
+\draw (0.9942952106614191,-3.8072736064066905)-- (6.0,0.0);
+\draw (3.0,2.0)-- (5.063140190852756,-0.7125633201275571);
+\begin{scriptsize}
+\draw (0.0,-0.0) circle (1.5pt);
+\draw (-0.32,0.4000000000000011) node {$A$};
+\draw (6.0,0.0) circle (1.5pt);
+\draw (6.279999999999999,0.2200000000000011) node {$B$};
+\draw (3.0,2.0) circle (1.5pt);
+\draw (3.06,2.3600000000000008) node {$C$};
+\draw (0.9942952106614191,-3.8072736064066905) circle (1.5pt);
+\draw (0.8400000000000001,-4.019999999999998) node {$P$};
+\draw (5.063140190852756,-0.7125633201275571) circle (1.5pt);
+\draw (5.239999999999999,-0.9199999999999988) node {$D$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+
+$ABC$ est isocèle en $C$ et $D$ est le projeté orthogonal de $C$ sur $(PB)$.
+On veut montrer que $PA+PB=2\,PD$. On peut supposer que $PB > PA$ et montrer
+$BD = PD - PA$. Soit $E\in (PB)$ tel que $EP = AP$. On veut montrer que
+$ED=BD$, ie que $ECB$ isocèle en $C$. Or, par chasse aux angles, 
+$\widehat{APC}=\widehat{ABC}=\widehat{CAB}=\widehat{CPB}$. Donc $(CP)$ est
+la bissectrice issue de $P$ dans $APE$, qui est isocèle en $P$, donc c'est aussi
+la médiatrice de $[AE]$. Cette médiatrice passant par $C$, $ACE$ est isocèle en $C$.
+Donc $EC=AC=BC$, donc $ECB$ est bien isocèle en $C$.
+
+\end{sol}
+
+\begin{sol}[67](Résolu par Joris Leroy-Savin et \'Etienne Massart et d'autre part par Thomas Grenier)
+
+Soit $E$ l'intersection de $(AQ)$ et $(PC)$. Montrons que $(DE)$ et $(PQ)$
+sont perpendiculaires.
+
+On se place dans le repère orthonormé $(D;C;A)$. Soit $0<y<1$ tel que 
+$P\,(y;1)$, et donc $Q\,(1;1-y)$.
+L'équation de $(AQ)$ est : $(AQ)(x)=-yx+1$, et de façon analogue : 
+$(PC)(x)=-\frac{1}{1-y}x+\frac{1}{1-y}$.
+On en déduit les coordonnées de $E$ : $\bigg(-\frac{y}{y-y^2-1}\,;
+\frac{y^2}{y-y^2-1}+1\bigg)$, d'où $(DE)(x)=\frac{y-1}{y}x$.
+On calcule aussi l'équation de $(PQ)$ : 
+$(PQ)(x) = -\frac{y}{1-y}x+1-\frac{y^2}{1-y}$.
+Comme le coefficient directeur de $(PQ)$ est l'opposé de l'inverse de
+celui de $(DE)$, $(PQ)$ et $(DE)$ sont perpendiculaires.\\
+ 
+\noindent{\it Autre méthode}\; En gardant la même définition du point $E$,
+il s'agit de montrer que $E$ est l'orthocentre du triangle $DPQ$. Montrons
+donc que $(AQ)$ est perpendiculaire à $(DP)$ et $(PC)$ à $(DQ)$. Or, comme
+$AP=BQ$, $\tan(\widehat{ADP})=\tan(\widehat{BAQ})$. Ce sont des angles aigus,
+donc $\widehat{ADP}=\widehat{BAQ}$. Soit $M$ le point d'intersection
+de $(AP)$ et de $(BQ)$. 
+On a $\widehat{AMD}=180\degres - \widehat{ADP}
+ - (90\degres-\widehat{BAQ})=90\degres$. Donc $(DP)$ et $(AQ)$ sont 
+ perpendiculaires, et on procède de même pour l'autre hauteur.
+
+\end{sol}
+
+\begin{sol}[73](R\'esolu par Guillaume Chyzak)
+Consid\'erons le nombre de choix possibles pour $X$. Il y a $n\choose i$ possibilit\'es de r\'ealiser un sous-ensemble $X$ \`a $i$ \'el\'ements. Or le nombre d'\'el\'ements peut aller de 0 \`a $n$. Il y a donc $\sum_{i=0}^n {n\choose i}$ possibilit\'es.
+
+Consid\'erons maintenant le nombre de choix possibles pour $Y$. Chacun des $i$ \'el\'ements peut \^etre pris ou non dans le sous-ensemble $Y$, ce qui donne $2^i$ possibilit\'es.
+
+Enfin, consid\'erons le nombre de choix possibles pour $Z$. C'est un ensemble de $n-i$ \'el\'ements, donc par le m\^eme argument que pour $Y$ il y a $2^{n-i}$ possibilit\'es pour $Z$.
+
+En mettant tout cela ensemble, on voit que le nombre de triplets $(X,Y,Z)$ est \'egal \`a
+\[\sum_{i=0}^n {n\choose i} \cdot 2^i\cdot 2^{n-i}=2^n\cdot\sum_{i=0}^n {n\choose i}=2^{2n}.\]
+
+\end{sol}
+
 \begin{sol}[75](Résolu par Dario Shariatan)
 
 Déterminons d'abord de combien de manières différentes il est possible de carreler un rectangle de taille $2 \times n$ avec des carreaux incolores. Notons $F(n)$ ce nombre.
@@ -204,6 +402,53 @@ faut nécessairement avoir $q-1-n = 0$, c'est-à-dire $n = q-1$ et $p = q^2-q+1$
 L'équation de départ, qui est $p(p-q) = (q+1)(q^2-q+1)$, est donc équivalente à $p-q = q+1$, ou encore à $q(q-1)+1 = q^2-q+1 = p = 2q+1$.
 Il faut donc nécessairement avoir $q = 3$, puis $p = 7$, et alors on a bien $p^2-pq-q^3 = 49 - 21 - 27 = 1$.
 L'unique solution du problème est donc obtenue pour $p = 7$ et $q = 3$.
+\end{sol}
+
+\begin{sol}[82](R\'esolu par Thimot\'ee Roquet et Th\'eodore Fougereux)
+Pour $n\in\N$, notons $S_n=\sum_{i=0}^n x_i$. On d\'emontre par r\'ecurrence l'affirmation
+\begin{center}
+$P_n:$ {\it il existe un entier $m$ tel que $S_n=\frac{m(m+1)}{2}$.}
+\end{center} 
+
+\paragraph*{Initialisation} Pour $n=0$, on a par hypoth\`ese $x_0^2=x_0^3$, ce qui est \'equivalent \`a $x_0^2(x_0-1)=0$, donc $x_0=0$ ou $x_0=1$. Dans les deux cas, on voit qu'en posant $m=x_0$ on a $S_0=x_0=\frac{m(m+1)}{2}$, ce qui conclut dans ce cas.
+
+\paragraph*{H\'er\'edit\'e} On suppose que l'on a la propri\'et\'e $P_n$, donc $S_n=\frac{m(m+1)}{2}$ pour un certain entier $m$. On doit trouver un entier $m'$ tel que $S_{n+1}=\frac{m'(m'+1)}{2}$. Par hypoth\`ese, on sait que
+\[x_1^3+\cdots+x_n^3=S_n^2\quad\text{et}\quad x_1^3+\cdots+x_{n+1}^3=S_{n+1}^2.\]
+De cela on d\'eduit
+\[x_1^3+\cdots+x_{n+1}^3-(x_1^3+\cdots+x_{n}^3)=S_{n+1}^2-S_n^2=(S_n+x_{n+1})^2-S_n^2,\]
+et donc finalement,
+\[x_{n+1}^3=x_{n+1}(2S_n+x_{n+1}).\]
+
+Supposons d'abord que $x_{n+1}=0$. Alors dans ce cas on a $S_{n+1}=S_n=\frac{m(m+1)}{2}$ d'apr\`es $P_n$ et alors $P_{n+1}$ est v\'erifi\'ee pour l'entier $m'=m$. Sinon, on peut diviser la derni\`ere \'equation par $x_{n+1}$ pour trouver $x_{n+1}^2=2S_n+x_{n+1}$, ou encore $S_n=\frac{x_{n+1}(x_{n+1}-1)}{2}$.
+
+Posons $X=x_{n+1}-1$. Alors $S_n=\frac{X(X+1)}{2}$, mais aussi $S_n=\frac{m(m+1)}{2}$ d'apr\`es  $P_n$, donc \[X^2+X=m^2+m,\]
+et alors
+\[0=X^2+X -m^2+m=\left(X^2+X+\frac14\right) -\left(m^2+m+\frac14\right)=\left(X+\frac12\right)^2-\left(m+\frac12\right)^2,\]
+et finalement
+\[(X+m+1)(X-m)=0,\]
+ce qui nous dit que $X=m$ ou $X=-m-1$. Et en rappelant que $X=x_{n+1}-1$, on trouve que $x_{n+1}=m+1$ ou $x_{n+1}=-m$.
+
+Si $x_{n+1}=m+1$, alors $S_{n+1}=S_n+x_{n+1}=\frac{m(m+1)}{2}+m+1=\frac{(m+1)(m+2)}{2}$, donc $P_{n+1}$ est v\'erifi\'ee pour l'entier $m'=m+1$.
+
+Si $x_{n+1}=-m$, alors $S_{n+1}=S_n+x_{n+1}=\frac{m(m+1)}{2}-m=\frac{(m-1)m}{2}$, donc $P_{n+1}$ est v\'erifi\'ee pour l'entier $m'=m-1$.
+
+\end{sol}
+
+\begin{sol}[83](R\'esolu par Timoth\'ee Roquet et Th\'eodore Fougereux)
+On a
+\[\frac{x}{x+2y+3z}+\frac{y}{y+2z+3x}+\frac{z}{z+2x+3y}=\frac{x^2}{x^2+2xy+3xz}+\frac{y^2}{y^2+2yz+3xy}+\frac{z^2}{z^2+2xz+3yz},\]
+et en appliquant l'in\'egalit\'e des mauvais \'el\`eves au terme de droite on trouve
+\[\frac{x}{x+2y+3z}+\frac{y}{y+2z+3x}+\frac{z}{z+2x+3y}\geq \frac{(x+y+z)^2}{x^2+y^2+z^2+5(xy+xz+yz)}.\]
+Il suffit alors de montrer
+\[\frac{(x+y+z)^2}{x^2+y^2+z^2+5(xy+xz+yz)}\geq \frac12,\]
+ce qui est \'equivalent \`a
+\begin{align*}
+2(x+y+z)^2 &\geq x^2+y^2+z^2+5(xy+xz+yz)\\
+2x^2+2y^2+2z^2+4xy+4xz+4yz &\geq x^2+y^2+z^2+5(xy+xz+yz)\\
+x^2+y^2+z^2 &\geq xy+xz+yz.
+\end{align*}
+Sans perte de g\'en\'eralit\'e, on peut supposer que $x\geq y\geq z$. La derni\`ere in\'egalit\'e correspond alors \`a l'in\'egalit\'e de r\'eordonnement, ce qui conclut.
+
 \end{sol}
 
 \begin{sol}[97](Résolu par Baptiste Serraille)
@@ -474,6 +719,55 @@ Il n'a eu le temps de colorier qu'un total de $12 \binom{15}{5} (76 \cdot 306 n 
 suffisamment grand.
 
 Il s'ensuit qu'Alice dispose bien d'une stratégie gagnante, même si Bob s'autorise à jouer $2$ coups après chacun des coups d'Alice.
+
+\begin{sol}[116](R\'esolu par Martin Rakovsky et Savinien Kreczman)
+Si $x\leq-5$, on a
+\[y^2=x^3+(x+4)^2<x^3+x^2=x^2(x+1)<0,\]
+ce qui est absurde. Par un calcul direct, on trouve aussi $y^2<0$ pour $x=-4,-3,-2$. Enfin, pour $x=-1$, on trouve $y^2=8$, ce qui est aussi absurde.
+
+Pour $x=0$, on trouve $y^2=16$, ce qui donne les premiers couples de solutions $(0,4)$ et $(0,-4)$. On peut alors supposer d\'esormais que $x\geq 1$.\\
+
+En regardant l'\'equation modulo 2, on d\'ecouvre que $y$ doit \^etre pair. En passant le $(x+4)^2$ de l'autre c\^ot\'e et en factorisant, on trouve
+\begin{equation*}\label{eq1}
+x^3=(y-x-4)(y+x+4).\tag{1}
+\end{equation*}
+Si $x$ est une puissance de 2, alors $y-x-4$ et $y+x+4$ sont aussi des puissances de 2. Il existe alors $a,b\in\N$ tels que
+\[x=2^{\frac{a+b}{3}},\qquad y+x+4=2^a,\qquad y-x-4=2^b.\]
+Alors,
+\begin{align*}
+(y+x+4)-(y-x-4) &=2x+8,\\
+2^a-2^b&=2\cdot 2^{\frac{a+b}{3}}+8,\\
+2^a&=2^{\frac{a+b}{3}+1}+2^b+8.
+\end{align*}
+Si $b\geq 6$, on a
+\[2^a=2^{\frac{a+b}{3}+1}+2^b+8\geq 2^{\frac{a}{3}+3}+2^6+8,\]
+qui est un multiple de 8. Donc
+\[2^a=2^3(2^{\frac{a+b}{3}-3}+2^{b-3}+1).\]
+Or, $2^{\frac{a+b}{3}-3}+2^{b-3}+1$ est impair, sauf si $a=3$ et $b=6$, mais l\`a on obtient $8=80$, ce qui est absurde. On obtient alors une contradiction pour $b\geq 6$. Et par des calculs directs, on v\'erifie que pour $1\leq b\leq 5$ on n'obtient pas des solutions non plus.\\
+
+On peut alors supposer que $x$ admet un diviseur impair. Soit $p$ un nombre premier impair divisant $x$. Alors $p|x^3$ et donc $p|(y-x-4)$ ou bien $p|(y+x+4)$. Mais si $p$ divise les deux nombres en m\^eme temps on trouve que $p$ divise leur somme qui est \'egale \`a $2x+8$, donc $p$ divise $8$ et $p=2$, ce qui est absurde. Donc tout diviseur premier $q$ de $x$ divise soit $y-x-4$ ou $y+x+4$ mais pas les deux. D'apr\`es l'\'equation \eqref{eq1}, il existe alors $a,b,c,d\in\N$, avec $c$ et $d$ impairs et premiers entre eux, tels que
+\[x=2^{\frac{a+b}{3}}cd,\qquad y+x+4=2^ac^3,\qquad y-x-4=2^bd^3.\]
+Alors,
+\begin{align*}
+(y+x+4)-(y-x-4) &=2x+8,\\
+2^ac^3-2^bd^3&=2^{\frac{a+b}{3}+1}cd+8.\tag{2}\label{eq2}
+\end{align*}
+On va montrer maintenant que $2^ac^3$ et $2^bd^3$ sont tous les deux des cubes. Autrement dit, on va montrer que $3|a$ et $3|b$. Or, on a \'evidemment que $3|(a+b)$ car sinon $x$ n'est pas un entier. On regarde alors diff\'erents cas :
+\begin{itemize}
+\item Si $a+b=0$, alors $a=b=0$ et on a conclu.
+\item Si $a+b=3$, alors le c\^ot\'e droit de \eqref{eq2} est un multiple de 4, mais pour les 4 diff\'erents choix de $a$ et $b$ on voit que le c\^ot\'e gauche ne l'est pas, ce qui est absurde.
+\item Si $a+b=6$, alors le c\^ot\'e droit de \eqref{eq2} est un multiple de 8. Pour que le c\^ot\'e gauche le soit aussi il faut alors $a=b=3$, ce qui conclut dans ce cas.
+\item Si $a+b\geq 9$, alors le c\^ot\'e droit de \eqref{eq2} est congru \`a $8\mod 16$. De plus, on a que l'un des nombres $a$ et $b$ est $\geq 5$. Pour avoir un c\^ot\'e gauche congru \`a $8\mod 16$ il faut alors que l'autre nombre soit \'egal \`a $3$. On retrouve alors que tous les deux sont des multiples de 3, ce qui conclut dans ce dernier cas.\\
+\end{itemize}
+
+D'apr\`es ce qui pr\'ec\`ede, il existe $m,n\in\N$ tels que $m^3=2^ac^3$ et $n^3=2^bd^3$, donc l'\'equation \eqref{eq2} devient
+\[m^3-n^3=2mn+8.\]
+Or, on a $m>n$, sans quoi $0=mn+8$, ce qui est absurde. Donc
+\[m^3-n^3=(m-n)(m^2+mn+n^2)=2mn+8,\]
+avec $m-n\geq 1$. Mais $m^2+mn+n^2 >3mn$ d'apr\`es l'in\'egalit\'e arithm\'etico-g\'eom\'etrique. Donc si $mn\geq 8$ on obtient
+\[m^3-n^3=(m-n)(m^2+mn+n^2)> 3mn\geq 2mn+8,\]
+ce qui est absurde. Sinon, des calculs directs pour $mn\leq 7$ et $m>n$ (qui font en tout 7 cas \`a v\'erifier \`a la main) montrent qu'il n'y pas de solutions non plus dans ces cas. Donc l'\'equation n'a pas d'autres solutions que $(0,4)$ et $(0,-4)$.
+>>>>>>> Stashed changes
 \end{sol}
 
 \begin{sol}[130](Résolu par Pierre-Marie Esmenjaud Thibaut Maron)
@@ -654,10 +948,4 @@ Ainsi, $p$ divise $a$ et $b$.
 		\end{itemize}~\\
 		\textit{On peut aussi prouver le r\'esultat comme suit:} soient $ABC$ un triangle acutangle, $I$ un point du segment $[AB]$, $a = \frac{AI}{AC}$, $b = \frac{BI}{BC}$. De la loi des sinus on d\'eduit $\frac{AI}{\sin(\widehat{ACI})}=\frac{AC}{\sin(\widehat{AIC})}$ et \\ $\frac{BI}{\sin(\widehat{ICB})}=\frac{BC}{\sin(\widehat{CIB})}$, c'est-\`a-dire $a = \frac{\sin(\widehat{ACI})}{\sin(\widehat{AIC})}$ et $b=\frac{\sin(\widehat{BCI})}{\sin(\widehat{BIC})}$. Comme $\widehat{ACI}$ et $\widehat{BIC}$ sont suppl\'ementaires, ils ont m\^eme sinus, d'o\`u $\frac{b}{a}=\frac{\sin(\widehat{ACI})}{\sin(\widehat{ICB})}$. \\
 		Finalement, $\frac{CA}{CB}=\frac{IA}{IB} \Leftrightarrow a = b \Leftrightarrow \widehat{ACI}=\widehat{ICB}$, le dernier point \'etant \'equivalent \`a "$(CI)$ est la bissectrice int\'erieure de $\widehat{ACB}$"'.
-\end{sol}
-
-\begin{sol}[1](Résolu par ....)
-
-Lorem Ipsum
-
 \end{sol}
