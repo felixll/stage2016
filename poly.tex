@@ -78,6 +78,8 @@
 \usepackage{hyperref}
 \hypersetup{ colorlinks=falses } \fi
 
+\usepackage[export]{adjustbox}
+
 
 \theoremstyle{definition}
 \def \style {\displaystyle}
@@ -361,6 +363,10 @@ width 5cm\end{center}}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% détermine si le poly est en version courte ou longue
+\newif\ifcourt
+
+\courtfalse
 \begin{document}
 
 \import{misc/}{premieres_pages.tex}
@@ -515,7 +521,7 @@ width 5cm\end{center}}
 
 
 
-\section{Groupe }
+\section{Groupe D}
 
 \subsection{Enoncé}
 
@@ -527,8 +533,89 @@ width 5cm\end{center}}
 
 
 
+\chapter{Première période}
+\minitoc \bigskip
 
 
+
+
+\section {Groupe A : stratégies de base}
+
+\subsection{mercredi 17 matin : Joon Kwon}
+
+\import{cours/A/}{17_AM}
+
+\subsection{mercredi 17 après-midi : Victor Vermès}
+
+\import{cours/A/}{17_PM}
+
+\subsection{jeudi 18 matin : Wassim Trabelsi}
+
+\import{cours/A/}{18_AM}
+
+\subsection{vendredi 19 matin : Mehdi Trense}
+
+\import{cours/A/}{19_AM}
+
+\subsection{vendredi 19 après-midi : Eva Philippe}
+
+\import{cours/A/}{19_PM}
+
+
+\section {Groupe D : arithmétique}
+
+\subsection{mercredi 17 matin : Matthieu Lequesne}
+
+\import{cours/D/}{17_AM}
+
+\chapter{Mercredi 24 matin : Test de fin de parcours}
+\minitoc \bigskip
+
+
+\section{Groupe A}
+
+\subsection{Énoncé}
+
+\import{tests/2/A/}{enonce}
+
+\subsection{Solution}
+
+\import{tests/2/A/}{solution}
+
+
+\section{Groupe B}
+
+\subsection{Énoncé}
+
+\import{tests/2/B/}{enonce}
+
+\subsection{Solution}
+
+\import{tests/2/B/}{solution}
+
+
+
+\section{Groupe C}
+
+\subsection{Énoncé}
+
+\import{tests/2/C/}{enonce}
+
+\subsection{Solution}
+
+\import{tests/2/C/}{solution}
+
+
+
+\section{Groupe D}
+
+\subsection{Énoncé}
+
+\import{tests/2/D/}{enonce}
+
+\subsection{Solution}
+
+\import{tests/1/D/}{solution}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -545,6 +632,9 @@ width 5cm\end{center}}
 \section{jeudi 18 : Les Olympiades de Mathématiques}
 
 \import{conf/}{olympiades}
+
+\section{lundi 22 : Tresses et treillis}
+\import{conf/}{tresses}
 
 
 
