@@ -357,13 +357,6 @@ Par conséquent, $a$ et $b$ ne peuvent pas être tous les deux rationnels.
 		\[\ln\left(\left(1+\frac{1}{(\cos(x))^{10}}\right)\left(1+\frac{1}{(\sin(x))^{10}}\right)\right) = f((\cos(x))^2)+f((\cos(x))^2) \geq 2f\left(\frac{(\cos(x))^2+(\sin (x))^2}{2}\right) = 2 \ln(33) = \ln (1089).\]
 \end{sol}
 
-\begin{sol}[64](R\'esolu par Humbert Tristan)
-
-		Si $p!^k | (p^2)!$, $k*v_p(p!) = v_p(p!^k) \leq v_p((p^2)!)$. 
-		Or, la formule de Legendre donne $v_p(p!)=p$, et $v_p((p^2)!)=p+1$. En cons\'equence, si $p!^k | p^2!$, $k \leq p+1$. \\
-		On va montrer que $p!^{p+1} | p^2!$. Soit $q$ un premier divisant $p!$ et distinct de $p$ (le r\'esultat du paragraphe est, on l'a vu, vrai pour $p$), soit $i \in \N$, \'ecrivons $p=q^i*a+r$, avec $0 \leq r < q^i$, et $a,r$ entiers. Par primalit\'e de $p$, $r > 0$, on a alors \\ $\left\lfloor \frac{p^2}{q^i}\right\rfloor = \left\lfloor \frac{a^2q^{2i}+2arq^i+r^2}{q^i}\right\rfloor=a^2q^i+2ar+\left\lfloor \frac{r^2}{q^i}\right\rfloor \geq a(aq^i+r+r) \geq (p+1) \left\lfloor \frac{p}{q^i}\right\rfloor$. En sommant, on obtient, pour tout premier $q < p$, $(p+1)v_q(p!) \leq v_q(p^2!)$. \\
-		On a alors $p!^{p+1} | p^2!$, et tel n'est pas le cas pour $p!^{p+2}$. 
-\end{sol}
 
 \begin{sol}[62](Résolu par Vincent Geffroy)
 On cherche \`a relier $n$ puits \`a $n$ villages sans que deux segments ne se croisent.
@@ -394,6 +387,15 @@ En effet, si deux chemins se croisent, alors en les d\'ecroisant, on obtient une
 Ainsi le prince peut r\'eussir.
 
 \end{sol}
+
+\begin{sol}[64](R\'esolu par Humbert Tristan)
+
+		Si $p!^k | (p^2)!$, $kv_p(p!) = v_p(p!^k) \leq v_p((p^2)!)$. 
+		Or, la formule de Legendre donne $v_p(p!)=p$, et $v_p((p^2)!)=p+1$. En cons\'equence, si $p!^k | p^2!$, $k \leq p+1$. \\
+		On va montrer que $p!^{p+1} | p^2!$. Soit $q$ un premier divisant $p!$ et distinct de $p$ (le r\'esultat du paragraphe est, on l'a vu, vrai pour $p$), soit $i \in \N$, \'ecrivons $p=aq^i+r$, avec $0 \leq r < q^i$, et $a,r$ entiers. Par primalit\'e de $p$, $r > 0$, on a alors \\ $\left\lfloor \frac{p^2}{q^i}\right\rfloor = \left\lfloor \frac{a^2q^{2i}+2arq^i+r^2}{q^i}\right\rfloor=a^2q^i+2ar+\left\lfloor \frac{r^2}{q^i}\right\rfloor \geq a(aq^i+r+r) \geq (p+1) \left\lfloor \frac{p}{q^i}\right\rfloor$. En sommant, on obtient, pour tout premier $q < p$, $(p+1)v_q(p!) \leq v_q(p^2!)$. \\
+		On a alors $p!^{p+1} | p^2!$, et tel n'est pas le cas pour $p!^{p+2}$. 
+\end{sol}
+
 
 \begin{sol}[67](Résolu par Joris Leroy-Savin et \'Etienne Massart et d'autre part par Thomas Grenier)
 
@@ -512,7 +514,7 @@ Il faut donc nécessairement avoir $q = 3$, puis $p = 7$, et alors on a bien $p^
 L'unique solution du problème est donc obtenue pour $p = 7$ et $q = 3$.
 \end{sol}
 
-\begin{sol}[80](Résolu par Ma\¨el Laoufi et Joris Leroy-Savin)
+\begin{sol}[80](Résolu par Maël Laoufi et Joris Leroy-Savin)
 
 Soit $a,b,c$ des r\'eels positifs. On a par in\'egalit\'e de Cauchy-Schwarz,\\
 $(a \times 1+ b\times 1+b \times+ c\times 1+c \times 1 +c\times 1)^2 \leq (a^2+b^2+b^2+c^2+c^2+c^2)(6 \times 1^2)$,
