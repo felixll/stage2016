@@ -365,6 +365,35 @@ Par conséquent, $a$ et $b$ ne peuvent pas être tous les deux rationnels.
 		On a alors $p!^{p+1} | p^2!$, et tel n'est pas le cas pour $p!^{p+2}$. 
 \end{sol}
 
+\begin{sol}[62](Résolu par Vincent Geffroy)
+On cherche \`a relier $n$ puits \`a $n$ villages sans que deux segments ne se croisent.
+On remarque tout d'abord que lorsque deux chemins sont crois\'es et qu'on les d\'ecroise, par in\'egalit\'e triangulaire, la longueur des segments d\'ecroit strictement.
+\[\begin{tikzpicture}[scale=1]
+\draw (0, 0)--(2,2 );
+\draw (2, 0)--(0,2 );
+\node at (0,0) {$V_1$};
+\node at (2,0) {$V_2$};
+\node at (0,2) {$P_1$};
+\node at (2,2) {$P_2$};
+
+\end{tikzpicture}\]
+
+\[\begin{tikzpicture}[scale=1]
+\draw (0, 0)--(0,2 );
+\draw (2, 0)--(2,2 );
+\node at (0,0) {$V_1$};
+\node at (2,0) {$V_2$};
+\node at (0,2) {$P_1$};
+\node at (2,2) {$P_2$};
+
+\end{tikzpicture}\]
+
+On sait qu'il n'existe qu'un nombre fini de mani\`eres de relier les $n$ puits aux $n$ villages (avec ou sans croisements), \`a chacune de ces mani\`eres, on associe la longueur totale des segments de la configuration. Il existe donc une configuration qui minimise cette longueur totale.
+Montrons que dans celle-ci, aucun segment ne se croise.
+En effet, si deux chemins se croisent, alors en les d\'ecroisant, on obtient une configuration de longueur plus petite, ce qui contredit la minimalit\'e de la configuration pr\'ec\'edente.
+Ainsi le prince peut r\'eussir.
+
+\end{sol}
 
 \begin{sol}[67](Résolu par Joris Leroy-Savin et \'Etienne Massart et d'autre part par Thomas Grenier)
 
