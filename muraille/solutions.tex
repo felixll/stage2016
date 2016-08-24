@@ -177,6 +177,35 @@ Ainsi, le nombre de manières de carreler un rectangle $2 \times n$ est $2^n \ti
 
 \end{sol}
 
+\begin{sol}[79](Résolu par Timothée Roquet et Théodore Fougereux)
+ 
+Si $p = 2$, l'équation devient $3=q(2+q^2)$, donc $q$ divise $3$ et, comme $q$ est premier $q = 3$, ce qui est absurde.
+De même, si $q = 2$, l'équation devient $p(p-2) = 9$, donc $p$ divise $9$, puis $p = 3$, ce qui est aussi absurde.
+On sait donc que $p$ et $q$ sont des nombres premiers impairs.
+ 
+On réécrit alors l'équation $p^2-pq-q^3=1$ sous la forme
+$(p-1)(p+1) = q(p+q^2)$, ou encore sous la forme $p(p-q) = (q+1)(q^2-q+1)$.
+Puisque $q \mid p-1$ ou $q \mid p+1$, on sait que $q \leq \frac{p+1}{2}$.
+Par conséquent, si $p \mid q+1$, on a $p \leq \frac{q+1}{2} \leq \frac{p+3}{4}$, c'est-à-dire $p \leq 1$, ce qui est absurde.
+On sait donc que $p \mid q^2-q+1$.
+
+Si $q \mid p+1$, soit $n$ l'entier tel que $p+1 = nq$. Puisque $p$ et $q$ sont impairs, $n$ est pair, donc $n \geq 2$.
+Alors $nq-1 = p \leq q^2-q+1$, donc $n \leq q-1 + \frac{2}{q} < q$,
+et $n \leq q-1$. Puis $0 \equiv q^2-q+1 \equiv q^2-q+1+(nq-1) \equiv q(q+n-1) \pmod{nq-1}$.
+Puisque $q$ est premier avec $q < 2q-1 \leq nq-1$, les entiers $q$ et $nq-1$ sont premiers entre eux, donc $nq-1 \mid q+n-1$.
+Or, on a $nq - n - q + 1 = (q-1)(n-1) \geq 2$, donc
+$0 < q+n-1 < nq-1$, et $nq-1$ ne peut pas diviser $q+n-1$.
+
+Il faut donc que $q \mid p-1$. Soit $n$ l'entier tel que $p-1 = nq$. Comme précédemment, $nq+1 = p \leq q^2-q+1$, donc $n \leq q-1$.
+Puis $0 \equiv q^2-q+1 \equiv q^2-q+1-(nq+1) \equiv q(q-1-n) \pmod{nq+1}$. Comme $q$ est premier avec $q < nq+1$,
+les entiers $q$ et $nq+1$ sont premiers entre eux, donc $nq+1 \mid q-1-n$. Puisque $0 \leq q-1-n < nq+1$, il
+faut nécessairement avoir $q-1-n = 0$, c'est-à-dire $n = q-1$ et $p = q^2-q+1$.
+
+L'équation de départ, qui est $p(p-q) = (q+1)(q^2-q+1)$, est donc équivalente à $p-q = q+1$, ou encore à $q(q-1)+1 = q^2-q+1 = p = 2q+1$.
+Il faut donc nécessairement avoir $q = 3$, puis $p = 7$, et alors on a bien $p^2-pq-q^3 = 49 - 21 - 27 = 1$.
+L'unique solution du problème est donc obtenue pour $p = 7$ et $q = 3$.
+\end{sol}
+
 \begin{sol}[97](Résolu par Baptiste Serraille)
 
 On veut montrer que cinq droites rouges sont concourantes. Comme le problème est d\'efini de manière cyclique, il nous suffira de montrer que trois droites cons\'ecutives le sont. 
@@ -188,6 +217,45 @@ En pratique, on fixe les points B, F, I, Y, H, J, E et donc les cercles circonsc
 
 Il suffit maintenant de montrer que $P_1=P_2$ pour $3$ positions distinctes de $P_1$. Or $P_1=I$ et $P_1=(BFHJ)\cap (IY)$ sont des cas faciles. La troisième position qui correspond à $A = \infty$ (de la droite (IFC)) se montre en r\'eit\'erant la même m\'ethode projective que pr\'ec\'edemment. 
 	
+\end{sol}
+
+\begin{sol}[100](Résolu par Pierre-Alexandre Bazin)
+ 
+Pour tout $k \geq 0$, on note $(a_{k,1},\ldots,a_{k,n})$ les coefficients du $n$-uplets $T^k(a_1,\ldots,a_n)$.
+Soit $M_k$ le maximum des réels $a_{k,1},\ldots,a_{k,n}$, $A_k$ le nombre d'indices $i$ tels que $a_{k,i} = M_k$,
+et $X_k$ la moyennne des réels $a_{k,1},\ldots,a_{k,n}$.
+Il est clair que $X_k = X_{k+1}$ pour tout $k \geq 0$.
+On suppose maintenant que, pour tout entier $k \geq 0$, les entiers $a_{k,1},\ldots,a_{k,n}$ ne sont pas tous égaux et sont tous entiers.
+D'autre part, on considèrera les indices $i$ modulo $n$ (on pourra donc noter $n+1$ pour l'indice $1$, etc).
+
+Montrons que, pour tout $k \geq 0$, on a soit $M_{k+1} < M_k$, soit $M_{k+1} = M_k$ et $A_{k+1} < A_k$.
+En effet, on a $2 a_{k+1,i} = a_{k,i} + a_{k,i+1} \leq 2 M_k$ pour tout $i$, donc $M_{k+1} \leq M_k$.
+Puis, si $M_{k+1} = M_k$, alors on doit avoir $a_{k,i} = a_{k,i+1} = M_k$ pour tout $i$ tel que $a_{k+1,i} = M_k$.
+Par conséquent, si les $a_{k,i}$ ne sont pas tous égaux, il existe un entier $i$ tel que
+$a_{k,i} = M_k > a_{k,i+1}$, donc $a_{k+1,i} < M_k$.
+Il s'ensuit que $A_{k+1} < A_k$.
+
+La suite $(M_k)_{k \geq 0}$ est décroissante, à valeurs entières, et minorée par $X_0$, donc elle converge en une valeur $M_\kappa$.
+Puis la suite $(A_k)_{k \geq \kappa}$ est strictement décroissante, et à valeurs entières positives, ce qui est impossible.
+Sous réserve que les $a_{k,i}$ soient tous entiers quels que soient $k$ et $i$, il existe donc un entier $\kappa$ tel que
+$a_{\kappa,1} = \ldots = a_{\kappa,n} = M_\kappa$.
+Sans perte de généralité, quitte à soustraire $M_\kappa$ à tous les entiers $a_i$, on suppose que $M_\kappa = 0$.
+
+Maintenant, intéressons-nous aux $n$-uplets $(x_1,\ldots,x_n)$ tels que $T(x_1,\ldots,x_n) = (0,\ldots,0)$.
+On a toujours $x_i + x_{i+1} = 0 = x_{i+1} + x_{i+2}$.
+Par conséquent, si $n$ est impair, on a $x_1 = x_3 = \ldots = x_n = x_2 = x_4 = \ldots = x_{n-1} = 0$.
+Le $n$-uplet $(0,\ldots,0)$ n'a donc d'autre antécédent par $T$ que lui-même, et puisque
+les entiers $a_1,\ldots,a_n$ sont deux à deux distincts, il est impossible d'avoir $T^k(a_1,\ldots,a_n) = (0,\ldots,0)$,
+quel que soit l'entier $k$ considéré.
+
+Si $n$ est pair, en revanche, tout antécédent de $(0,\ldots,0)$ est de la forme $(x,-x,x,-x,\ldots,x,-x)$, où $x$ est un réel.
+Puis tout antécédent de $(x,-x,x,-x,\ldots,x,-x)$ est nécessairement de la forme
+$(y,2x-y,y-4x,6x-y,y-8x,\ldots,nx-y)$, où $y$ est un réel tel que $2nx = 2x$. Puisque $n > 2$, un tel antécédent n'existe que si $x = 0$,
+mais lui-même est de la forme $(y,-y,y,-y,\ldots,y,-y)$.
+Par conséquent, là aussi, puisque les entiers $a_1,\ldots,a_n$ sont deux à deux distincts, il est impossible d'avoir $T^k(a_1,\ldots,a_n) = (0,\ldots,0)$,
+quel que soit l'entier $k$ considéré.
+
+Notre supposition selon laquelle les $a_{k,i}$ soient tous entiers quels que soient $k$ et $i$ était donc fausse, ce qui conclut l'exercice.
 \end{sol}
 
 \begin{sol}[102](Résolu par Olivier Garçonnet)
@@ -208,6 +276,204 @@ D'autre part, considérons six députés $X_0,\ldots,X_6$.
 Supposons que chaque député $X_i$ déteste les députés $X_j$ avec $j-i \in \{1,2,3\} \pmod{6}$.
 Alors on ne peut jamais mettre deux députés dans un même groupe, donc il nous faut au moins $7$ groupes.
 Cela montre que $n \geq 7$, donc que $n = 7$.
+\end{sol}
+
+\begin{sol}[105](Résolu par Yakob Kahane)
+
+On va montrer que Alice gagne dans le deuxième cas, et donc dans le premier.
+Pour ce faire, elle va peindre en rouge des motifs particuliers sur les deux diagonales $\{(n,n) \mid n \in \Z\}$ et $\{(n,1-n) \mid n \in \Z\}$.
+
+Soit $k \geq 1$ un entier. Supposons qu'il existe deux abscisses $x$ et $x+k$ telles qu'Alice ait colorié en rouge les quatre cases
+$(x,x)$, $(x+k,x+k)$, $(x,1-x)$ et $(x+k,1-x-k)$ : on dit que la paire $(x,x+k)$ est une $k$-abscisse.
+De même, s'il existe deux ordonées $y$ et $y+k$ telles que les quatre cases $(y,y)$, $(y+k,y+k)$, $(1-y,y)$ et $(1-y-k,y+k)$
+soient rouges, on dit que la paire $(y,y+k)$ est une $k$-ordonnée.
+
+Supposons maintenant que $(x,x+k)$ est une $k$-paire et que $(y,y+k)$ est une $k$-ordonnée, avec $x \geq k+2$, $y \geq k+2$ et $|x - y| \geq k+2$.
+Alors les entiers $x$, $1-x$, $x+k$, $1-x-k$, $y$, $1-y$, $y+k$ et $1-y-k$ sont distincts deux à deux.
+On note alors $\mathcal{D}^k_{x,y}$ et $\mathcal{E}^k_{x,y}$ les ensembles de cases définis comme suit :
+\[\mathcal{D}^k_{x,y} = \{(x,y),(y,x),(1-y,1-x)\} \text{ et } \mathcal{E}^k_{x,y} = \mathcal{D}^k_{x,y} \cup \mathcal{D}^k_{x+k,y} \cup \mathcal{D}^k_{x,y+k} \cup \{(x+k,y+k)\}.\]
+
+Si Bob n'a colorié en vert aucune case de $\mathcal{D}^k_{x,y}$, alors Alice colorie en rouge la case $(x,y)$.
+Bob doit empêcher les deux carrés $(x,y)$, $(x,x)$, $(y,y)$, $(y,x)$ et
+$(x,y)$, $(x,1-x)$, $(1-y,y)$, $(1-y,1-x)$ de devenir entièrement rouges : il doit donc jouer tout de suite en $(y,x)$ et en $(1-y,1-x)$.
+Alors Alice joue en $(x+k,y)$ : Bob répond alors en $(y,x+k)$ et en $(1-y,1-x-k)$. Puis elle joue en $(y+k,x)$ : Bob répond en
+$(y+k,x)$, $(1-y-k,1-x)$. Enfin, Alice joue en $(x+k,y+k)$ pour obtenir un carré rouge et ainsi gagner.
+Bob doit donc nécessairement avoir déjà colorié une case en bleu de l'ensemble $\mathcal{D}^k_{x,y}$, sous peine de perdre.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+\newcommand{\fillcase}[3]{\draw[fill=black!20!#1!20] (#2,#3) -- (#2,#3-1) -- (#2-1,#3-1) -- (#2-1,#3) -- cycle;}
+
+\fillcase{red}{7}{7}
+\fillcase{red}{6}{6}
+\fillcase{gray}{5}{5}
+\fillcase{red}{4}{4}
+\fillcase{red}{3}{3}
+\fillcase{gray}{2}{2}
+\fillcase{gray}{1}{1}
+\fillcase{gray}{0}{0}
+\fillcase{gray}{-1}{-1}
+\fillcase{gray}{-2}{-2}
+\fillcase{gray}{-3}{-3}
+\fillcase{gray}{-4}{-4}
+\fillcase{gray}{-5}{-5}
+\fillcase{gray}{-6}{-6}
+
+\fillcase{red}{7}{-6}
+\fillcase{red}{6}{-5}
+\fillcase{gray}{5}{-4}
+\fillcase{gray}{4}{-3}
+\fillcase{gray}{3}{-2}
+\fillcase{gray}{2}{-1}
+\fillcase{gray}{1}{0}
+\fillcase{gray}{0}{1}
+\fillcase{gray}{-1}{2}
+\fillcase{red}{-2}{3}
+\fillcase{red}{-3}{4}
+\fillcase{gray}{-4}{5}
+\fillcase{gray}{-5}{6}
+\fillcase{gray}{-6}{7}
+
+\fillcase{green}{6}{3}
+\fillcase{green}{3}{6}
+\fillcase{green}{-2}{-5}
+\fillcase{green}{7}{3}
+\fillcase{green}{3}{7}
+\fillcase{green}{-2}{-6}
+\fillcase{green}{6}{4}
+\fillcase{green}{4}{6}
+\fillcase{green}{-3}{-5}
+\fillcase{green}{7}{4}
+
+\draw[very thick,draw=black!50!green] (3,7) -- (2,7) -- (2,5) -- (4,5) -- (4,6) -- (3,6) -- cycle;
+\draw[very thick,draw=black!50!green] (-2,-7) -- (-2,-5) -- (-4,-5) -- (-4,-6) -- (-3,-6) -- (-3,-7) -- cycle;
+
+\draw (-7,-7) -- (7,-7);
+\draw (-7,-6) -- (7,-6);
+\draw (-7,-5) -- (7,-5);
+\draw (-7,-4) -- (7,-4);
+\draw (-7,-3) -- (7,-3);
+\draw (-7,-2) -- (7,-2);
+\draw (-7,-1) -- (7,-1);
+\draw (-7,0) -- (7,0);
+\draw (-7,1) -- (7,1);
+\draw[very thick] (-7.5,2) -- (7.5,2);
+\draw (-7,3) -- (7,3);
+\draw[very thick] (-7.5,4) -- (7.5,4);
+\draw (-7,5) -- (7,5);
+\draw (-7,6) -- (7,6);
+\draw (-7,7) -- (7,7);
+
+\draw (-7,-7) -- (-7,7);
+\draw (-6,-7) -- (-6,7);
+\draw (-5,-7) -- (-5,7);
+\draw (-4,-7) -- (-4,7);
+\draw (-3,-7) -- (-3,7);
+\draw (-2,-7) -- (-2,7);
+\draw (-1,-7) -- (-1,7);
+\draw (0,-7) -- (0,7);
+\draw (1,-7) -- (1,7);
+\draw (2,-7) -- (2,7);
+\draw (3,-7) -- (3,7);
+\draw (4,-7) -- (4,7);
+\draw[very thick] (5,-7.5) -- (5,7.5);
+\draw (6,-7) -- (6,7);
+\draw[very thick] (7,-7.5) -- (7,7.5);
+
+\draw[very thick,<->] (-7.75,2) -- (-7.75,4);
+\node[anchor=east] at (-7.75,3) {$(3,4)$ = $1$-ordonnée};
+\draw[very thick,<->] (5,-7.75) -- (7,-7.75);
+\node[anchor=north] at (6,-7.75) {$(6,7)$ = $1$-abscisse};
+
+\draw[very thick,draw=black!50!green,fill=black!20!green!20!white] (-13,-7) -- (-13,-5) -- (-15,-5) -- (-15,-6) -- (-14,-6) -- (-14,-7) -- cycle;
+\draw[very thick,draw=black!50!green,fill=black!20!green!20!white] (-14,-2) -- (-15,-2) -- (-15,-4) -- (-13,-4) -- (-13,-3) -- (-14,-3) -- cycle;
+\draw[very thick,fill=black!20!green!20!white] (-10,-2) -- (-12,-2) -- (-12,-4) -- (-10,-4) -- cycle;
+\draw (-10,-2) -- (-10,-4);
+\draw (-11,-2) -- (-11,-4);
+\draw (-12,-2) -- (-12,-4);
+
+\draw (-13,-3) -- (-13,-4);
+\draw (-14,-2) -- (-14,-4);
+\draw (-15,-2) -- (-15,-4);
+\draw (-13,-5) -- (-13,-7);
+\draw (-14,-5) -- (-14,-7);
+\draw (-15,-5) -- (-15,-6);
+
+\draw (-10,-2) -- (-12,-2);
+\draw (-10,-3) -- (-12,-3);
+\draw (-10,-4) -- (-12,-4);
+
+\draw (-14,-2) -- (-15,-2);
+\draw (-13,-3) -- (-15,-3);
+\draw (-13,-4) -- (-15,-4);
+\draw (-13,-5) -- (-15,-5);
+\draw (-13,-6) -- (-15,-6);
+\draw (-13,-7) -- (-14,-7);
+
+\node[anchor=south] at (-12.5,-1.5) {$\mathcal{D}^1_{6,3}$};
+\end{tikzpicture}
+\end{center}
+
+L'idée de la stratégie d'Alice est la suivante : si elle réussit, pour deux entiers $k$ donnés et $K$ donnés, mais pour un entier $n$ arbitrairement grand, à créer
+en $K n$ coups $n$ paires $(x,x+k)$ qui soient des $k$-abscisses et $n$ paires $(y,y+k)$ qui soient des $k$-ordonnées,
+alors Bob aura dû colorier, durant ces $K n$ coups que joue Alice (donc $2 K n$ coups que joue Bob),
+des cases parmi $n^2$ ensembles $\mathcal{D}_{x,y}^k$ deux à deux disjoints. Pour $n$ suffisamment grand, à $K$ fixé, Alice pourra donc gagner.
+
+\medskip
+
+Soit donc $n$ un entier naturel non nuls, arbitrairement grand. On pose
+$R = 306 (n+1)$, $Q = 12 R+1$ et $P = \binom{15}{5} Q$.
+
+Tout d'abord, Alice procède en $P$ étapes. Lors de chaque étape, elle joue $6$ coups, comme suit.
+Alice choisit un entier positif $a \geq 1$ tel que nulle case de l'ensemble $\mathcal{F}_a = \{(x,x) \mid 16 a \leq x \leq 16 a + 15\}$ ne soit encore coloriée.
+Puis, lors des $6$ prochains coups, elle colorie une des $16$ cases de cette ensemble, en commençant par la case $(16 a,16 a)$.
+Au moment de jouer le dernier coup, au plus $15$ cases
+de l'ensemble auront été coloriées en rouge ou en bleu, donc Alice peut bien se débrouiller pour colorier $6$ cases parmi celles de $\mathcal{F}_a$.
+
+D'après le principe des tiroirs,
+après avoir effectué ces $P$ étapes, il existera nécessairement un ensemble
+$\mathcal{S} \subseteq \{0,1,\ldots,16\}$ de cardinal $6$
+tel que $0 \in \mathcal{S}$ et tel que, pour (au moins) $Q$ valeurs de $a$, Alice a colorié les cases
+$\{(x,x) \mid x - 16 a \in \mathcal{S}\}$. On note $\mathcal{A}$ l'ensemble de ces $Q$ valeurs de $a$.
+
+Puis, quitte à translater le repère (et donc l'ensemble $\mathcal{A}$), on suppose que nulle case
+de la seconde diagonale $\{(x,1-x) \mid x \in \Z\}$ n'a encore été coloriée, et que $\mathcal{A} \subseteq \N^\ast$.
+On appelle cet instant \og{}instant critique\fg{} de la stratégie d'Alice.
+Alice procède ensuite en $R$ étapes.
+Pour chaque valeur non nulle $s \in \mathcal{S}$, elle initialise un compteur $\mathbf{C}(s)$ à la valeur $0$.
+
+Lors de chaque étape, Alice joue $2$ coups, comme suit.
+Elle choisit un entier $a \in \mathcal{A}$ tel que nulle case de l'ensemble $\{(x,1-x) \mid x - 16 a \in \mathcal{S}\}$ ne soit encore coloriée.
+Au plus $6 R$ cases ont été coloriées depuis l'instant critique, et puisque $6 R < Q$, il existe bien un tel entier $a$.
+Alors Alice colorie en rouge la case $(16a,1-16a)$, puis Bob colorie en bleu $2$ cases, et alors il reste au moins $3$ entiers $s \in \mathcal{S}$
+tels que la case $(16a+s,1-16a-s)$ ne soit pas coloriée. Parmi ces entiers, Alice en choisit un tel que le compteur $\mathbf{C}(s)$ soit minimal,
+elle colorie en rouge la case $(16a+s,1-16a-s)$, et elle incrémente la valeur de $\mathcal{C}(s)$.
+
+Par conséquent, après $R$ étapes, nul compteur $\mathbf{C}(s)$ ne peut dépasser la valeur $\frac{R}{3}$,
+et il y a donc au moins $3$ valeurs non nulles de $s \in \mathcal{S}$ telles que $\mathbf{C}(s) \geq \frac{R}{9} = 34 (n+1)$.
+En particulier, pour chacune de ces $3$ valeurs de $s$ (disons $s_1$, $s_2$ et $s_3$),
+Alice vient de créer au moins $34 (n+1)$ paires $(16a,16a+s)$ qui sont des $s$-abscisses.
+
+Alice procède une dernière fois en $R$ nouvelles étapes, de manière analogue,
+mais en se concentrant sur les ensembles $\{(1-x,x) \mid x - 16 a \in \mathcal{S}\}$.
+Là encore, au plus $12 R$ cases ont été coloriées depuis l'instant critique, et puisque $12 R < Q$, des entiers $a$ convenables existent bien.
+À la fin de ces $R$ nouvelles étapes, il existe au moins $3$ valeurs de $s$ (disons $s_4$, $s_5$ et $s_6$) telles qu'Alice
+a créé au moins $34 (n+1)$ paires $(16a,16a+s)$ qui sont des $s$-ordonnées.
+On atteint alors l'instant \og{}final\fg{} de la stratégie d'Alice.
+
+Les deux ensembles $\{s_1,s_2,s_3\}$ et $\{s_4,s_5,s_6\}$ sont inclus dans $\mathcal{S} \setminus \{0\}$, donc s'intersectent.
+Il existe donc une valeur non nulle $s \in \mathcal{S}$ telle qu'au moins $34 (n+1)$ de nos $s$-abscisses et $34 (n+1)$ de nos $s$-ordonnées ont été créées.
+Puisque l'on sait que $s+2 \leq 17$, on peut sélectionner $n$ de nos $s$-abscisses, par exemple $(x_1,x_1+s),\ldots,(x_n,x_n+s)$, et
+$n$ de nos $s$-abscisses, par exemple $(y_1,y_1+s),\ldots,(y_n,y_n+s)$, telles que l'on ait $x_i \geq s+2$, $y_i \geq s+2$ et $|x_i-y_j| \geq s+2$ pour tous $i, j$.
+
+Mais alors chaque choix des paires $(x_i,x_i+s)$ et $(y_j,y_j+s)$ satisfait les conditions mentionnées en début de solution,
+et les ensembles $\mathcal{D}^s_{x_i,y_j}$ sont deux à deux disjoints.
+Or, cet instant final a été atteint après qu'Alice a joué $6P + 4R = 6 \binom{15}{5} (76 \cdot 306 n + 312)$ coups,
+et pour éviter une défaite assurée il faut que Bob ait colorié des cases dans chacun des $n^2$ ensembles $\mathcal{D}^s_{x_i,y_j}$.
+Il n'a eu le temps de colorier qu'un total de $12 \binom{15}{5} (76 \cdot 306 n + 312)$ cases, ce qui est strictement plus petit que $n^2$ quand $n$ est
+suffisamment grand.
+
+Il s'ensuit qu'Alice dispose bien d'une stratégie gagnante, même si Bob s'autorise à jouer $2$ coups après chacun des coups d'Alice.
 \end{sol}
 
 \begin{sol}[130](Résolu par Pierre-Marie Esmenjaud Thibaut Maron)
